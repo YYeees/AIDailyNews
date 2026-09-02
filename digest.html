@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>月度 Digest · Daily Digest</title>
+<style>
+  :root {
+    --bg: #F0EEE6;
+    --card: #FAF9F5;
+    --text: #141413;
+    --muted: #5F5E57;
+    --border: #DDDAD0;
+    --accent: #B5522A;
+    --high: #B5522A;
+    --medium: #716F67;
+    --tag-high-bg: #cbcadb;
+    --tag-ai-bg: #bcd1ca;
+    --tag-anchor-bg: #bcd1ca;
+    --today-bg: var(--card);
+    --today-border: var(--accent);
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+  }
+  header {
+    padding: 24px 24px 10px;
+    max-width: 1080px;
+    width: 94%;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; margin: 0 0 14px; font-weight: 700; }
+  select {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 9px 34px 9px 15px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--text);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="%235F5E57" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  select:hover { border-color: var(--accent); }
+  select:focus { outline: none; border-color: var(--accent); }
+  nav {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  nav a.active { color: var(--text); font-weight: 600; }
+  main { max-width: 1080px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
+  .track { margin-top: 32px; }
+  .track h2 {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .track-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  @media (min-width: 760px) {
+    .track-items { grid-template-columns: 1fr 1fr; }
+  }
+  .item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 0;
+  }
+  .item.medium { opacity: 0.88; }
+  .item.today { border: 2px solid var(--today-border); }
+  .item-meta {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.92rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .tier-tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
+  }
+  .tier-high { background: var(--tag-high-bg); color: var(--text); }
+  .tier-medium { background: var(--tag-high-bg); color: var(--text); }
+  .category-tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 1px 9px;
+    border-radius: 999px;
+    color: var(--text);
+  }
+  .category-ai { background: var(--tag-ai-bg); }
+  .category-anchor { background: var(--tag-anchor-bg); }
+  .item a.title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    margin: 8px 0 8px;
+    line-height: 1.45;
+  }
+  .item a.title:hover { color: var(--accent); }
+  /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
+     回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。 */
+  /* 跟同一行的tier-tag等高(padding 1px + 1px描边 = tier-tag的2px padding),但不加粗、
+     用描边不用填充——那两个是"这条内容是什么"的状态标签,这个是可点的动作,要弱化让路。 */
+  .note-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: color .15s, border-color .15s, background .15s;
+  }
+  /* 未记:空心笔(只描边)。已记:实心笔。同形状不同填充,切换时尺寸完全不变。 */
+  .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+  .note-btn:hover { color: var(--text); border-color: var(--muted); }
+  /* 按"动作 vs 信息"拆:未记态是个待发生的动作,阅读时没有存在的理由,hover卡片才浮现;
+     已记态是关于这条内容的事实,属于这一行,一直显示(见下面 .noted 覆盖回来)。
+     用opacity而不是display:none —— 位置照常占着,hover时标签不会左右跳。 */
+  .note-btn { opacity: 0; transition: opacity .15s, color .15s, border-color .15s, background .15s; }
+  .item:hover .note-btn,
+  .note-btn:focus-visible,
+  .note-btn.noted { opacity: 1; }
+  /* 触屏没有hover,一直显示 */
+  @media (hover: none) { .note-btn { opacity: 1; } }
+  /* 「已记」不能弱化:它是这套回路唯一的产物(你为这条写过东西=ground truth),也是
+     一屏卡片里最该一眼扫到的信息。而且它是可点的(跳回那条笔记)——之前用虚线+半透明
+     等于把活按钮画成了disabled,是可用性错误。用主色描边+勾:比未记态重,但仍是描边,
+     跟旁边填充的AI/tier标签(系统的判断)分开——这个是你自己的标记。 */
+  /* 去掉描边但保留1px透明边:盒模型不变,两个状态等宽等高,标签行不会因为切换状态而跳动。
+     digest首先是个阅读界面,已记态靠"实心+主色"认出来就够,不需要再加一圈框去抢注意力。 */
+  .note-btn.noted { color: var(--accent); border-color: transparent; }
+  .note-btn.noted svg { fill: currentColor; stroke: currentColor; }
+  .note-btn.noted:hover { color: var(--accent); background: rgba(181, 82, 42, 0.08); }
+  .meta-left { display: inline-flex; align-items: center; gap: 6px; }
+  .meta-left .source-type svg { width: 20px; height: 20px; display: block; }
+  .meta-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .source-type {
+    display: inline-flex;
+  }
+  .item p { margin: 0; font-size: 1.05rem; color: var(--text); text-align: justify; }
+  .tag-row { display: inline-flex; gap: 6px; }
+  .diff-tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.8rem; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+    background: var(--border); color: var(--muted);
+  }
+  .empty {
+    grid-column: 1 / -1;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    color: var(--muted);
+    font-size: 0.95rem;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>月度 Digest</h1>
+  <nav><a href="index.html">7日内关注</a> · <a class="active" href="digest.html">月度 Digest</a></nav>
+  <select id="monthSelect"></select>
+</header>
+<main>
+  <section class="track">
+    <h2>本月精选</h2>
+    <div id="contentTrack" class="track-items"></div>
+  </section>
+  <section class="track">
+    <h2>GitHub 高分项目</h2>
+    <div id="githubTrack" class="track-items"></div>
+  </section>
+</main>
+
+<script>window.PUBLIC_SITE = true;</script>
+<script>
+// 公开站(AIDailyNews)和私有站共用这一份HTML,不是复制两份——公开站由export_public.py
+// 在SITE-CONFIG标记那行注入window.PUBLIC_SITE=true。共用是刻意的:前端以后怎么改,
+// 公开站都自动跟着走,不会两边慢慢漂开。公开站跟私有站的差别只有下面这几处guard。
+const IS_PUBLIC = !!window.PUBLIC_SITE;
+
+async function loadMonths() {
+  const res = await fetch('data/months.json');
+  const { months } = await res.json();
+  const sel = document.getElementById('monthSelect');
+  sel.innerHTML = months.map(m => `<option value="${m}">${m}</option>`).join('');
+  sel.addEventListener('change', () => loadMonth(sel.value));
+  if (months.length) loadMonth(months[0]);
+}
+
+// 内联SVG,不依赖外部图片请求。YouTube用其播放按钮标志;播客/博客没有单一平台可代表,
+// 分别用业内通用的播客图标、标准RSS图标(内容本来就是走RSS抓的,语义也对)。
+const TYPE_ICON = {
+  // YouTube标志用它真实的宽高比(宽矩形+居中播放三角),不是正方形,不然认不出来
+  youtube: {
+    label: 'YouTube',
+    svg: '<svg width="34" height="24" viewBox="0 0 28 20"><rect width="28" height="20" rx="4" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>',
+  },
+  // 播客用标准麦克风图标(话筒+支架),比之前的广播弧线更清楚
+  podcast: {
+    label: '播客',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#8B5CF6"/><rect x="10" y="5" width="4" height="9" rx="2" fill="#fff"/><path d="M7 11a5 5 0 0 0 10 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><line x1="9" y1="19" x2="15" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  },
+  // 标准RSS图标:圆点+两条同心弧,弧线圆心精确对齐圆点位置(标准RSS图标的画法)
+  blog: {
+    label: '文章',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF8C00"/><rect x="5.5" y="4" width="13" height="16" rx="1.5" fill="#fff"/><line x1="8" y1="8.5" x2="15.5" y2="8.5" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="11.8" x2="15.5" y2="11.8" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="15.1" x2="12.5" y2="15.1" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/></svg>',
+  },
+  // X用官方"X"标志(黑底白字)，跟平台本身的品牌一致
+  x: {
+    label: 'X',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+  },
+};
+
+const TRACK_LABEL = { ai: 'AI' };
+const TIER_LABEL = { high: 'High', medium: 'Medium' };
+
+// ---- 「记一笔」:在写作收件箱里新建/打开一条临时笔记 ----
+// 走官方 obsidian://new。官方URI只支持"新建"不支持"追加"——这正是收件箱定成"一条一文件"
+// 的原因(不用为了追加去装Advanced URI插件)。vault名就是那个文件夹名。
+// 正文第一行那个markdown链接是整条反馈回路的接头:页面自动填,URL跟digest.db的link字段
+// 逐字节相同,scan_inbox.py精确匹配即可。用[标题](链接)而不是frontmatter里塞一行裸URL,
+// 是因为笔记是给人读的——三个月后翻回来,看见的该是文章标题,点一下就能回去重读。
+//
+// 同一篇点第二次不能再走`new`:obsidian://new撞名会另建一个"xxx 1.md",笔记就散了。
+// 所以用localStorage记住已经记过的link,之后改走`open`直接跳到那条笔记上。
+// localStorage是逐浏览器的、可能被清掉——清掉的后果只是某条会多建一次文件,不影响数据,
+// 所以读写都包在try里,取不到就当没记过。
+const INBOX_VAULT = 'writing-inbox';
+const NOTED_KEY = 'digest-noted-links-v1';
+
+function notedLinks() {
+  try { return new Set(JSON.parse(localStorage.getItem(NOTED_KEY) || '[]')); }
+  catch (e) { return new Set(); }
+}
+
+function setNoted(link, on) {
+  try {
+    const s = notedLinks();
+    if (on) { s.add(link); } else { s.delete(link); }
+    localStorage.setItem(NOTED_KEY, JSON.stringify([...s]));
+  } catch (e) { /* 隐私模式/禁用站点数据:记不住就下次再建一个,不该让点击失败 */ }
+}
+
+function attrEscape(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+function inboxNoteName(item) {
+  const slug = (item.title || '').trim()
+    .replace(/[\\/:*?"<>|#^[\]]/g, ' ')   // 文件名非法字符 + Obsidian的保留字符
+    .replace(/\s+/g, ' ').trim().slice(0, 60);
+  return `${item.date} ${slug}`;
+}
+
+function inboxHref(item, noted) {
+  const name = inboxNoteName(item);
+  const vault = `vault=${encodeURIComponent(INBOX_VAULT)}`;
+  if (noted) {
+    return `obsidian://open?${vault}&file=${encodeURIComponent(name)}`;
+  }
+  // 方括号会把markdown链接语法拆掉(Craig Mod的"[RIDGELINE] ..."就带方括号),换成圆括号。
+  const anchor = (item.title || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
+  // source填信息来源(人或刊物,如"Simon Willison"/"Latent Space")。双引号会撑破YAML,
+  // 换成单引号——名字里带冒号的源(有的播客标题就带)不加引号会直接把frontmatter弄坏。
+  const from = (item.person || '').replace(/"/g, "'");
+  const content = `---\nsource: "${from}"\ndate: ${item.date}\n---\n\n[${anchor}](${item.link})\n\n`;
+  return `obsidian://new?${vault}`
+    + `&name=${encodeURIComponent(name)}`
+    + `&content=${encodeURIComponent(content)}`;
+}
+
+// 笔的图标:内联SVG,跟source-type那几个图标一个路子(不依赖外部图片)。未记态描边、
+// 已记态填充——同一个形状靠"空心/实心"区分状态,是最省视觉重量的一种做法,digest首先
+// 是阅读界面。**不用星号**:星号的语义是收藏,而"收藏"是明确否掉过的方向,这个标记的
+// 意思是"我为这条写过东西",不是"以后再看"。
+const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">'
+  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/>'
+  + '</svg>';
+
+function noteBtn(item) {
+  // 公开站没有本地Obsidian收件箱,这个按钮点了也没意义
+  if (IS_PUBLIC) return '';
+  const noted = notedLinks().has(item.link);
+  // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
+  return `<a class="note-btn${noted ? ' noted' : ''}"`
+    + ` href="${attrEscape(inboxHref(item, noted))}"`
+    + ` data-link="${attrEscape(item.link)}" data-name="${attrEscape(inboxNoteName(item))}"`
+    + ` data-new-href="${attrEscape(inboxHref(item, false))}"`
+    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
+}
+
+function openHref(name) {
+  return `obsidian://open?vault=${encodeURIComponent(INBOX_VAULT)}&file=${encodeURIComponent(name)}`;
+}
+
+// 右键取消已记标记。为什么需要这个:点「记录」时Chrome可能弹"是否打开Obsidian",而**页面
+// 收不到你在那个弹框上点了确定还是取消**——外部协议链接没有回调,只能假定成功。点了取消
+// 就会出现"标成已记但笔记不存在",再点走open又打不开,这一条就卡死了。右键给一条退路。
+// (Chrome弹框上勾"总是允许"之后就不再弹,这个问题也就不出现了。)
+document.addEventListener('contextmenu', function (e) {
+  const btn = e.target.closest && e.target.closest('.note-btn.noted');
+  if (!btn) return;
+  e.preventDefault();
+  setNoted(btn.dataset.link, false);
+  btn.classList.remove('noted');
+  btn.href = btn.dataset.newHref;
+  btn.title = '在写作收件箱里记一笔（点了没反应？右键可取消标记）';
+});
+
+// 事件委托:卡片是innerHTML整块重渲染的(筛选器一动就重来),挂在document上才不会掉。
+document.addEventListener('click', function (e) {
+  const btn = e.target.closest && e.target.closest('.note-btn');
+  if (!btn || btn.classList.contains('noted')) return;
+  setNoted(btn.dataset.link, true);
+  // **必须setTimeout**:监听器跑在浏览器执行默认跳转之前,在这里直接改href,本次点击就会
+  // 跳到还不存在的那条笔记上,笔记建不出来(2026-08-24踩过)。推到下一个tick,等默认跳转
+  // 带着当前的new链接发出去之后再改状态,下次点这个按钮才走open。
+  setTimeout(function () {
+    btn.classList.add('noted');
+    btn.title = '打开已记的那条笔记（右键取消标记）';
+    btn.href = openHref(btn.dataset.name);
+  }, 0);
+});
+
+function renderContentItem(item) {
+  const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
+  const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
+  const latestClass = item.is_new ? ' today' : '';
+  // 月度归档只留high档,tracks里全部都是high,推荐程度标签固定显示High
+  const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
+  return `
+    <div class="item high${latestClass}">
+      <div class="item-meta">
+        <span class="meta-left">
+          <span class="source-type" title="${type.label}">${type.svg}</span>
+          ${item.person} · ${item.date}
+        </span>
+        <span class="meta-right">
+          ${noteBtn(item)}
+          ${categoryTags}
+          <span class="tier-tag tier-high">${TIER_LABEL.high}</span>
+        </span>
+      </div>
+      <a class="title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+      <p>${desc}</p>
+    </div>
+  `;
+}
+
+function renderContentTrack(items) {
+  const el = document.getElementById('contentTrack');
+  el.innerHTML = items.length
+    ? items.map(renderContentItem).join('')
+    : '<div class="empty">这个月没有归档内容</div>';
+}
+
+// "刚更新"高亮完全由导出脚本算好写进JSON的`is_new`字段决定，前端不做任何时间运算——
+// 页面什么时候打开高亮都一样，一次更新到下一次更新之间不会自己变。判定规则和踩过的坑
+// (日历日换日线、26小时滚动窗口跨了两次抓取)见项目根目录new_flags.py的文件头注释。
+
+const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
+
+function renderRepo(repo) {
+  const diffTag = repo.difficulty
+    ? `<span class="diff-tag">${DIFFICULTY_LABEL[repo.difficulty] || repo.difficulty}</span>`
+    : '';
+  const stars = repo.stars_total != null ? `★ ${repo.stars_total.toLocaleString()}` : '';
+  return `
+    <div class="item high">
+      <div class="item-meta">
+        <span>${repo.language || ''} · ${stars}</span>
+        <span class="tag-row">${diffTag}<span class="tier-tag tier-high">${TIER_LABEL.high}</span></span>
+      </div>
+      <a class="title" href="${repo.url}" target="_blank" rel="noopener">${repo.full_name}</a>
+      <p>${repo.recommend_reason || repo.description || ''}</p>
+    </div>
+  `;
+}
+
+function renderGithubTrack(repos) {
+  const el = document.getElementById('githubTrack');
+  el.innerHTML = repos.length
+    ? repos.map(renderRepo).join('')
+    : '<div class="empty">这个月没有发现值得关注的项目</div>';
+}
+
+async function loadMonth(month) {
+  const res = await fetch(`data/digest_${month}.json`);
+  const data = await res.json();
+  renderContentTrack(data.items);
+  renderGithubTrack(data.github_track || []);
+}
+
+loadMonths();
+</script>
+</body>
+</html>

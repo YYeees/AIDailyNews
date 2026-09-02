@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "person": "Latent Space",
+      "title": "[AINews] AI is eating Finance; AIE NYC now open",
+      "link": "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc",
+      "date": "2026-07-29",
+      "source_type": "blog",
+      "summary": "本期梳理了AI进入金融服务这一垂直领域的十家机构实战案例（FactSet、Nubank、Morgan Stanley等），聚焦企业级agent基础设施的真实痛点：风险治理、可验证性（每个答案都要能溯源）、审计追踪与数据治理。不是泛泛谈AI加金融的宏观叙事，而是具体到金融机构落地agent时踩过的坑。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "十家机构的实战案例聚焦企业级agent基础设施真实痛点，不是泛泛谈AI加金融的宏观叙事"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+      "link": "https://www.latent.space/p/chatgpt-work",
+      "date": "2026-07-28",
+      "source_type": "blog",
+      "summary": "OpenAI ChatGPT Work产品负责人Akshay Nathan分享了几条实操心得：多数场景下应坚持默认配置而非过度定制模型参数；持久化环境（本地文件、记忆、计划任务）投入越多AI助手价值越大；交互式Sites正取代Excel/幻灯片成为新的研究报告载体；团队衡量AI进展时应看真实目标达成而非提交次数或token消耗量。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI产品负责人给出的实操建议直接影响日常怎么用AI agent产品，比如默认配置、持久化环境价值、衡量真实进展"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Much ado about Open Weights",
+      "link": "https://www.latent.space/p/ainews-much-ado-about-open-weights",
+      "date": "2026-07-28",
+      "source_type": "blog",
+      "summary": "本期AINews的核心是Moonshot AI发布开源模型Kimi K3（2.8T参数混合专家、104B活跃参数），并配套开源FlashKDA、MoonEP、AgentENV等基础设施；同时NVIDIA发起“开放安全AI联盟”，美国政府也在考虑要求前沿系统接受30天审前访问。报道点出一个反差：真正在推进开放权重的只有Moonshot，OpenAI、Anthropic等大厂更多是在开放立场上表态站队而非行动。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Moonshot AI发布Kimi K3并开源配套基础设施，技术细节扎实，且点出谁在真做谁在站队这条清晰的行业脉络"
+        }
+      ]
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "An opinionated guide to which AI to use to do stuff",
+      "link": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
+      "date": "2026-07-23",
+      "source_type": "blog",
+      "summary": "二〇二六夏季版AI工具选型指南。核心判断：AI已经从聊天工具进化成能自主干几个小时活的「代理系统」。日常需求用免费模型就够，医疗、法律这类高风险决策要上Claude Opus／Fable或GPT-5.6 Sol这类最强模型。最实用建议：每月二十美元订阅一个，把AI当团队成员管，给它权限、设安全检查点，像带新人一样持续调教。",
+      "is_new": false,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "最贴合当前水平的AI工具选型实操指南"
+        }
+      ]
+    },
+    {
+      "person": "Andrej Karpathy",
+      "title": "One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM nee…",
+      "link": "https://x.com/karpathy/status/2079610838143623371",
+      "date": "2026-07-21",
+      "source_type": "x",
+      "summary": "Karpathy分享了一个用LLM的小技巧：遇到一时说不清楚的需求，切换到语音模式随口碎碎念几分钟（总带一点混乱也没关系），LLM往往能把这些杂乱的话整理得比自己原本的思路还清晰，能减少后续来回修正的次数。",
+      "is_new": false,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体的LLM使用技巧（用语音模式长时间碎碎念给模型更多上下文），直接影响日常怎么用AI工具，实操性强"
+        }
+      ]
+    }
+  ],
+  "github_track": []
+}
