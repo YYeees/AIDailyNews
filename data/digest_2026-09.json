@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Research acceleration: The view inside OpenAI",
+      "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+      "date": "2026-09-06",
+      "source_type": "blog",
+      "summary": "OpenAI发布内部报告，披露coding agent正在重塑研究员的日常工作方式：人均每日AI工具花费从2月接近零，一路攀升到6月约150美元，7月后陡增到8月底约600美元，Simon Willison推测7月的跃升可能对应内部员工提前用上了后来发布的GPT-6 Astra。文章还提到同日发布的OpenAI首席科学家Jakub Pachocki《An Alien Mind》一文，两篇都在谈「RSI（递归自我改进）」，暗示这是OpenAI眼中的新AGI路径。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司内部真实数据披露coding agent对研究工作方式的重塑，讲清楚是什么、为什么重要，非纯新闻通稿"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot",
       "link": "https://www.latent.space/p/grok-bot",
