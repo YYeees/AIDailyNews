@@ -2,12 +2,28 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Introducing ChatGPT Images 2.5",
+      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "date": "2026-09-08",
+      "source_type": "blog",
+      "summary": "OpenAI发布ChatGPT Images 2.5，改进多轮指令遵循、生成速度和参考图主体保留能力，新增Sunburst（精细编辑）和Flare（快速生成）两个模型。作者据此升级了自己的openai_image.py命令行工具以支持传入参考图片，并演示了给图表添加卡通浣熊角色的效果。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI图片生成模型重大更新，全文确认作者亲自升级自己的CLI工具并给出可复用命令行示例演示效果，兼具新闻性和实操价值"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Research acceleration: The view inside OpenAI",
       "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
       "date": "2026-09-06",
       "source_type": "blog",
       "summary": "OpenAI发布内部报告，披露coding agent正在重塑研究员的日常工作方式：人均每日AI工具花费从2月接近零，一路攀升到6月约150美元，7月后陡增到8月底约600美元，Simon Willison推测7月的跃升可能对应内部员工提前用上了后来发布的GPT-6 Astra。文章还提到同日发布的OpenAI首席科学家Jakub Pachocki《An Alien Mind》一文，两篇都在谈「RSI（递归自我改进）」，暗示这是OpenAI眼中的新AGI路径。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
