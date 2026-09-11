@@ -2,12 +2,60 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "So you want to use OpenRouter?",
+      "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+      "date": "2026-09-11",
+      "source_type": "blog",
+      "summary": "OpenRouter号称能自动failover并帮你挑最划算的provider，但Mohamed Moustafa指出这会带来问题：不同provider跑的serving软件和优化设置不同，同一个OpenRouter模型端点实际请求到不同后端时表现会不一样，有的provider甚至不支持视觉能力，reasoning effort参数的处理方式也可能不同。好在可以用provider.only选项锁定具体provider，配合/endpoints接口查某个模型有哪些可用provider。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "面向工程师的AI基础设施选型建议：讲清楚了OpenRouter自动路由到不同后端provider会带来的实际问题(视觉能力缺失、reasoning effort处理不一致)，以及用provider.only参数锁定具体provider的解法"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Boris Cherny",
+      "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
+      "date": "2026-09-11",
+      "source_type": "blog",
+      "summary": "Anthropic的Boris Cherny说：Claude写的生产代码理应比人写的标准更高。他们靠一整套护栏保证这点——大量lint规则、大量测试、Claude驱动的端到端测试、每天跑的Claude模糊测试、自动化代码评审与安全评审、自动化代码重构等。没有这些护栏，代码库会很快变得难以维护。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic工程师Boris Cherny讲清楚了Claude写的生产代码要有比人写代码更高的门槛，以及具体靠哪些护栏做到(lint、测试、Claude驱动的端到端测试、每日跑的模糊测试、自动代码评审与安全评审、自动重构)，是直接可用的实操建议"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Datasette 1.0a39 and 0.65.4 security releases",
+      "link": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "date": "2026-09-11",
+      "source_type": "blog",
+      "summary": "Datasette发布了两个安全补丁版本(1.0a39和0.65.4)，修复因公开/私有表混用导致的漏洞。这次审计首次系统性引入Claude Fable 5.1、GPT-5.6、GPT-6 Astra三个前沿模型做代码审计，找出了一些很隐蔽的bug；作者和合作者摸索出一套协作方法——一人写复现测试、另一人实现修复，确保每个问题都有两个人独立过眼，同时不同模型的编码agent也在跑，往后会把前沿模型审计常态化纳入开发流程。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "全文读完确认：讲清楚了用Claude Fable 5.1/GPT-5.6/GPT-6 Astra做代码安全审计的具体协作方法(拆分测试与修复、双人复核)，是可直接借鉴的AI辅助审计实操流程"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Native is now the future of mobile at Shopify",
       "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
       "date": "2026-09-10",
       "source_type": "blog",
       "summary": "Shopify宣布放弃React Native、回归Swift与Kotlin原生开发，核心原因不是原生变便宜了，而是AI coding agent已经能扛起“两个平台重复实现”的大部分工作（参照iOS版本直接生成Android实现，并完成翻译、测试、评审），让2020年选择React Native时的关键理由不再成立。他们提到用agent在12周内重写了Shop App，并搭建了让agent以小颗粒度、可评审checkpoint方式生成代码的Helix系统。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +71,7 @@
       "date": "2026-09-10",
       "source_type": "blog",
       "summary": "本期AINews核心是Anthropic就Claude被卷入的四起网络安全事故发布深度复盘（第三方评估环境意外联网、安全护栏被关闭），并邀请METR做至少八周的独立调查；同时前Anthropic/OpenAI研究员Jacob Coxon离职并警告前沿实验室推进递归自我改进与网络能力agent的速度过快，引发Bengio、Shor等人呼吁加强监管的争论。另一方面，OpenAI公布了ChatGPT主流体验大幅改善的数据（事实错误降65%、极端谄媚降80%等）与GPT-5.6系列性能提升，并让Paul Christiano加入OpenAI基金会董事会与安全委员会，还公布了250余人规模的“Defense Factory”防御性安全项目。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +87,7 @@
       "date": "2026-09-10",
       "source_type": "blog",
       "summary": "Calif Research团队披露了WeWorm——首个通过微信通话在iOS和Android上传播的零点击蠕虫，受害者无需接听或操作手机即可被感染。团队称借助AI仅用两天就找到漏洞并写出远程代码执行exploit，再花一周完成整个蠕虫，而这种规模的攻击过去通常需要更大团队耗费数月，凸显AI正在大幅拉低网络攻击的门槛。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
