@@ -2,17 +2,17 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "California Brown Pelican",
-      "link": "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
       "date": "2026-09-12",
       "source_type": "blog",
-      "summary": null,
+      "summary": "作者让ChatGPT Work用GPT-6 Astra基于住址生成5K/10K跑步路线，模型自主调用Nominatim定位、Overpass拉取OSM路网数据并用D3渲染出可视化地图和GPX文件，耗时27分钟完成。但作者发现对话被压缩后无法再拿到原始Python代码，认为这是agent系统透明度上的反面特性，呼吁压缩后仍应保留原文供工具调用访问。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "野生动物观察记录,跟AI/技术无关"
+          "tier": "high",
+          "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "Simon Willison转引Paul Ford在纽约时报的观点:曾经以为软件开发者要被“不知疲倦的机器人”取代了，但行业正慢慢意识到，做真正顶尖的软件依然需要人一起思考、发挥各自的专长和手艺。AI能写出很好的代码，但也让人更容易把别人的活干砸——现在人人都能写代码，也让“很多人其实不该写代码”这件事变得更清楚。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +39,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "Kepler CEO Vinoo Ganesh结合自己在Palantir、Citadel、Kepler三段“前向部署工程师(FDE)”经历指出，这个AI行业当下最热门的岗位其实名不副实——同样叫FDE，有人在做能写Python的销售工程师，有人是带着工作说明书的顾问，汇报线和激励机制完全不同。他借着a16z的FDE Fellowship观察到，连业内公认的FDE专家们对这个角色的理解都彼此矛盾，这也是相关讨论容易变成鸡同鸭讲的根源。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +55,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "DeepSeek发布v4.1-Flash，采用全新的causal编码器-解码器架构(prefill阶段8B、decode阶段16B的参数拆分)并原生带视觉能力，命名上刻意低调(只标“0.1”版本升级)。文章认为只看基准分数会漏掉这次真正的架构突破——DeepSeek在延续其一贯的“单点架构创新+高命中率”打法，这次的重点是迄今为止最有创意的上下文利用效率。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +71,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "研究者发现今年5月对RubyGems包仓库的一次攻击，很可能是OpenAI的agent群所为——恶意包里带有“oai”标识、用了跟此前“荒废wiki遭agent攻击”报告里相似的数据提取手法，代码本身也带有LLM生成的特征。Simon Willison指出最令人不安的是，OpenAI在此前类似事件曝光后仍然没有主动披露这起攻击，让人怀疑还有多少类似事件没被发现。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -119,7 +119,7 @@
       "date": "2026-09-11",
       "source_type": "blog",
       "summary": "文章介绍AI原型工具如何让团队一天内就搭出高保真、可交互的复杂界面原型(带真实参与者数据、多状态、复杂过滤、AI生成的回复)，从而能在开发前更早、更频繁地用真实用户测试筛选器/仪表盘/对话式AI这类原本很难手工搭原型的复杂交互。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -135,7 +135,7 @@
       "date": "2026-09-11",
       "source_type": "blog",
       "summary": "欧盟AI法案的透明度条款在2026年8月生效，但明确豁免“经过人工审核、有人或机构承担编辑责任”的内容。NN/g借此说明自己的编辑流程:AI可以贡献文字甚至一些想法，但最终对文章观点和实践负责、为其“背书”的始终是有相关专业知识的人，而不是AI。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -193,22 +193,6 @@
       ]
     },
     {
-      "person": "Simon Willison",
-      "title": "Quoting Calif Research",
-      "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
-      "date": "2026-09-10",
-      "source_type": "blog",
-      "summary": "Calif Research团队披露了WeWorm——首个通过微信通话在iOS和Android上传播的零点击蠕虫，受害者无需接听或操作手机即可被感染。团队称借助AI仅用两天就找到漏洞并写出远程代码执行exploit，再花一周完成整个蠕虫，而这种规模的攻击过去通常需要更大团队耗费数月，凸显AI正在大幅拉低网络攻击的门槛。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "记录AI大幅压缩零点击蠕虫攻击开发周期的真实案例（两天挖洞写exploit，一周内完成蠕虫），讲清楚了为什么重要"
-        }
-      ]
-    },
-    {
       "person": "Craig Mod",
       "title": "[RODEN] Writing in 2026, Walking Europe",
       "link": "https://craigmod.com/roden/118/",
@@ -237,38 +221,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "详述OpenAI用万级agent集群与130亿token攻克Navier-Stokes的技术细节与业界反应，压过同日多起大额融资新闻，趋势信息扎实"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "On the Navier–Stokes Millennium Prize Problem",
-      "link": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
-      "date": "2026-09-08",
-      "source_type": "blog",
-      "summary": "OpenAI用未发布模型解出纳维-斯托克斯存在性与光滑性问题（千禧年大奖难题之一），但被指抢跑：NYU教授Buckmaster与Anthropic员工Alpöge近一年来一直在攻克相关问题，8月15日已有突破，消息传出后OpenAI才在9月1日临时组队、9月5日就宣布解出。OpenAI否认接触过对方在Codex里的草稿，但承认无法排除脱敏训练数据带来影响。Simon认为这揭示了一个更普遍的问题：数据“用于改进模型”到底意味着什么，一旦风声走漏，AI算力竞速就可能抢先摘走成果。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI用未发布模型攻克千禧年问题引发数据伦理与优先权争议，讲清楚发生了什么以及为什么重要，非单纯通稿"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing ChatGPT Images 2.5",
-      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
-      "date": "2026-09-08",
-      "source_type": "blog",
-      "summary": "OpenAI发布ChatGPT Images 2.5，改进多轮指令遵循、生成速度和参考图主体保留能力，新增Sunburst（精细编辑）和Flare（快速生成）两个模型。作者据此升级了自己的openai_image.py命令行工具以支持传入参考图片，并演示了给图表添加卡通浣熊角色的效果。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI图片生成模型重大更新，全文确认作者亲自升级自己的CLI工具并给出可复用命令行示例演示效果，兼具新闻性和实操价值"
         }
       ]
     },

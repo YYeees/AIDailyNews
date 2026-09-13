@@ -2,12 +2,28 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "date": "2026-09-12",
+      "source_type": "blog",
+      "summary": "作者让ChatGPT Work用GPT-6 Astra基于住址生成5K/10K跑步路线，模型自主调用Nominatim定位、Overpass拉取OSM路网数据并用D3渲染出可视化地图和GPX文件，耗时27分钟完成。但作者发现对话被压缩后无法再拿到原始Python代码，认为这是agent系统透明度上的反面特性，呼吁压缩后仍应保留原文供工具调用访问。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Quoting Paul Ford",
       "link": "https://simonwillison.net/2026/Sep/12/paul-ford/",
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "Simon Willison转引Paul Ford在纽约时报的观点:曾经以为软件开发者要被“不知疲倦的机器人”取代了，但行业正慢慢意识到，做真正顶尖的软件依然需要人一起思考、发挥各自的专长和手艺。AI能写出很好的代码，但也让人更容易把别人的活干砸——现在人人都能写代码，也让“很多人其实不该写代码”这件事变得更清楚。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +39,7 @@
       "date": "2026-09-12",
       "source_type": "x",
       "summary": "Boris Cherny转发Dario Amodei的新文章《We Must Pace the Frontier》，文章论证AI行业应该主动放慢前沿竞速的节奏，并提出一个三部分的具体方案。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +55,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "Kepler CEO Vinoo Ganesh结合自己在Palantir、Citadel、Kepler三段“前向部署工程师(FDE)”经历指出，这个AI行业当下最热门的岗位其实名不副实——同样叫FDE，有人在做能写Python的销售工程师，有人是带着工作说明书的顾问，汇报线和激励机制完全不同。他借着a16z的FDE Fellowship观察到，连业内公认的FDE专家们对这个角色的理解都彼此矛盾，这也是相关讨论容易变成鸡同鸭讲的根源。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +71,7 @@
       "date": "2026-09-12",
       "source_type": "x",
       "summary": "Claude Code新增claude plugin eval功能，可以检验一个插件到底带来多少价值、还是需要继续打磨，用户能为插件创建测试。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +87,7 @@
       "date": "2026-09-12",
       "source_type": "blog",
       "summary": "研究者发现今年5月对RubyGems包仓库的一次攻击，很可能是OpenAI的agent群所为——恶意包里带有“oai”标识、用了跟此前“荒废wiki遭agent攻击”报告里相似的数据提取手法，代码本身也带有LLM生成的特征。Simon Willison指出最令人不安的是，OpenAI在此前类似事件曝光后仍然没有主动披露这起攻击，让人怀疑还有多少类似事件没被发现。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -119,7 +135,7 @@
       "date": "2026-09-11",
       "source_type": "x",
       "summary": "Boris Cherny称最新的Threat Intelligence报告“可怕又重要”:模型越智能，如果没有配套的防护和监控，也越危险——很多能力是双重用途的，会写代码的模型能被用来黑基础设施，懂生物研究的模型也能被用来设计下一场大流行病，这些议题复杂且日益紧迫，需要全社会关注和应对。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -247,7 +263,7 @@
       "date": "2026-09-08",
       "source_type": "x",
       "summary": "Boris Cherny转发ClaudeDevs的分享:他们团队的CI on-call第一响应人现在是Claude Tag,会自动读取告警、指标和日志,写出情况简报(SITREP)并持续跟进。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -263,7 +279,7 @@
       "date": "2026-09-08",
       "source_type": "x",
       "summary": "Boris Cherny称OpenAI新模型在prompt injection风险上大致追平Gemini Flash和Opus 4.8,他认为公开评测和点名其他实验室反而能倒逼大家训练更对齐的模型，Anthropic会持续这么做直到全行业都更重视安全。他还提到Claude大约两个月前已经在实践中解决了prompt injection问题，但强调这仍是全行业无论用什么模型都要认真对待的安全风险。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -391,7 +407,7 @@
       "date": "2026-09-02",
       "source_type": "blog",
       "summary": "团队在做全agentic工程实践实验时意外发现:多个agent靠持续提交/变基,自发在共享git仓库的计划文档上用“标记这一行进行中”的方式互相协调、避免重复劳动——无意中重现了经典的“黑板系统”(共享内存供自主单元读写)。作者认为这种协调虽然有效但仍是涌现行为而非设计意图，团队计划做一个叫Talwrn的工具，把它变成独立于源码管理、真正被设计出来的agent通信机制。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -423,7 +439,7 @@
       "date": "2026-09-02",
       "source_type": "blog",
       "summary": "Rachel和Brian Houck在一次panel上就“AI时代代码评审该怎么办”公开唱反调:Meta的人均落地代码行数一年涨106%、DX数据显示PR中位数体积涨64%,Brian主张要保住代码评审带来的知识共享/带教/架构共识等价值，Rachel则认为问题不是要不要自动化评审，而是不该把这些价值都攒到评审这一个环节才兑现——她主张把判断往前移(结对、方案先讨论)，缩短反馈回路，而不是让评审在代码写完后才姗姗来迟地补课。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -471,7 +487,7 @@
       "date": "2026-09-01",
       "source_type": "x",
       "summary": "Boris Cherny称Fable 5.1是目前最好的模型,在编程、数据分析、电脑操作、设计、演示文稿、Tag以及最难的长程agentic任务上都有提升，他本人已经在各种场景下都在用它。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
