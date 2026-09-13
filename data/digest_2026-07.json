@@ -1,13 +1,45 @@
 {
   "items": [
     {
+      "person": "Martin Fowler",
+      "title": "The Conductor Developer",
+      "link": "https://martinfowler.com/rachels-ramblings/conductor-developer.html",
+      "date": "2026-07-31",
+      "source_type": "blog",
+      "summary": "Rachel认为AI没有改变什么是好软件,而是改变了什么东西稀缺——现在稀缺的是人类注意力。过去开发者靠保护心流时间产出好软件,但她观察到最好的开发者已经不再整天沉浸心流写代码,而是像指挥家一样统筹多个agent:不需要自己演奏每件乐器,但要理解全局、听出不对劲的地方、在恰当时机调整节奏。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对AI改变开发者角色(从写代码到编排agent)提出扎实、有洞察的框架性判断"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Economic Benefit of Refactoring",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html",
+      "date": "2026-07-30",
+      "source_type": "blog",
+      "summary": "Edwards-Alexander用一个17155行的Rust数据访问层文件做重构实验：让AI agent在重构前后分别执行同一个功能变更任务，测得处理同一变更所需的输入token从159564降到27360、降幅83%(单次省下不到4毛钱)，以此证明代码结构对AI时代的开发成本有可持续衡量的经济价值，重构不再只是“感觉更整洁”。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体实验量化重构对AI时代开发成本的经济价值，实操性强"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] AI is eating Finance; AIE NYC now open",
       "link": "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc",
       "date": "2026-07-29",
       "source_type": "blog",
       "summary": "本期梳理了AI进入金融服务这一垂直领域的十家机构实战案例（FactSet、Nubank、Morgan Stanley等），聚焦企业级agent基础设施的真实痛点：风险治理、可验证性（每个答案都要能溯源）、审计追踪与数据治理。不是泛泛谈AI加金融的宏观叙事，而是具体到金融机构落地agent时踩过的坑。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,12 +55,28 @@
       "date": "2026-07-28",
       "source_type": "blog",
       "summary": "OpenAI ChatGPT Work产品负责人Akshay Nathan分享了几条实操心得：多数场景下应坚持默认配置而非过度定制模型参数；持久化环境（本地文件、记忆、计划任务）投入越多AI助手价值越大；交互式Sites正取代Excel/幻灯片成为新的研究报告载体；团队衡量AI进展时应看真实目标达成而非提交次数或token消耗量。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "OpenAI产品负责人给出的实操建议直接影响日常怎么用AI agent产品，比如默认配置、持久化环境价值、衡量真实进展"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Orchestrator's Tax",
+      "link": "https://martinfowler.com/articles/orchestrator-tax.html",
+      "date": "2026-07-28",
+      "source_type": "blog",
+      "summary": "Garg认为子代理(subagent)真正的价值不是并行节省时间，而是把不必要的中间推理过程隔离在外，保护主代理(orchestrator)的上下文不被污染。他给出四条具体规则：单波次子代理数量控制在2~4个、不要靠轮询子代理拿完整记录、不并发跑git操作、把共享文件区域的任务合并处理——核心是“认知局部性”，让主代理的注意力始终集中在真正需要它决策的地方。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体规则直接影响日常怎么设计多agent协作，实操性强"
         }
       ]
     },
@@ -39,7 +87,7 @@
       "date": "2026-07-28",
       "source_type": "blog",
       "summary": "本期AINews的核心是Moonshot AI发布开源模型Kimi K3（2.8T参数混合专家、104B活跃参数），并配套开源FlashKDA、MoonEP、AgentENV等基础设施；同时NVIDIA发起“开放安全AI联盟”，美国政府也在考虑要求前沿系统接受30天审前访问。报道点出一个反差：真正在推进开放权重的只有Moonshot，OpenAI、Anthropic等大厂更多是在开放立场上表态站队而非行动。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -77,6 +125,118 @@
           "track": "ai",
           "tier": "high",
           "reason": "具体的LLM使用技巧（用语音模式长时间碎碎念给模型更多上下文），直接影响日常怎么用AI工具，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: July 21",
+      "link": "https://martinfowler.com/fragments/2026-07-21.html",
+      "date": "2026-07-21",
+      "source_type": "blog",
+      "summary": "Fragments July21：Thoughtworks静修会报告给出五条主要结论——代码生成不再是瓶颈、验证才是；harness工程正成为独立学科；组织正撞上“学徒制危机”；高管与工程师对AI的预期落差是比技术限制更大的风险；遗留系统现代化是最容易变现的近期价值点。文中还用一个“沙漠训练的模型用到北极”的寓言警示董事会不能只看AI承诺的效率提升而忽视安全风险，公民开发者“vibe coding”需要独立基础设施和确定性数据访问管控来兜底。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "行业静修会的五条结论，扎实讲清楚agentic开发当前的关键瓶颈和风险"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Archaeologist’s Copilot",
+      "link": "https://martinfowler.com/articles/archaeologist-copilot.html",
+      "date": "2026-07-16",
+      "source_type": "blog",
+      "summary": "Malykhin记录了用AI把一个Java 1.5遗留系统现代化的真实过程：AI给出的“乐观答案”常常经不起代码库验证，真正见效是在用证据约束AI、搭建隔离Docker环境、分阶段小步验证之后。核心教训是AI最有效的用法不是自动修复，而是被严格约束、按考古学方式一步步引导。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体实操案例+教训，讲清楚AI在遗留系统现代化中怎么用才有效"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "DSLs Enable Reliable Use of LLMs",
+      "link": "https://martinfowler.com/articles/llm-and-dsls.html",
+      "date": "2026-07-14",
+      "source_type": "blog",
+      "summary": "Joshi介绍如何用DSL给LLM生成代码划定“强护栏”：先与LLM合作设计DSL本身，再把DSL当作自然语言接口生成代码。以分布式系统框架Tickloom为例，固定的语义模型大幅压缩了LLM的决策空间，并能借助确定性解析器/编译器自动校验生成结果，让DSL本身成为可长期维护的真实源码资产。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体方法+真实案例(Tickloom)讲清楚DSL如何约束LLM生成代码，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: July 13",
+      "link": "https://martinfowler.com/fragments/2026-07-13.html",
+      "date": "2026-07-13",
+      "source_type": "blog",
+      "summary": "Fragments July13：深入讨论“harness工程”在这次静修会上从无人问津变成专门议题，涵盖上下文管理(agents.md控制在200行内)、用Rust等强类型语言替代Python、以及用属性测试/形式化方法当作“计算传感器”。文章也谈到自托管开源模型因成本、主权和数据安全考量正重新受到关注。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲harness工程的具体实践(上下文管理/计算传感器/自托管模型)，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Experiences with local models for coding",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html",
+      "date": "2026-07-08",
+      "source_type": "blog",
+      "summary": "Böckeler实测多个本地模型(如Qwen3.6 35B)完成编程任务，发现其agentic编码能力“远不及”她已经习惯的大模型水准。她建议把本地模型用于简单直接的小任务，并强调代码审查依然不可省，本地方案暂时还谈不上即插即用。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一手实测对比本地模型与大模型编程能力差距，给出实操建议"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Viability of local models for coding",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html",
+      "date": "2026-07-07",
+      "source_type": "blog",
+      "summary": "Böckeler梳理了本地运行编码LLM的可行性因素：硬件限制(内存带宽)、模型量化与架构、以及agentic编码依赖的工具调用能力。结论是本地模型目前还称不上“开箱即用”，但Qwen3.6 35B MoE在能力、速度、内存占用之间取得了较好平衡，是当前较实用的选择。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "梳理本地LLM编程可行性的具体影响因素和实用选型建议，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: July  6",
+      "link": "https://martinfowler.com/fragments/2026-07-06.html",
+      "date": "2026-07-06",
+      "source_type": "blog",
+      "summary": "记录Thoughtworks第二届“软件开发的未来”欧洲静修会的观察，与会者态度从半年前的“将信将疑”转为“证据确凿”：agentic开发已从概念走向生产落地。文中还讨论了架构设计在AI时代是否仍重要，一种观点认为护城河已转向“harness工程”这个新兴术语，另一种则担心模型足够聪明后不再需要精心设计的模块化。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "记录行业一线对agentic开发从概念到生产落地的真实转变，讲清楚是什么、为什么重要"
         }
       ]
     }
