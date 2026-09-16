@@ -2,33 +2,65 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "The contagion of fear",
-      "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
-      "date": "2026-09-14",
+      "title": "Gemini Live audio",
+      "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+      "date": "2026-09-15",
       "source_type": "blog",
-      "summary": "Bryan Cantrill撰文回应前Anthropic员工关于\"AI可能在本世纪末前害死所有人\"的说法，用自己年轻时因不够格却发表技术断言、造成不必要恐慌的往事作类比，主张专家在敲响警钟时更该谨慎克制——尤其是生物武器这类他认为被随口引用、缺乏专业背书的风险场景，应该真正请生物学家/军控专家来评估而不是靠联想制造恐惧。Simon Willison在博文里补充了对应播客节目里Cantrill原话的引用。",
+      "summary": "Google发布Gemini 3.8 Live与3.8 Live Extended Thinking两款语音对话模型(对标OpenAI的GPT-Live),Simon Willison用刚发布的GPT-6 Astra Extra High读文档、直接生成了一个不依赖任何库的网页语音对话工具:通过WebSocket连接Gemini接口,用Web Audio API做录音和播放,支持打断对话和下载转录记录,代码已开源。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
-          "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
+          "reason": "前沿模型新发布(Gemini 3.8 Live语音模型)+直接可用的实操信息:作者用刚发布的GPT-6 Astra快速搭出实测工具,给出了具体技术实现路径(WebSocket、Web Audio API),讲清楚是什么、怎么用"
         }
       ]
     },
     {
-      "person": "Simon Willison",
-      "title": "What blog posts influenced your thinking the most?",
-      "link": "https://simonwillison.net/2026/Sep/14/influences/",
-      "date": "2026-09-14",
+      "person": "Latent Space",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "link": "https://www.latent.space/p/good-start-labs",
+      "date": "2026-09-15",
       "source_type": "blog",
-      "summary": "Simon Willison在Lobsters讨论串里回顾了三篇塑造他职业思考的博文：Joel Spolsky的《渗漏抽象定律》让他养成持续深挖底层原理的习惯；Will Larson的《迁移：技术债唯一可规模化的解法》说服他把系统迁移当成工程师该练的常规技能而非特殊状况；Charity Majors的《工程师/经理钟摆》则让他放下\"转回IC会毁掉职业生涯\"的焦虑，认识到在IC和管理间来回摆动反而让两边都做得更好。",
+      "summary": "Good Start Labs探索用游戏训练AI模型的迁移能力:让模型在19世纪铁路游戏《1830》里练交易决策,再测试金融研究任务,发现只有\"多轮终端agent、自主探索环境\"这种训练设计才能让游戏里练出的能力迁移到真实任务上。创始人认为harness设计比模型本身更决定AI能学到什么,团队把游戏内训练轨迹和学习环境本身作为产品卖给前沿AI实验室。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "扎实讲清楚了一个真实AI训练趋势(用游戏做RL训练环境、迁移到真实工作任务),有具体案例(1830铁路游戏训练迁移到金融研究)和创始人访谈细节,不是纯新闻通稿"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] AEF-1 standard emerges for Third Party Evaluators, as Xai, OpenAI, and Anthropic all cosign",
+      "link": "https://www.latent.space/p/ainews-aef-1-standard-emerges-for",
+      "date": "2026-09-15",
+      "source_type": "blog",
+      "summary": "Anthropic发布博客提出\"AEF-1\"标准,承诺让METR等第三方评估机构以类员工身份深度介入安全与对齐工作(工位、门禁卡、公司电脑级别的准入),OpenAI和xAI也签署跟进。文章同时提到跨民主国家协调、以及与中国协调验证合规的设想,是继\"Pacing the Frontier\"后AI安全治理领域的又一次表态。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "跟AI无关，是职业生涯影响他思考的博文回顾"
+          "reason": "AI安全治理层面的重要新动向(Anthropic提出AEF-1第三方评估标准,OpenAI/xAI跟进签署),但偏宏观叙事和政策表态,不是直接影响日常用AI工具的实操信息"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The contagion of fear",
+      "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
+      "date": "2026-09-14",
+      "source_type": "blog",
+      "summary": "Bryan Cantrill撰文回应前Anthropic员工关于\"AI可能在本世纪末前害死所有人\"的说法，用自己年轻时因不够格却发表技术断言、造成不必要恐慌的往事作类比，主张专家在敲响警钟时更该谨慎克制——尤其是生物武器这类他认为被随口引用、缺乏专业背书的风险场景，应该真正请生物学家/军控专家来评估而不是靠联想制造恐惧。Simon Willison在博文里补充了对应播客节目里Cantrill原话的引用。",
+      "is_new": false,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
         }
       ]
     },
@@ -39,44 +71,12 @@
       "date": "2026-09-14",
       "source_type": "blog",
       "summary": "Latent Space访谈Richard Socher(You.com创始人，现创办估值50亿美元的Recursive)，围绕他提出的\"尤里卡机器\"构想——用AI自动化AI研究本身，实现递归自我提升。访谈深入讨论了reward hacking、对Anthropic\"宪法式AI\"有效性的质疑、开源模型的地缘软实力价值，以及AI硬起飞被物理与经济约束低估的观点，还提到Recursive已有的GPU kernel自动优化、AI研究系统跑赢人类等早期成果。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "深度访谈前沿AI创业者，讲清楚递归自我提升、reward hacking、对齐等前沿趋势是什么、为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Laurie Voss",
-      "link": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
-      "date": "2026-09-14",
-      "source_type": "blog",
-      "summary": "Simon Willison转引Laurie Voss的观点：写代码的成本已经坍缩，审查、修复、运维代码的成本也在跟进下降；软件开发剩下的核心工作，将变成搞清楚用户到底想要什么、把需求定义精确、并做得让人用着舒服。这条只是引用，Willison本人没有额外评论。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "转引的一段观察很扎实(AI让写代码成本坍缩、剩下的核心工作是搞清楚需求)，但只是引用没有Willison本人展开"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "commit-rewriter 0.1",
-      "link": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
-      "date": "2026-09-14",
-      "source_type": "blog",
-      "summary": "Simon Willison为清理Datasette安全发布中带有编程代理痕迹和私有issue编号的commit信息，做了一个小工具commit-rewriter：本地网页界面逐条编辑commit message，提交前自动打一个时间戳分支备份，再批量重写从选定commit往后的历史。属于AI辅助编程留下的\"尾巴\"该怎么收拾的实用小工具，文章本身没有更深的架构或方法论展开。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小工具介绍，但解决的是编程agent留下commit信息垃圾这个实际AI辅助编程痛点"
         }
       ]
     },
@@ -87,7 +87,7 @@
       "date": "2026-09-14",
       "source_type": "blog",
       "summary": "作者在GitHub Next的一手实践出发，主张当前人机协作界面太\"薄\"——agent只用文本对话向人汇报，缺少让人类介入验证的界面。她提出应该用可视化状态图、实时可操控原型、多方案并行呈现等\"厚界面\"替代纯文本交互，并以设计系统调整、播放器状态机、重试逻辑对比三个真实项目为例。团队正在开发Chopin项目，一个支持多人协作与决策留痕的实时规划原型工具。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -253,22 +253,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "全文读完确认：讲清楚了用Claude Fable 5.1/GPT-5.6/GPT-6 Astra做代码安全审计的具体协作方法(拆分测试与修复、双人复核)，是可直接借鉴的AI辅助审计实操流程"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Native is now the future of mobile at Shopify",
-      "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
-      "date": "2026-09-10",
-      "source_type": "blog",
-      "summary": "Shopify宣布放弃React Native、回归Swift与Kotlin原生开发，核心原因不是原生变便宜了，而是AI coding agent已经能扛起“两个平台重复实现”的大部分工作（参照iOS版本直接生成Android实现，并完成翻译、测试、评审），让2020年选择React Native时的关键理由不再成立。他们提到用agent在12周内重写了Shop App，并搭建了让agent以小颗粒度、可评审checkpoint方式生成代码的Helix系统。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "记录Shopify从React Native重新转回原生开发的真实工程决策，核心原因是AI coding agent已能承担双平台重复实现/测试/翻译工作，讲清楚了具体原因和影响"
         }
       ]
     },
