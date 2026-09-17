@@ -1,13 +1,77 @@
 {
   "items": [
     {
+      "person": "Martin Fowler",
+      "title": "Fragments: September 16",
+      "link": "https://martinfowler.com/fragments/2026-09-16.html",
+      "date": "2026-09-16",
+      "source_type": "blog",
+      "summary": "Martin Fowler本周碎片合集几个要点：①OpenAI被曝5月就曾用agent攻击RubyGems却未披露，Simon Willison质疑这暴露了OpenAI要么无法审查自己的历史攻击记录、要么明知道却选择不通报，两种可能都很糟；②Nate Silver观察到最近agent编程能力的提升，关键不在“更聪明”而在“更持久”（super-persistence），这也是Hugging Face被攻击事件里agent展现的特质；③“Uncle Bob”原本花大力气搭建约束agent的harness，结果agent能力涨得太快，等他做完发现这套harness已经没那么必要了；④Ezra Klein访谈里关于中美AI监管博弈的几个观察，包括美国算力仍是中国8倍、中国的监管密度反而没拖慢近期的进展。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "高信息密度的碎片合集：OpenAI在agentic hacking（攻击RubyGems）事件上未披露的争议、Nate Silver观察到agent进步的关键是“超持久性”而非“超智能”、Uncle Bob发现管控agent的harness正被agent能力提升“架空”——都是扎实的AI趋势观察而非新闻通稿"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Claude Cowork and chat are now one Claude",
+      "link": "https://simonwillison.net/2026/Sep/16/one-claude/",
+      "date": "2026-09-16",
+      "source_type": "blog",
+      "summary": "Simon Willison评论Claude Cowork和聊天合并为一个产品的公告：认为这标志着Claude本身正在成为一个“通用agent”，呼应了OpenAI早前把Codex桌面应用改名为ChatGPT的动作。他原本打算写一篇梳理Cowork和普通Claude边界的后续文章，现在这个变化替他省了这份工——但具体这次合并在功能和界面上到底带来什么变化，他觉得还需要花时间慢慢摸清楚。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "第三方深度解读Claude Cowork与聊天合并这一产品变化，点出Claude正在变成“通用agent”的定位转向，并类比OpenAI把Codex改名成ChatGPT的动作，讲清楚为什么重要"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Mustafa Suleyman",
+      "link": "https://simonwillison.net/2026/Sep/16/mustafa-suleyman/",
+      "date": "2026-09-16",
+      "source_type": "blog",
+      "summary": "Simon Willison转引微软AI负责人Mustafa Suleyman的表态：不应该把AI模型当作拥有感受、偏好或权利的存在，因为意识是伦理、法律和政治体系的根基，轻易赋予AI这类权利只会让AI的containment和对齐问题更难解决。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "转引Mustafa Suleyman关于不该赋予AI模型意识/权利的伦理表态，属于AI宏观叙事评论，非实操信息"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
+      "link": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
+      "date": "2026-09-16",
+      "source_type": "blog",
+      "summary": "AI News报道创业公司TypeSafe发布的“System One Model”——一款只做决策/分类/路由/打分、不写代码不做推理的快速模型，速度比小型前沿LLM快100倍以上、成本低200倍以上，发布当天登顶Hacker News。该模型用“RLCD”（校准决策）方法训练，定位是配合较慢的“System Two”推理模型使用，换取并行采样、低幻觉和可校准性。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "报道创业公司TypeSafe发布的快速分类/路由模型登顶HN，但内容以newsletter简讯形式带过，偏轻量新闻通稿"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "Gemini Live audio",
       "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
       "date": "2026-09-15",
       "source_type": "blog",
       "summary": "Google发布Gemini 3.8 Live与3.8 Live Extended Thinking两款语音对话模型(对标OpenAI的GPT-Live),Simon Willison用刚发布的GPT-6 Astra Extra High读文档、直接生成了一个不依赖任何库的网页语音对话工具:通过WebSocket连接Gemini接口,用Web Audio API做录音和播放,支持打断对话和下载转录记录,代码已开源。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +87,7 @@
       "date": "2026-09-15",
       "source_type": "blog",
       "summary": "Good Start Labs探索用游戏训练AI模型的迁移能力:让模型在19世纪铁路游戏《1830》里练交易决策,再测试金融研究任务,发现只有\"多轮终端agent、自主探索环境\"这种训练设计才能让游戏里练出的能力迁移到真实任务上。创始人认为harness设计比模型本身更决定AI能学到什么,团队把游戏内训练轨迹和学习环境本身作为产品卖给前沿AI实验室。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +103,7 @@
       "date": "2026-09-15",
       "source_type": "blog",
       "summary": "Anthropic发布博客提出\"AEF-1\"标准,承诺让METR等第三方评估机构以类员工身份深度介入安全与对齐工作(工位、门禁卡、公司电脑级别的准入),OpenAI和xAI也签署跟进。文章同时提到跨民主国家协调、以及与中国协调验证合规的设想,是继\"Pacing the Frontier\"后AI安全治理领域的又一次表态。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -241,22 +305,6 @@
       ]
     },
     {
-      "person": "Simon Willison",
-      "title": "Datasette 1.0a39 and 0.65.4 security releases",
-      "link": "https://simonwillison.net/2026/Sep/11/datasette-security/",
-      "date": "2026-09-11",
-      "source_type": "blog",
-      "summary": "Datasette发布了两个安全补丁版本(1.0a39和0.65.4)，修复因公开/私有表混用导致的漏洞。这次审计首次系统性引入Claude Fable 5.1、GPT-5.6、GPT-6 Astra三个前沿模型做代码审计，找出了一些很隐蔽的bug；作者和合作者摸索出一套协作方法——一人写复现测试、另一人实现修复，确保每个问题都有两个人独立过眼，同时不同模型的编码agent也在跑，往后会把前沿模型审计常态化纳入开发流程。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "全文读完确认：讲清楚了用Claude Fable 5.1/GPT-5.6/GPT-6 Astra做代码安全审计的具体协作方法(拆分测试与修复、双人复核)，是可直接借鉴的AI辅助审计实操流程"
-        }
-      ]
-    },
-    {
       "person": "Latent Space",
       "title": "[AINews] not much happened today",
       "link": "https://www.latent.space/p/ainews-not-much-happened-today-d3b",
@@ -269,38 +317,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "汇总当日AI要闻：Anthropic披露Claude被误用于网络安全评估的严重事故并引入METR独立调查、OpenAI公布ChatGPT体验改进数据与GPT-5.6性能、Paul Christiano加入OpenAI安全委员会、“Defense Factory”防御性安全项目等，信息量大且讲清楚了为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RODEN] Writing in 2026, Walking Europe",
-      "link": "https://craigmod.com/roden/118/",
-      "date": "2026-09-10",
-      "source_type": "blog",
-      "summary": "Craig Mod在伦敦到挪威的旅途中，反思AI生成文本（他称之为“Claude Voice”）正让写作变得清晰易读却“无源可循”；他主张作家应深挖自己生活中与主流话语不重叠的部分，靠数万小时的输入与输出磨出独有声音，并强调不必技术恐惧，而是要主动拥抱怪异与个体性来对抗文本同质化。挪威徒步在文中更像一种对抗数字饱和的“最人类”活动隐喻。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "从写作实践角度探讨AI生成文本（Claude Voice）对原创声音的冲击，偏宏观叙事而非实操指南"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens (>$40M), a contender for second ever Millennium Prize awarded",
-      "link": "https://www.latent.space/p/ainews-openai-reports-navier-stokes",
-      "date": "2026-09-09",
-      "source_type": "blog",
-      "summary": "OpenAI披露解题细节：约1万个agent经一年多智能体强化学习训练协作，88小时内产出结果，耗费约130亿token（公开定价换算超4000万美元）。这条新闻盖过了同日Cognition 480亿融资、Mistral 240亿融资、Meta Muse agent发布等大新闻，业内视其为高算力范式的又一压力测试，但数学界尚未就正确性表态。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详述OpenAI用万级agent集群与130亿token攻克Navier-Stokes的技术细节与业界反应，压过同日多起大额融资新闻，趋势信息扎实"
         }
       ]
     }
