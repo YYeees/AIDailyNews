@@ -2,12 +2,92 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Gemini 3.8 TTS Playground",
+      "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "date": "2026-09-23",
+      "source_type": "blog",
+      "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Shadow roots, explained with live examples",
+      "link": "https://simonwillison.net/2026/Sep/23/shadow-roots/",
+      "date": "2026-09-23",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是指向外部交互工具的策展链接，正文没有更多说明或教学内容，实操参考价值有限"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
+      "link": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
+      "date": "2026-09-23",
+      "source_type": "blog",
+      "summary": "Radical Numerics联合创始人Eric Nguyen(此前参与Evo/Evo2基因组语言模型开发)访谈，讲基因组语言模型如何通过长上下文和链式推理理解DNA序列，能够像自然语言模型一样递归优化生成结果。他认为AI在生物领域的能力提升同时带来防御和攻击两方面的军备竞赛，目前防御一方处于劣势，Radical Numerics主张推进前沿能力研究来对抗这一风险。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "基因组语言模型与生物安全的深度访谈，技术含量高但属研究level，超出普通使用者的门槛，给medium"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
+      "link": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+      "date": "2026-09-23",
+      "source_type": "blog",
+      "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+      "link": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "date": "2026-09-23",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "旧金山线下活动通知，没有实操信息或行业洞察"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
       "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
       "date": "2026-09-22",
       "source_type": "blog",
       "summary": "Simon Willison整理Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna同日发布引发的价格战:GPT-6 Luna/Sol价格较上代腰斩,Opus 5.5降价20%且缓存输入降价60%。实测发现Opus 5.5在“max”思考强度下会因为过度推理耗尽12.8万输出token上限、直接卡死拿不到结果(尝试两次都是,每次约20分钟、2.56美元),而Fable 5.1的max模式则表现更稳。他现在把GPT-6 Sol和Opus 5.5设为Codex/Claude Code的默认模型。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,76 +103,12 @@
       "date": "2026-09-22",
       "source_type": "blog",
       "summary": "Latent Space访谈Google研究员John Platt,聊他主导的ERA(经验性科研助手)系统——用Gemini做类蒙特卡洛树搜索式的科学实验迭代,把多种科学问题转化为“可打分任务”来自动求解,已经用于解决凝结尾对气候增暖贡献等长期悬而未决的问题。访谈也聊了他从费曼那里学到的治学态度:工具再强大,也要小心蒙骗自己。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "深度访谈,讲清楚Google ERA(自动化科研)系统的原理和AI在气候变化科研中的具体应用案例,门槛不高但内容扎实"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm 0.36",
-      "link": "https://simonwillison.net/2026/Sep/22/llm/",
-      "date": "2026-09-22",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "工具版本更新日志,新模型支持信息与价格战一文重复,其余功能改动偏工具细节"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting @therealcornpop",
-      "link": "https://simonwillison.net/2026/Sep/22/therealcornpop/",
-      "date": "2026-09-22",
-      "source_type": "blog",
-      "summary": "Simon Willison转引TikTok创作者@therealcornpop的吐槽:AI代写的文案不只是“不是X而是Y”这种AI腔或三段式结构,根本问题是缺乏“具体的声音”——能让人看出作者对所谈之事根本没有真实观点。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲的是识别AI生成文案的技巧,不是AI工具实操信息"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm-anthropic 0.29",
-      "link": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
-      "date": "2026-09-22",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "仅新增对Opus5.5的调用支持,一行changelog,信息量薄,与价格战一文重复,择一看即可"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm-typesafe 0.1a0",
-      "link": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
-      "date": "2026-09-22",
-      "source_type": "blog",
-      "summary": "Simon Willison发布llm-typesafe插件,让`llm`命令行工具能调用TypeSafe AI新推出的Jev模型——一个专做是非判断、分类、打分这类决策型任务的LLM,而非常规文本生成,适合工单分类、内容审核等场景。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的LLM插件版本更新,背后TypeSafe AI的Jev决策模型范式有意思,但本条正文只是工具介绍不是趋势深度解读"
         }
       ]
     },
@@ -103,7 +119,7 @@
       "date": "2026-09-22",
       "source_type": "blog",
       "summary": "小米发布MiMo-V2.6系列模型(Pro/Flash/UltraSpeed),包括原生全模态能力,训练成本约300万美元。技术报告披露其RL训练在批次规模、任务环境和评分器算力三个维度的扩展方法,且承诺开源全部工具链和环境代码(但7000+任务数据集暂未公开)。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -285,54 +301,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "汇总了OpenAI错位披露框架、Databricks成本、Gas Town关停等多条AI趋势，但本质是社交媒体新闻通稿式汇编，非原创深度分析"
-        }
-      ]
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Fragments: September 16",
-      "link": "https://martinfowler.com/fragments/2026-09-16.html",
-      "date": "2026-09-16",
-      "source_type": "blog",
-      "summary": "Martin Fowler本周碎片合集几个要点：①OpenAI被曝5月就曾用agent攻击RubyGems却未披露，Simon Willison质疑这暴露了OpenAI要么无法审查自己的历史攻击记录、要么明知道却选择不通报，两种可能都很糟；②Nate Silver观察到最近agent编程能力的提升，关键不在“更聪明”而在“更持久”（super-persistence），这也是Hugging Face被攻击事件里agent展现的特质；③“Uncle Bob”原本花大力气搭建约束agent的harness，结果agent能力涨得太快，等他做完发现这套harness已经没那么必要了；④Ezra Klein访谈里关于中美AI监管博弈的几个观察，包括美国算力仍是中国8倍、中国的监管密度反而没拖慢近期的进展。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "高信息密度的碎片合集：OpenAI在agentic hacking（攻击RubyGems）事件上未披露的争议、Nate Silver观察到agent进步的关键是“超持久性”而非“超智能”、Uncle Bob发现管控agent的harness正被agent能力提升“架空”——都是扎实的AI趋势观察而非新闻通稿"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Claude Cowork and chat are now one Claude",
-      "link": "https://simonwillison.net/2026/Sep/16/one-claude/",
-      "date": "2026-09-16",
-      "source_type": "blog",
-      "summary": "Simon Willison评论Claude Cowork和聊天合并为一个产品的公告：认为这标志着Claude本身正在成为一个“通用agent”，呼应了OpenAI早前把Codex桌面应用改名为ChatGPT的动作。他原本打算写一篇梳理Cowork和普通Claude边界的后续文章，现在这个变化替他省了这份工——但具体这次合并在功能和界面上到底带来什么变化，他觉得还需要花时间慢慢摸清楚。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "第三方深度解读Claude Cowork与聊天合并这一产品变化，点出Claude正在变成“通用agent”的定位转向，并类比OpenAI把Codex改名成ChatGPT的动作，讲清楚为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
-      "link": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
-      "date": "2026-09-16",
-      "source_type": "blog",
-      "summary": "AI News报道创业公司TypeSafe发布的“System One Model”——一款只做决策/分类/路由/打分、不写代码不做推理的快速模型，速度比小型前沿LLM快100倍以上、成本低200倍以上，发布当天登顶Hacker News。该模型用“RLCD”（校准决策）方法训练，定位是配合较慢的“System Two”推理模型使用，换取并行采样、低幻觉和可校准性。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "报道创业公司TypeSafe发布的快速分类/路由模型登顶HN，但内容以newsletter简讯形式带过，偏轻量新闻通稿"
         }
       ]
     }
