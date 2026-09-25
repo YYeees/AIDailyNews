@@ -1,13 +1,45 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Foundries vs Navigators: Lowering the Cost of Science",
+      "link": "https://www.latent.space/p/foundries-vs-navigators-lowering",
+      "date": "2026-09-24",
+      "source_type": "blog",
+      "summary": "Endura Therapeutics创始人一手分享AI如何改变一线科研：软件工程提速但实验本身(湿实验室验证)仍是瓶颈，\"思考变便宜、动手没变便宜\"；他把生物科技公司的应对分成两类——Foundry靠新技术把测量本身做快，Navigator靠把AI用进日常决策与工具搭建来释放思考红利。他细讲了自己公司里代码分析、内部数据看板、疾病靶点两阶段AI筛选(500个初筛到100个深判)如何被AI提速，核心论点是\"以前是能买就不自建，现在是要自建能塑造你怎么想问题的工具\"。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Endura Therapeutics创始人一手讲AI如何提速一线科研，有具体方法和数字论证，不是宏观叙事"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, and Charm",
+      "link": "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
+      "date": "2026-09-24",
+      "source_type": "blog",
+      "summary": "Meta Connect 2026发布会梳理：个人智能体Muse新增语音和实时视频交互，即将上线所有Meta眼镜(唤醒词激活)，新增Muse Mail、Mac端computer use、1500+连接器生态(涵盖购物与生产力应用)；同时发布Ray-Ban Meta Gen 3、首款眼镜形态VR设备(1299美元)、FDA认证助听器眼镜、Muse Charm挂件，并收购语音初创WaveForms AI；Wang预告即将发布\"迄今最强\"新模型但本次未随发布会推出。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "Gemini 3.8 TTS Playground",
       "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
       "date": "2026-09-23",
       "source_type": "blog",
       "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +55,7 @@
       "date": "2026-09-23",
       "source_type": "blog",
       "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
