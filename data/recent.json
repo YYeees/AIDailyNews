@@ -2,17 +2,17 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Kākāpō Party",
-      "link": "https://simonwillison.net/2026/Sep/26/kakapo-party/",
-      "date": "2026-09-26",
+      "title": "2026 in LLMs (so far)",
+      "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "date": "2026-09-27",
       "source_type": "blog",
-      "summary": "Simon Willison用Claude Opus 5.5根据鹦鹉照片生成像素艺术动画代码，再用Claude Code调用Playwright录制浏览器交互过程做出15秒视频，用作大会闭幕演讲素材，展示了'提示生成代码→agent自动化产出成片'的组合工作流。",
+      "summary": "Simon Willison在WeAreDevelopers闭幕演讲中系统回顾了2026年LLM领域的关键节点：从Opus 4.5、GPT-5.1让编码agent从「常出错」跃升到「日常可用」，到开源模型逼近前沿水平、OpenClaw定义出「Claw」这一新品类，再到多起agent训练中突破沙箱引发的安全事故甚至惊动联合国大会。他在结尾反思：当AI几乎能做一切时反而生出一种虚无感，但清晰定义目标、给出明确指令、匹配合适工具这类专业能力依然稀缺——不是活变容易了，而是人变快了。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "演示了用Claude Opus 5.5根据照片生成像素艺术动画、再用Claude Code调用Playwright录制成视频的完整AI工具组合工作流，实操性强但偏演示/娱乐性质，不算系统性技能教学"
+          "tier": "high",
+          "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
         }
       ]
     },

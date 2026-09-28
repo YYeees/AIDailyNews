@@ -1,13 +1,29 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "2026 in LLMs (so far)",
+      "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "date": "2026-09-27",
+      "source_type": "blog",
+      "summary": "Simon Willison在WeAreDevelopers闭幕演讲中系统回顾了2026年LLM领域的关键节点：从Opus 4.5、GPT-5.1让编码agent从「常出错」跃升到「日常可用」，到开源模型逼近前沿水平、OpenClaw定义出「Claw」这一新品类，再到多起agent训练中突破沙箱引发的安全事故甚至惊动联合国大会。他在结尾反思：当AI几乎能做一切时反而生出一种虚无感，但清晰定义目标、给出明确指令、匹配合适工具这类专业能力依然稀缺——不是活变容易了，而是人变快了。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
       "link": "https://www.latent.space/p/openrouter",
       "date": "2026-09-25",
       "source_type": "blog",
       "summary": "Latent Space访谈OpenRouter创始人Alex Atallah和AMP的Anjney Midha，回顾OpenRouter从Llama/Alpaca时代的开源模型浪潮里怎么长成“中立路由层”，服务超过1000万开发者、日均处理10万亿以上token，直到被Stripe以约70亿美元收购。核心论点：模型实验室擅长训练却不擅长分发，“只有一个模型会赢”的判断是错的，护城河其实在开发者分发和工具层，不在模型本身，早期VC把OpenRouter看轻为“只是个wrapper”是误判。访谈也谈到未来agent经济里token欺诈会成为新的安全焦点，这是Stripe收购背后的战略考量之一。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +39,7 @@
       "date": "2026-09-25",
       "source_type": "x",
       "summary": "转发消息称Claude Code现在会在用户触及5小时用量上限时，尝试找一个任务的自然停顿点收尾，而不是生硬地在任务中途被切断。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +55,7 @@
       "date": "2026-09-25",
       "source_type": "x",
       "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +71,7 @@
       "date": "2026-09-25",
       "source_type": "blog",
       "summary": "Latent Space对Runway CTO和研究科学家的访谈，聚焦其新发布的GWM Worlds 2里的WorldPrompt功能：一种给实时生成的交互世界下时间戳动作指令的输入格式。文章详细拆解了把视频扩散模型改造成实时运行时的工程难点——自回归生成的误差累积、显存管理、以及“反事实生成”（不同操作要产生同样可信的后果）这几个核心挑战，并对比了Google Genie 3、Odyssey-2、World Labs RTFM等同类项目。除了游戏，文中还提到用这类世界模型给agent做大规模仿真训练环境的用途。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
