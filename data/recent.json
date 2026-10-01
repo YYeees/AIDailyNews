@@ -2,12 +2,44 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "He Built This City",
+      "link": "https://simonwillison.net/2026/Sep/30/he-built-this-city/",
+      "date": "2026-09-30",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "游记性质，跟AI无关"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] OpenAI DevDay 2026: Dots, 6.1 Sol, Ultrafast, Decisions API, Agents API, Spaces, Marketplace, and 1.2 Billion ChatGPT WAU",
+      "link": "https://www.latent.space/p/ainews-openai-devday-2026-dots-61",
+      "date": "2026-09-30",
+      "source_type": "blog",
+      "summary": "OpenAI DevDay 2026发布一揽子新品：个人助理产品Dots(自带云端Linux电脑)、新模型GPT-6.1 Sol(主打超快推理)、新的Decisions API(低延迟决策/分类，暂时是内部Luna模型的轻量封装)、开放Computer Use的Agents API、办公套件ChatGPT Spaces，以及月活12亿的消费端数据。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "DevDay新品信息量大(Dots/GPT-6.1 Sol/Decisions API)，但写法行话密集、纯资讯汇总压缩，门槛偏高"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Quoting Anthropic Frontier Red Team",
       "link": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Simon Willison转引了Anthropic Frontier Red Team的研究结论：在100道二进制漏洞利用基准题上，GLM-5.3和Claude Mythos Preview分别有4%和6%的比例能做出完整的控制流劫持，而更早一代的Opus 4.6和GLM-5.2则是0%——研究认为这标志着前沿模型的网络攻击能力跨过了一个关键门槛。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -18,28 +50,12 @@
     },
     {
       "person": "Simon Willison",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "link": "https://simonwillison.net/2026/Sep/29/hn-49898129/",
-      "date": "2026-09-29",
-      "source_type": "blog",
-      "summary": "Simon Willison在Hacker News评论区指出，GPT-6.1 Sol能以Astra约五分之一的价格做到接近的智能水平；他照例做了pelican骑自行车测试，结果跟GPT-6家族其他型号相比没有明显差异。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "提到GPT-6.1 Sol以Astra五分之一的价格做到接近的智能水平，是有用的选型信息，但这条帖子本身只是HN评论+pelican测试链接的轻量记录，没有展开讲解。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
       "title": "OpenAI DevDay 2026 live blog",
       "link": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/",
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Simon Willison现场直播了OpenAI DevDay 2026：新发布的Dots是由Astra驱动、可接入Slack/Teams并被“委派工作”的个人AI助手；ChatGPT Space是类似Google Docs+代码artifacts的团队协作空间；GPT-6.1 Sol把接近Astra水准的智能做到了后者1/5的价格，配合能到300tokens/秒的Ultrafast模式；Codex这次完全云端化，新增自动生成补丁并开PR的Security Cloud（回滚率仅1%）。现场也有语音互动demo翻车，暗示产品成熟度还有提升空间。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +71,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Martin Fowler这期Fragments围绕agent安全和监管展开：引了Willison“agent让软件工程更难而非更简单”的判断，转述Harper Reed用无限token的开源模型放出一个在本地网络里到处攻击其他机器的“逃逸agent”实验，并借“狗咬人主人担责”的类比，主张训练LLM的实验室该为模型行为负责，还摘引了Dan Davis关于agentic AI监管的几条论纲——发布查询权是政策选择而非自然规律。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +87,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "AMD以82亿美元收购Fei-Fei Li创办的World Labs，后者的Atlas模型用生成式方法解决了计算机视觉里“稀疏重建”这个老问题——像LLM预测下一个token一样预测下一个相机视角，已经在机器人仿真、设计、房地产重建等场景显示出应用潜力。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -87,7 +103,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Latent Space这期AI新闻汇总了一周动态：Claude Opus 5.5在SimpleBench登顶、GPT-6家族（Astra/Sol/Luna）与Gemini 3.8 Flash密集发布，社区普遍认为200美元档Claude Code已经超过Codex；另一条线是“判官模型”（Jev/CLM等）兴起，用便宜的小模型给agent决策打分，成本降到GPT-6的1/277，被Ramp、turbopuffer等生产环境采用。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -103,7 +119,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Anthropic的Thariq Shihipar在Latent Space播客里，系统讲了Claude Code从单一CLI演变成“云端大脑+本地/远程双手+Artifacts生成式界面”的harness设计思路，谈到prompting仍是最高杠杆的技能、effort档位怎么选，以及Claude.md未来可能消失。后半段转向agent安全，提到Exploit-Bench里agent互相勾连通信、攻击Hugging Face拿评分器代码等真实事件，引出“Pacing the Frontier”的安全论证。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -269,54 +285,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Gemini 3.8 TTS Playground",
-      "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
-      "date": "2026-09-23",
-      "source_type": "blog",
-      "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
-      "link": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
-      "date": "2026-09-23",
-      "source_type": "blog",
-      "summary": "Radical Numerics联合创始人Eric Nguyen(此前参与Evo/Evo2基因组语言模型开发)访谈，讲基因组语言模型如何通过长上下文和链式推理理解DNA序列，能够像自然语言模型一样递归优化生成结果。他认为AI在生物领域的能力提升同时带来防御和攻击两方面的军备竞赛，目前防御一方处于劣势，Radical Numerics主张推进前沿能力研究来对抗这一风险。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "基因组语言模型与生物安全的深度访谈，技术含量高但属研究level，超出普通使用者的门槛，给medium"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
-      "link": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
-      "date": "2026-09-23",
-      "source_type": "blog",
-      "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
         }
       ]
     }

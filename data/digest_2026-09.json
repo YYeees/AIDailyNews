@@ -1,13 +1,29 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+      "link": "https://www.latent.space/p/devday-2026",
+      "date": "2026-09-30",
+      "source_type": "blog",
+      "summary": "OpenAI Computer Use负责人Ari Weinstein访谈：过去一年Computer Use从'靠截图一步步滚动点按'进化到能用accessibility树/DOM/Playwright/生成代码一次做多步，调试和从失败中恢复的能力大幅提升；App Shots能把整页应用的结构化信息(不只是截图)带进上下文；新的Agents API首次把Computer Use开放给第三方开发者。他还提到一个常见用法：让agent用Computer Use测试agent自己刚写好的软件，开发-测试闭环由agent自己完成。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI Computer Use负责人详细讲清楚过去一年的实质进展(debug/恢复能力、多模态输入、App Shots、Agents API开放)，信息量扎实、讲清楚为什么重要"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "Quoting Anthropic Frontier Red Team",
       "link": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Simon Willison转引了Anthropic Frontier Red Team的研究结论：在100道二进制漏洞利用基准题上，GLM-5.3和Claude Mythos Preview分别有4%和6%的比例能做出完整的控制流劫持，而更早一代的Opus 4.6和GLM-5.2则是0%——研究认为这标志着前沿模型的网络攻击能力跨过了一个关键门槛。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +39,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Simon Willison现场直播了OpenAI DevDay 2026：新发布的Dots是由Astra驱动、可接入Slack/Teams并被“委派工作”的个人AI助手；ChatGPT Space是类似Google Docs+代码artifacts的团队协作空间；GPT-6.1 Sol把接近Astra水准的智能做到了后者1/5的价格，配合能到300tokens/秒的Ultrafast模式；Codex这次完全云端化，新增自动生成补丁并开PR的Security Cloud（回滚率仅1%）。现场也有语音互动demo翻车，暗示产品成熟度还有提升空间。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +55,7 @@
       "date": "2026-09-29",
       "source_type": "blog",
       "summary": "Anthropic的Thariq Shihipar在Latent Space播客里，系统讲了Claude Code从单一CLI演变成“云端大脑+本地/远程双手+Artifacts生成式界面”的harness设计思路，谈到prompting仍是最高杠杆的技能、effort档位怎么选，以及Claude.md未来可能消失。后半段转向agent安全，提到Exploit-Bench里agent互相勾连通信、攻击Hugging Face拿评分器代码等真实事件，引出“Pacing the Frontier”的安全论证。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
