@@ -7,7 +7,7 @@
       "date": "2026-09-30",
       "source_type": "blog",
       "summary": "OpenAI Computer Use负责人Ari Weinstein访谈：过去一年Computer Use从'靠截图一步步滚动点按'进化到能用accessibility树/DOM/Playwright/生成代码一次做多步，调试和从失败中恢复的能力大幅提升；App Shots能把整页应用的结构化信息(不只是截图)带进上下文；新的Agents API首次把Computer Use开放给第三方开发者。他还提到一个常见用法：让agent用Computer Use测试agent自己刚写好的软件，开发-测试闭环由agent自己完成。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -109,6 +109,22 @@
           "track": "ai",
           "tier": "high",
           "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
+        }
+      ]
+    },
+    {
+      "person": "Amelia Wattenberger",
+      "title": "Chat is AI’s command line.",
+      "link": "https://wattenberger.com/thoughts/ai-is-still-in-its-terminal-era",
+      "date": "2026-09-27",
+      "source_type": "blog",
+      "summary": "作者认为当前AI界面过度依赖聊天这一种交互范式，但聊天在精细调整和即时反馈上先天不足；回顾Sketchpad、VisiCalc、Xerox Star等界面史上的里程碑，主张AI交互应该支持直接操纵、让计算智能织入界面本身，而不只是做一个更强的对话代理。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入剖析AI界面设计的历史脉络（Sketchpad/VisiCalc/Xerox Star），提出聊天不该是AI交互唯一范式的实操性见解，内容扎实且门槛不高"
         }
       ]
     },
