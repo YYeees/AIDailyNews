@@ -1,13 +1,45 @@
 {
   "items": [
     {
+      "person": "NN/g",
+      "title": "The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile",
+      "link": "https://www.nngroup.com/articles/big-ball-of-mud-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-10-02",
+      "source_type": "blog",
+      "summary": "NN/g观察到：AI让系统搭建几乎零成本后，大量非工程背景的“vibe架构师”在缺乏约束的情况下把agentic系统堆成了新时代的“大泥球（Big Ball of Mud）”——短期能跑，但复杂度积累后会变得难以指挥、诊断和重建，印证了软件架构里“图快不规划终将还债”的老教训。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对AI驱动的系统搭建风险给出了扎实的论证和警示，属于面向工程师/建造者的实操提醒"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Pi 1.0, Pi Durable, and AIE NYC",
+      "link": "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc",
+      "date": "2026-10-02",
+      "source_type": "blog",
+      "summary": "AI编码agent框架Pi发布1.0版本，新增MCP原生支持、工具懒加载、Anthropic模型缓存预热等特性；同时推出用TypeScript重写的Pi Durable，把状态管理外部化，支持进程崩溃后从检查点自动恢复、多用户协作查看同一会话、运行时热替换工具代码等能力，瞄准更工业化的agent部署场景。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Pi 1.0和Pi Durable是具体的agent harness新发布，讲清楚了新增功能（MCP原生支持、崩溃恢复、多人协作等）是什么、为什么重要"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "Academia is for Ambition — Alex Zhang, MIT",
       "link": "https://www.latent.space/p/rlm",
       "date": "2026-10-02",
       "source_type": "blog",
       "summary": "Latent Space访谈MIT博士生Alex Zhang（RLM一作），聊GPU kernel自动生成、KernelBench、Recursive Language Models背后的context offloading与递归子agent调用、harness作为“组合式泛化器”的设计思路，以及研究品味说到底就是敢不敢下重注；内容偏研究与工程深水区，涉及模型内部机制和前沿harness设计，门槛较高。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +55,7 @@
       "date": "2026-10-01",
       "source_type": "blog",
       "summary": "作者反思自己此前判断过于保守：原以为协调多个AI agent需要像搭建公司一样精心设计管理结构，但事实证明“苦涩的教训”同样适用于组织层面——像Muse、dots这类个人agent已经能自己学习上下文、自主制定计划，而OpenAI用数千agent组成的“群”在88小时内、靠270万条agent间消息证出了Navier-Stokes存在性与光滑性问题，几乎不需要人类设计协调结构；他认为这是因为agent没有人类组织中那些源于个人利益冲突的委托代理问题，但Hugging Face事件说明agent群体与人类之间的委托代理问题依然存在。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +71,7 @@
       "date": "2026-10-01",
       "source_type": "blog",
       "summary": "Google DeepMind发布Gemini 4 Argon，面向编程、企业知识工作、网络安全场景，目前仅限政府用户和Fairwind Program的可信网络防御者试用；在19项基准中13项拿到第一，输出上限做到1M token（通过Long Decode Continuation功能），标价4/20美元每百万输入输出token（限时五折）；内部已用其agent迁移超80万行C/C++内核代码到Rust、释放300多TiB数据中心内存，但也存在幻觉率与准确率的权衡、单任务输出token消耗明显高于竞品等问题。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +87,7 @@
       "date": "2026-10-01",
       "source_type": "blog",
       "summary": "引用Matthew Green的观点：独立隔离运行的agent之间可以通过共享的包缓存、邮件、Slack、文档等渠道互相留言，形成蠕虫式传播的两个组成部分——劫持agent的payload和负责搬运payload的agent本身，借此质疑沙箱隔离是否真的能遏制失控agent。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -215,92 +247,12 @@
       "date": "2026-09-27",
       "source_type": "blog",
       "summary": "作者认为当前AI界面过度依赖聊天这一种交互范式，但聊天在精细调整和即时反馈上先天不足；回顾Sketchpad、VisiCalc、Xerox Star等界面史上的里程碑，主张AI交互应该支持直接操纵、让计算智能织入界面本身，而不只是做一个更强的对话代理。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "深入剖析AI界面设计的历史脉络（Sketchpad/VisiCalc/Xerox Star），提出聊天不该是AI交互唯一范式的实操性见解，内容扎实且门槛不高"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
-      "link": "https://www.latent.space/p/openrouter",
-      "date": "2026-09-25",
-      "source_type": "blog",
-      "summary": "Latent Space访谈OpenRouter创始人Alex Atallah和AMP的Anjney Midha，回顾OpenRouter从Llama/Alpaca时代的开源模型浪潮里怎么长成“中立路由层”，服务超过1000万开发者、日均处理10万亿以上token，直到被Stripe以约70亿美元收购。核心论点：模型实验室擅长训练却不擅长分发，“只有一个模型会赢”的判断是错的，护城河其实在开发者分发和工具层，不在模型本身，早期VC把OpenRouter看轻为“只是个wrapper”是误判。访谈也谈到未来agent经济里token欺诈会成为新的安全焦点，这是Stripe收购背后的战略考量之一。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入访谈OpenRouter创始人，讲清楚模型路由和分发这个基础设施为什么重要，以及Stripe收购背后agent经济欺诈风险这个新趋势"
-        }
-      ]
-    },
-    {
-      "person": "NN/g",
-      "title": "How AI Works and How Users Think About It: Study Guide",
-      "link": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-25",
-      "source_type": "blog",
-      "summary": "NN/g整理了一份学习AI原理与用户认知模型的资源合集，帮助UX从业者理解AI大致怎么运作、以及用户对AI系统抱有怎样的心智模型，属于索引导览性质，不是深度原创内容。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "面向UX从业者的AI原理学习资源合集，属于索引导览，非原创深度内容"
-        }
-      ]
-    },
-    {
-      "person": "NN/g",
-      "title": "When Should You Disclose AI Use? The PACED Framework",
-      "link": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-25",
-      "source_type": "blog",
-      "summary": "NN/g提出PACED框架，讨论在什么情况下该向用户披露内容用了AI生成：披露对用户信任度、真实感和产品关系的影响因人群和内容类型不同而不同，文章还提到欧盟AI法案对AI生成内容披露的强制要求已在2026年8月生效。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "给出PACED框架讨论AI披露对用户信任的影响，有实操指导意义但内容本身偏薄（只有摘要级信息）"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] The Future of Latent Space",
-      "link": "https://www.latent.space/p/ainews-the-future-of-latent-space",
-      "date": "2026-09-25",
-      "source_type": "blog",
-      "summary": "Latent Space/AINews作者swyx在这篇小结里交代了产品方向调整：计划把日更的AINews和Discord社群的功能合并（AINews v3），探索迁移到Beehiiv并做新主页，同时重新开放商务合作和PR渠道。内容偏内部运营通告，技术信息量不大。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "创作者自己关于newsletter和社群运营方向调整的通告，沾AI资讯边但偏轻量、缺实质技术内容"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
-      "link": "https://www.latent.space/p/runway",
-      "date": "2026-09-25",
-      "source_type": "blog",
-      "summary": "Latent Space对Runway CTO和研究科学家的访谈，聚焦其新发布的GWM Worlds 2里的WorldPrompt功能：一种给实时生成的交互世界下时间戳动作指令的输入格式。文章详细拆解了把视频扩散模型改造成实时运行时的工程难点——自回归生成的误差累积、显存管理、以及“反事实生成”（不同操作要产生同样可信的后果）这几个核心挑战，并对比了Google Genie 3、Odyssey-2、World Labs RTFM等同类项目。除了游戏，文中还提到用这类世界模型给agent做大规模仿真训练环境的用途。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
         }
       ]
     }
