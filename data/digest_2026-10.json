@@ -1,13 +1,29 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "date": "2026-10-03",
+      "source_type": "blog",
+      "summary": "Simon Willison呼吁付费API和托管服务应默认提供硬性预算上限——超支直接报错断服务，而不是只发警告邮件，因为编码agent和个人agent让人更容易在无人盯着的情况下跑出失控账单。他指出AWS九月、Google Cloud七月都已经上线了类似的硬性支出上限功能，认为这应该成为行业默认，想不设上限的人应该主动勾选opt-in，而不是让意外账单成为默认风险。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
+        }
+      ]
+    },
+    {
       "person": "NN/g",
       "title": "The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile",
       "link": "https://www.nngroup.com/articles/big-ball-of-mud-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
       "date": "2026-10-02",
       "source_type": "blog",
       "summary": "NN/g观察到：AI让系统搭建几乎零成本后，大量非工程背景的“vibe架构师”在缺乏约束的情况下把agentic系统堆成了新时代的“大泥球（Big Ball of Mud）”——短期能跑，但复杂度积累后会变得难以指挥、诊断和重建，印证了软件架构里“图快不规划终将还债”的老教训。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +39,7 @@
       "date": "2026-10-02",
       "source_type": "blog",
       "summary": "Airbnb CTO Ahmad Al-Dahle（原Meta生成式AI负责人）详述公司“inside-out AI”转型：60%代码由AI生成，人均PR产出提升约1.6倍；客服工单约一半由AI独立解决，上线前用大量合成数据反复测试打磨；内部知识图谱Everest让新业务从数月缩短到六周上线；并开始让agent自动化on-call排查。他也强调即使AI写了代码，工程师仍必须能解释清楚系统是怎么运作的，否则初级工程师的架构判断力和测试素养会被掏空。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +55,7 @@
       "date": "2026-10-02",
       "source_type": "blog",
       "summary": "AI编码agent框架Pi发布1.0版本，新增MCP原生支持、工具懒加载、Anthropic模型缓存预热等特性；同时推出用TypeScript重写的Pi Durable，把状态管理外部化，支持进程崩溃后从检查点自动恢复、多用户协作查看同一会话、运行时热替换工具代码等能力，瞄准更工业化的agent部署场景。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
