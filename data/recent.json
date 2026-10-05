@@ -7,28 +7,12 @@
       "date": "2026-10-03",
       "source_type": "blog",
       "summary": "Simon Willison呼吁付费API和托管服务应默认提供硬性预算上限——超支直接报错断服务，而不是只发警告邮件，因为编码agent和个人agent让人更容易在无人盯着的情况下跑出失控账单。他指出AWS九月、Google Cloud七月都已经上线了类似的硬性支出上限功能，认为这应该成为行业默认，想不设上限的人应该主动勾选opt-in，而不是让意外账单成为默认风险。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "September sponsors-only newsletter",
-      "link": "https://simonwillison.net/2026/Oct/3/newsletter/",
-      "date": "2026-10-03",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "只是付费订阅newsletter的发刊通知，实际内容在付费墙后面看不到，罗列的topic都只是标题"
         }
       ]
     },
@@ -39,7 +23,7 @@
       "date": "2026-10-03",
       "source_type": "blog",
       "summary": "这期AINews汇编了10月1-2日AI圈动态：OpenAI新发布的GPT-6.1 Sol主打性价比(比GPT-6 Sol便宜39%但分数更高，比Astra便宜81%)；Anthropic的Sonnet 5.5在Agent Arena排名第3、Chat类目第1，目前Anthropic系模型包揽Agent Arena前三；Gemini 4 Argon拿下Text Arena第一。另有多条模型发布的未证实传闻(Fable 5.5、GPT-6 Astra Lite)，以及本地小模型(webAI TwIL-LM3-Pro、Reka RIDM等)和开源决策模型生态的进展。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -269,22 +253,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿模型新发布，讲清楚性能提升、定价策略、免费层布局和实测对比，属于典型的AI趋势+实操信息"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "2026 in LLMs (so far)",
-      "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
-      "date": "2026-09-27",
-      "source_type": "blog",
-      "summary": "Simon Willison在WeAreDevelopers闭幕演讲中系统回顾了2026年LLM领域的关键节点：从Opus 4.5、GPT-5.1让编码agent从「常出错」跃升到「日常可用」，到开源模型逼近前沿水平、OpenClaw定义出「Claw」这一新品类，再到多起agent训练中突破沙箱引发的安全事故甚至惊动联合国大会。他在结尾反思：当AI几乎能做一切时反而生出一种虚无感，但清晰定义目标、给出明确指令、匹配合适工具这类专业能力依然稀缺——不是活变容易了，而是人变快了。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
         }
       ]
     }
