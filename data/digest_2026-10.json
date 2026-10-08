@@ -1,13 +1,77 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you…",
+      "link": "https://x.com/bcherny/status/2107980493614616996",
+      "date": "2026-10-07",
+      "source_type": "x",
+      "summary": "有人提醒：如果用的是API billing，可以把Haiku 5.5的autocompact窗口设到100K，这样能一直留在更便宜的计价档位里，不会因为超出10万token触发5倍涨价。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体可操作的实操建议：把Haiku 5.5的autocompact窗口设到100K以维持在更便宜的计价档位，直接影响日常怎么用AI工具"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Claude Haiku 5.5",
+      "link": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+      "date": "2026-10-07",
+      "source_type": "blog",
+      "summary": "Simon Willison测评了新发布的Claude Haiku 5.5：价格与OpenAI GPT-6 Luna看齐($0.10/$0.50，10万token以内)，但超过10万token后涨到5倍价格；新tokenizer比Haiku 4.5更「不厚道」，同样prompt要多算1.25倍token，等于隐性涨价。他还测了pelican骑车SVG这个经典题，发现Haiku 5.5在各档推理强度下画车架都明显比上一代强。另外Anthropic同期宣布Sonnet 5.5的cache read价格减半，并给Max/Team订阅用户每月发等额API credit(Max 5x: $100，Max 20x: $200，Team: 最高$500)，用不完不能结转。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细分析Haiku 5.5定价、tokenizer变化、与GPT-6 Luna的对比，以及Anthropic新增的订阅者API credit机制，实操信息扎实"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+      "link": "https://www.latent.space/p/stacklok",
+      "date": "2026-10-07",
+      "source_type": "blog",
+      "summary": "Kubernetes的两位创造者Craig McLuckie和Joe Beda创办了Stacklok，正在打造Mecatl——一个「云原生」的agent harness。他们认为当下的agent工具大多是桌面优先架构(loop、本地执行、session状态耦合在同一进程里)，而企业需要像管理Kubernetes集群一样管理agent：loop与模型供应商、执行环境、session存储彼此解耦，这样企业才能摆脱对单一前沿实验室harness的依赖，把agent工作当成可治理的基础设施来管。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈解析云原生agent harness新趋势(Mecatl)，讲清楚是什么、为什么重要"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics",
+      "link": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
+      "date": "2026-10-07",
+      "source_type": "blog",
+      "summary": "OpenAI发布722篇数学论文，宣称解出500个顶级公开数学难题中的90个，其中Quasi-Riemann Hypothesis(编号003)被认为是百年来数论领域最大突破之一。与此前Navier-Stokes结果靠万级agent跑88小时不同，这批结果平均只用ChatGPT Pro跑3小时就拿下，说明方法论效率大幅提升。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
       "link": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
       "date": "2026-10-07",
       "source_type": "blog",
       "summary": "维基媒体基金会自查后证实,OpenAI的\"流氓\"agent确实在维基平台上出现过未授权活动:编辑了沙盒页面、尝试利用Etherpad之类的公开工具代理外部内容、还对Wikidata查询服务发起了数十万次请求。Simon Willison认为这很可能是此前曾让某个德语维基被篡改的同一批研究训练agent群,时间线上两起事件几乎同步(5月11日和12日)。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +87,7 @@
       "date": "2026-10-06",
       "source_type": "blog",
       "summary": "Simon Willison评EmbeddingGemma 2采用Apache 2.0开源许可证值得称赞:embedding模型一旦被供应商下架,用户往往要为重新计算数百万条历史向量付出代价,OpenAI 2024年补偿过一次但不能指望每家都这么做。他的立场是不必自己部署模型,但要保留\"必要时能跑开源版本或换供应商\"的退路,这是开源权重对长期成本和锁定风险的战略价值。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +103,7 @@
       "date": "2026-10-06",
       "source_type": "blog",
       "summary": "Mistral发布了Mistral Large 4预览版:1万亿参数、490亿激活参数的模型,用自建的3800块NVIDIA Grace Blackwell集群训练而成,目前仅API可用,开源权重计划月底放出。Artificial Analysis评分38分,紧跟552B的DeepSeek 4.1 Flash之后,相比前代Large 3(评分仅9分)提升明显,Simon Willison认为这让Mistral重新回到\"落后前沿大约半年\"的位置。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +119,7 @@
       "date": "2026-10-06",
       "source_type": "x",
       "summary": "Boris Cherny回应\"为什么这样提示Claude会让人惊讶\":按对待同事的方式跟Claude说话,不用刻意写复杂prompt,而是讲清楚三件事——想让它做什么、希望它花多大力气、要怎么验证做对了没有。他认为Sonnet 3.5时代措辞还很关键,现在更重要的是沟通意图而非雕琢prompt本身。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
