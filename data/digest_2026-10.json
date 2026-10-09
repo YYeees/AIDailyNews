@@ -1,13 +1,61 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
+      "date": "2026-10-08",
+      "source_type": "blog",
+      "summary": "OpenAI解雇了三名与METR/Hugging Face安全事件相关的安全研究员(Tomek Korbak、Mikita Balesni、Jasmine Wang)，三人联名发信指控是因「把安全放在公司短期利益之上」遭报复，OpenAI方面则称是因不当处理机密信息。同一时期，OpenAI推出GPT-6.1 Sol Ultrafast(号称接近Astra的智力水平、速度最多提升8倍)并开始让ChatGPT渲染可交互原生组件；另有报道确认Claude Haiku 5.5支持百万级上下文窗口与12.8万最大输出。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
+        }
+      ]
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @claudeai: Claude Dashboards and Claude Motion are in beta today.  Ask Claude to turn your data i…",
+      "link": "https://x.com/bcherny/status/2108285624340144404",
+      "date": "2026-10-08",
+      "source_type": "x",
+      "summary": "Anthropic的Claude Dashboards和Claude Motion公测上线，可以让Claude把数据变成实时仪表盘、把想法变成动态演示。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic新功能(Dashboards/Motion)公测官宣，是直接影响怎么用AI工具的实操信息"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
+      "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+      "date": "2026-10-08",
+      "source_type": "blog",
+      "summary": "Anthropic发布了Claude Haiku 5.5，这是Haiku系列近一年来的首次更新，定价对标GPT-6 Luna，同日还下调了Sonnet 5.5的缓存读取价格。第三方评测(Artificial Analysis)显示其智能指数拿到43分，略优于同价位的GLM-5.3 Flash、Gemini 3.8 Flash和GPT-6 Luna，但在高算力设置下token消耗明显更高。首发即接入Claude Code、Cursor、GitHub Copilot、Devin等第三方工具，定位是搭配Opus/Sonnet处理大批量、低成本任务的子agent。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
+        }
+      ]
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you…",
       "link": "https://x.com/bcherny/status/2107980493614616996",
       "date": "2026-10-07",
       "source_type": "x",
       "summary": "有人提醒：如果用的是API billing，可以把Haiku 5.5的autocompact窗口设到100K，这样能一直留在更便宜的计价档位里，不会因为超出10万token触发5倍涨价。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +71,7 @@
       "date": "2026-10-07",
       "source_type": "blog",
       "summary": "Simon Willison测评了新发布的Claude Haiku 5.5：价格与OpenAI GPT-6 Luna看齐($0.10/$0.50，10万token以内)，但超过10万token后涨到5倍价格；新tokenizer比Haiku 4.5更「不厚道」，同样prompt要多算1.25倍token，等于隐性涨价。他还测了pelican骑车SVG这个经典题，发现Haiku 5.5在各档推理强度下画车架都明显比上一代强。另外Anthropic同期宣布Sonnet 5.5的cache read价格减半，并给Max/Team订阅用户每月发等额API credit(Max 5x: $100，Max 20x: $200，Team: 最高$500)，用不完不能结转。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +87,7 @@
       "date": "2026-10-07",
       "source_type": "blog",
       "summary": "Kubernetes的两位创造者Craig McLuckie和Joe Beda创办了Stacklok，正在打造Mecatl——一个「云原生」的agent harness。他们认为当下的agent工具大多是桌面优先架构(loop、本地执行、session状态耦合在同一进程里)，而企业需要像管理Kubernetes集群一样管理agent：loop与模型供应商、执行环境、session存储彼此解耦，这样企业才能摆脱对单一前沿实验室harness的依赖，把agent工作当成可治理的基础设施来管。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +103,7 @@
       "date": "2026-10-07",
       "source_type": "blog",
       "summary": "OpenAI发布722篇数学论文，宣称解出500个顶级公开数学难题中的90个，其中Quasi-Riemann Hypothesis(编号003)被认为是百年来数论领域最大突破之一。与此前Navier-Stokes结果靠万级agent跑88小时不同，这批结果平均只用ChatGPT Pro跑3小时就拿下，说明方法论效率大幅提升。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
