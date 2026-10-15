@@ -1,13 +1,93 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+      "link": "https://www.latent.space/p/crossing-the-threshold",
+      "date": "2026-10-14",
+      "source_type": "blog",
+      "summary": "AI Engineer NYC上，OpenAI/Anthropic/Two Sigma/Bloomberg都在讲同一件事：金融agent的自主权要靠'管控放在哪'而不是'限制有多少'来保安全。OpenAI讲'可用性阈值'；Two Sigma用可组合的guardrails+自动分类器把琐碎决策和重要决策分流，避免审批疲劳；Anthropic强调给agent建身份/权限层、让它只能'提议'不能直接'执行'；Bloomberg主张把安全检查放在模型外部(作用域凭证、工具调用管控、出站流量限制、审计、kill switch)。核心一句话：装刹车是为了能更快地跑。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体讲清楚金融agent自主权与安全管控的架构模式(guardrails/trust layer/人在回路设计)，对理解怎么构建安全的agent系统有直接实操价值。"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Tree Appreciator",
+      "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
+      "date": "2026-10-14",
+      "source_type": "blog",
+      "summary": "Simon Willison用Claude iPhone App(非Claude Code)让Opus 5.5 Max做了个three.js找不同小游戏'Tree Appreciator'：两棵算法生成的树找差异，带配乐和成就系统。他提到只告诉模型'make sure it is fun'这句话效果出乎意料地好，模型跑了3小时7分钟才交付，成品相当耐玩——是vibe coding娱乐性产出的一个样本。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏娱乐/演示性质(vibe coding小游戏)，符合medium里显式列出的那条。"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+      "link": "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
+      "date": "2026-10-14",
+      "source_type": "blog",
+      "summary": "Latent Space访谈Leash Bio的Ian Quigley：DNA编码库(DEL)数据又脏又难搞，Leash靠给每个分子打多重barcode等方法把它清洗成可复现的大规模数据；团队还发现'造分子的化学家是谁'本身就能预测活性(Clever Hans效应)。这些数据现在喂给了Minos——一个让AI agent像化学家一样推理、在650万分子里找最佳结合物的科学推理playground，刚发了预印本和开放数据集。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI x Bio科研场景的深度访谈，需要生物化学背景才看得懂门道，按用户水平爬坡超出，归medium不给high。"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "AI is mass decompiling games. That's both awesome and scary.",
+      "link": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
+      "date": "2026-10-14",
+      "source_type": "blog",
+      "summary": "独立游戏开发者Popcar撰文讨论AI正在批量反编译游戏的浪潮：好的一面是推动老游戏保存、移植到WebAssembly等新平台，让买断制游戏不因服务器关停而报废；坏的一面是任何软件都可能被无授权反编译并挪用，付费产品可能被迫'被开源'、竞争对手可抄对手代码，冲击整个科技行业。Simon认为这篇文章把两面都讲到了，值得一看。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度分析AI批量反编译带来的游戏保存机遇和软件产权风险这一真实趋势，讲清楚是什么、为什么重要，不是纯新闻通稿。"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] AI Engineer NYC: Gemini 4 Argon, Vals AI Benchmarks",
+      "link": "https://www.latent.space/p/ainews-ai-engineer-nyc-gemini-4-argon",
+      "date": "2026-10-14",
+      "source_type": "blog",
+      "summary": "Gemini 4 Argon已全球开放(编程/知识工作/企业场景/网络安全防御)，API定价2/10美元每百万input/output token(11月30日后涨至4/20美元)；谷歌内部用它拆解600万行Chromium遗留代码、agentic代码提交量提升35%、回滚减少近三分之一；DeepMind演示它从人类视频学习打康乐球并指导机器人完成连续投掷。另有Meta Muse Wonder定位个人助理+编程但订阅限额偏紧引发吐槽，以及AIE NYC金融场域keynote谈AI新闻转化投资决策。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI新闻周报体裁(twitter recap+多条新闻)，信息量大但偏news roundup而非深度讲透一件事，Gemini 4 Argon的GA/定价/内部应用数据有实质细节，归medium。"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "Redesigning source control at Anthropic",
       "link": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
       "date": "2026-10-13",
       "source_type": "blog",
       "summary": "Anthropic自曝从今年5月日均合并2500次代码变更暴涨到9月的3万次,逼着他们放弃Git、自建名为Scion的集中式版本管理系统(类似Subversion)和配套的Antique代码评审系统,7人团队5个月完成迁移,主分支历史近100GB、每天2500万次代码检出。工程师称『不支持离线』是因为Claude是最重度使用者且必然联网。Simon补充自己也在用对抗性评审(让Claude和GPT互相挑错),认同文中说的『效果很好但容易钻进假设性顾虑里过度设计』,需要工程师自己把agent从过度工程化里拉回来。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +103,7 @@
       "date": "2026-10-13",
       "source_type": "blog",
       "summary": "Google发布Gemini 4 Argon,Simon测试其SVG生成能力(鹈鹕骑车系列)表现优异。定价初期为$2/M输入、$10/M输出,与GPT-6 Sol持平、比Opus 5.5和Fable 5.1都便宜,但12月1日起会翻倍。作者提醒报价不如『跑完一个目标实际花多少钱』重要——按Artificial Analysis的跑分成本看,Argon跑完整套基准只要$2,407,比大多数旗舰模型便宜。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +119,7 @@
       "date": "2026-10-13",
       "source_type": "blog",
       "summary": "Dyna Robotics首席科学家Jason Ma详解Dyna-2世界行动模型:用超百万小时人类第一视角视频预训练,扩散transformer架构预测未来画面再据此生成机器人动作,仅需45分钟示范就能让机器人学会新任务。谈及机器人数据比语言模型更稀缺、需要人类数据+机器人自身数据+合成仿真数据三路拼接,以及为什么端侧低延迟推理逼着他们自建硬件和推理栈。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +135,7 @@
       "date": "2026-10-13",
       "source_type": "blog",
       "summary": "Geoffrey Huntley提出,与其手动维护AGENTS.md这类文档去规范agent行为、且文档必然和实际代码产生drift,不如写一个pre-commit钩子检查git diff里是否有绕过诊断模块的直接调用——命中就拒绝提交并向agent注入提示,引导它改用正确的诊断库。这种『用机制替代文档』的约束方式能让agent的合规率接近满分。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +151,7 @@
       "date": "2026-10-13",
       "source_type": "blog",
       "summary": "Latent Space的AINews汇总了Meta Muse Wonder/Wonder Full发布的全貌:定价($4/M输入、$20/M输出,100万上下文)、安全声明、发布当天因用量异常导致配额被耗尽的小插曲,以及Artificial Analysis的评测数据——Wonder Full在智能指数上以56分逼近Opus 5.5的58分,在Agentic类评测(Terminal-Bench、GDPval)上进步最大。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -82,28 +162,12 @@
     },
     {
       "person": "Simon Willison",
-      "title": "web-edit 0.1a1",
-      "link": "https://simonwillison.net/2026/Oct/13/web-edit/",
-      "date": "2026-10-13",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志,内容仅为简短发布说明"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
       "title": "llm-meta-ai 0.2",
       "link": "https://simonwillison.net/2026/Oct/12/llm-meta-ai/",
       "date": "2026-10-12",
       "source_type": "blog",
       "summary": "Meta发布Muse Wonder与Wonder Full,据Artificial Analysis评分已追平GPT-6.1 Sol,是Meta首批『Fable级』模型。作者更新llm-meta-ai插件并用『鹈鹕作图』测试六档推理强度,对比Muse 1.2/1.3版本后指出Meta正以月更节奏快速迭代、能力提升明显。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -253,54 +317,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Claude Haiku 5.5",
-      "link": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
-      "date": "2026-10-07",
-      "source_type": "blog",
-      "summary": "Simon Willison测评了新发布的Claude Haiku 5.5：价格与OpenAI GPT-6 Luna看齐($0.10/$0.50，10万token以内)，但超过10万token后涨到5倍价格；新tokenizer比Haiku 4.5更「不厚道」，同样prompt要多算1.25倍token，等于隐性涨价。他还测了pelican骑车SVG这个经典题，发现Haiku 5.5在各档推理强度下画车架都明显比上一代强。另外Anthropic同期宣布Sonnet 5.5的cache read价格减半，并给Max/Team订阅用户每月发等额API credit(Max 5x: $100，Max 20x: $200，Team: 最高$500)，用不完不能结转。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细分析Haiku 5.5定价、tokenizer变化、与GPT-6 Luna的对比，以及Anthropic新增的订阅者API credit机制，实操信息扎实"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-      "link": "https://www.latent.space/p/stacklok",
-      "date": "2026-10-07",
-      "source_type": "blog",
-      "summary": "Kubernetes的两位创造者Craig McLuckie和Joe Beda创办了Stacklok，正在打造Mecatl——一个「云原生」的agent harness。他们认为当下的agent工具大多是桌面优先架构(loop、本地执行、session状态耦合在同一进程里)，而企业需要像管理Kubernetes集群一样管理agent：loop与模型供应商、执行环境、session存储彼此解耦，这样企业才能摆脱对单一前沿实验室harness的依赖，把agent工作当成可治理的基础设施来管。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深度访谈解析云原生agent harness新趋势(Mecatl)，讲清楚是什么、为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics",
-      "link": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
-      "date": "2026-10-07",
-      "source_type": "blog",
-      "summary": "OpenAI发布722篇数学论文，宣称解出500个顶级公开数学难题中的90个，其中Quasi-Riemann Hypothesis(编号003)被认为是百年来数论领域最大突破之一。与此前Navier-Stokes结果靠万级agent跑88小时不同，这批结果平均只用ChatGPT Pro跑3小时就拿下，说明方法论效率大幅提升。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
         }
       ]
     }
