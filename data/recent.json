@@ -1,34 +1,66 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Chirp Pong",
+      "link": "https://simonwillison.net/2026/Oct/15/chirp-pong/",
+      "date": "2026-10-15",
+      "source_type": "blog",
+      "summary": "Simon Willison用Claude Opus在Claude Code里生成了Chirp Pong：两台手机靠近，通过麦克风捕捉的音频噪声传递游戏状态，实现无网络的双人Pong对战实验。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏娱乐/演示性质的内容：用Claude Code生成一个靠手机麦克风音频联机的双人Pong游戏"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
+      "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+      "date": "2026-10-15",
+      "source_type": "blog",
+      "summary": "Anthropic在IPO前向投资者披露：Q3营收达168亿美元，环比增长近50%，每花1美元算力成本带来1.70美元营收，调整后营业利润率11%。文章还指出竞争对手'蒸馏'Anthropic模型一度占其收入5-7%，Q3已被大幅削减，且公司不再强调'年化运行率'这一说法。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司动态，讲清楚是什么为什么重要：Anthropic季度营收增至168亿美元，披露蒸馏占收入5-7%并已大幅削减等具体细节"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Modal’s $1B ARR, $16B Series D makes it NYC’s newest AI Infra Decacorn, 3x usage and 3x valuation in 5 months, 15x in 1 yr",
+      "link": "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+      "date": "2026-10-15",
+      "source_type": "blog",
+      "summary": "Modal完成16亿美元D轮融资，估值大涨，5个月内用量和估值均增长3倍，过去一年用量增长15倍；文章回顾了其Sandbox产品从2023年至今的爆发式增长。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI infra公司融资新闻，沾AI边但偏宏观叙事/资讯，不是实操指南"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
       "link": "https://www.latent.space/p/crossing-the-threshold",
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "AI Engineer NYC上，OpenAI/Anthropic/Two Sigma/Bloomberg都在讲同一件事：金融agent的自主权要靠'管控放在哪'而不是'限制有多少'来保安全。OpenAI讲'可用性阈值'；Two Sigma用可组合的guardrails+自动分类器把琐碎决策和重要决策分流，避免审批疲劳；Anthropic强调给agent建身份/权限层、让它只能'提议'不能直接'执行'；Bloomberg主张把安全检查放在模型外部(作用域凭证、工具调用管控、出站流量限制、审计、kill switch)。核心一句话：装刹车是为了能更快地跑。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "具体讲清楚金融agent自主权与安全管控的架构模式(guardrails/trust layer/人在回路设计)，对理解怎么构建安全的agent系统有直接实操价值。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Tree Appreciator",
-      "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
-      "date": "2026-10-14",
-      "source_type": "blog",
-      "summary": "Simon Willison用Claude iPhone App(非Claude Code)让Opus 5.5 Max做了个three.js找不同小游戏'Tree Appreciator'：两棵算法生成的树找差异，带配乐和成就系统。他提到只告诉模型'make sure it is fun'这句话效果出乎意料地好，模型跑了3小时7分钟才交付，成品相当耐玩——是vibe coding娱乐性产出的一个样本。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例，偏娱乐/演示性质(vibe coding小游戏)，符合medium里显式列出的那条。"
         }
       ]
     },
@@ -39,7 +71,7 @@
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "Latent Space访谈Leash Bio的Ian Quigley：DNA编码库(DEL)数据又脏又难搞，Leash靠给每个分子打多重barcode等方法把它清洗成可复现的大规模数据；团队还发现'造分子的化学家是谁'本身就能预测活性(Clever Hans效应)。这些数据现在喂给了Minos——一个让AI agent像化学家一样推理、在650万分子里找最佳结合物的科学推理playground，刚发了预印本和开放数据集。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +87,7 @@
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "独立游戏开发者Popcar撰文讨论AI正在批量反编译游戏的浪潮：好的一面是推动老游戏保存、移植到WebAssembly等新平台，让买断制游戏不因服务器关停而报废；坏的一面是任何软件都可能被无授权反编译并挪用，付费产品可能被迫'被开源'、竞争对手可抄对手代码，冲击整个科技行业。Simon认为这篇文章把两面都讲到了，值得一看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +103,7 @@
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "Gemini 4 Argon已全球开放(编程/知识工作/企业场景/网络安全防御)，API定价2/10美元每百万input/output token(11月30日后涨至4/20美元)；谷歌内部用它拆解600万行Chromium遗留代码、agentic代码提交量提升35%、回滚减少近三分之一；DeepMind演示它从人类视频学习打康乐球并指导机器人完成连续投掷。另有Meta Muse Wonder定位个人助理+编程但订阅限额偏紧引发吐槽，以及AIE NYC金融场域keynote谈AI新闻转化投资决策。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -269,54 +301,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "完整实操案例:用ChatGPT Codex语音模式边做饭边开发博客新功能,详述流程(语音构思+键盘精修)和适用边界,直接影响怎么用语音驱动coding agent"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] not much happened today",
-      "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
-      "date": "2026-10-08",
-      "source_type": "blog",
-      "summary": "OpenAI解雇了三名与METR/Hugging Face安全事件相关的安全研究员(Tomek Korbak、Mikita Balesni、Jasmine Wang)，三人联名发信指控是因「把安全放在公司短期利益之上」遭报复，OpenAI方面则称是因不当处理机密信息。同一时期，OpenAI推出GPT-6.1 Sol Ultrafast(号称接近Astra的智力水平、速度最多提升8倍)并开始让ChatGPT渲染可交互原生组件；另有报道确认Claude Haiku 5.5支持百万级上下文窗口与12.8万最大输出。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Synthesis Superintelligence: from Semiconductors to Superconductors — Periodic Labs’ Liam Fedus and Ekin Dogus Cubuk",
-      "link": "https://www.latent.space/p/periodic",
-      "date": "2026-10-08",
-      "source_type": "blog",
-      "summary": "Latent Space访谈了Periodic Labs的Liam Fedus和Ekin Dogus Cubuk，谈他们「合成超智能」的愿景：单纯扩大数据训练不足以推进材料科学发现，核心是让AI系统直接跟高通量实验室的真实物理实验打交道，用强化学习处理噪声数据、相变识别与材料合成预测。他们强调实验才是检验真理的最终标准，失败实验本身就是宝贵的训练数据，目标是把过去几十年的材料发现周期压缩到几个月。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI用于材料科学研究方法的深度访谈，需要物理/材料科学背景，门槛较高，按当前用户水平爬坡给medium不给high"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
-      "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
-      "date": "2026-10-08",
-      "source_type": "blog",
-      "summary": "Anthropic发布了Claude Haiku 5.5，这是Haiku系列近一年来的首次更新，定价对标GPT-6 Luna，同日还下调了Sonnet 5.5的缓存读取价格。第三方评测(Artificial Analysis)显示其智能指数拿到43分，略优于同价位的GLM-5.3 Flash、Gemini 3.8 Flash和GPT-6 Luna，但在高算力设置下token消耗明显更高。首发即接入Claude Code、Cursor、GitHub Copilot、Devin等第三方工具，定位是搭配Opus/Sonnet处理大批量、低成本任务的子agent。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
         }
       ]
     }

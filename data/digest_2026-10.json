@@ -1,13 +1,61 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "Over the last few years, we have made significant progress on prompt injection for Claude models. As…",
+      "link": "https://x.com/bcherny/status/2110791698611855624",
+      "date": "2026-10-15",
+      "source_type": "x",
+      "summary": "Anthropic宣布与Gray Swan合作举办prompt injection红队竞赛，称这几年在Claude的prompt injection防御上已有明显进展，随着agent能做的事越来越多，解决这个问题对全行业都越来越紧迫。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "重要AI安全行业动态：Anthropic与Gray Swan合作举办prompt injection红队竞赛，直接关系到agent时代AI工具的安全可信度"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
+      "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+      "date": "2026-10-15",
+      "source_type": "blog",
+      "summary": "Anthropic在IPO前向投资者披露：Q3营收达168亿美元，环比增长近50%，每花1美元算力成本带来1.70美元营收，调整后营业利润率11%。文章还指出竞争对手'蒸馏'Anthropic模型一度占其收入5-7%，Q3已被大幅削减，且公司不再强调'年化运行率'这一说法。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司动态，讲清楚是什么为什么重要：Anthropic季度营收增至168亿美元，披露蒸馏占收入5-7%并已大幅削减等具体细节"
+        }
+      ]
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We've been working hard on making the Claude Code desktop app great for running lots…",
+      "link": "https://x.com/bcherny/status/2110627630945079624",
+      "date": "2026-10-15",
+      "source_type": "x",
+      "summary": "Claude Code桌面版新增多session并排运行能力，方便同时跑多个任务。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI工具的实操信息：Claude Code桌面版支持多session并排运行"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
       "link": "https://www.latent.space/p/crossing-the-threshold",
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "AI Engineer NYC上，OpenAI/Anthropic/Two Sigma/Bloomberg都在讲同一件事：金融agent的自主权要靠'管控放在哪'而不是'限制有多少'来保安全。OpenAI讲'可用性阈值'；Two Sigma用可组合的guardrails+自动分类器把琐碎决策和重要决策分流，避免审批疲劳；Anthropic强调给agent建身份/权限层、让它只能'提议'不能直接'执行'；Bloomberg主张把安全检查放在模型外部(作用域凭证、工具调用管控、出站流量限制、审计、kill switch)。核心一句话：装刹车是为了能更快地跑。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +71,7 @@
       "date": "2026-10-14",
       "source_type": "blog",
       "summary": "独立游戏开发者Popcar撰文讨论AI正在批量反编译游戏的浪潮：好的一面是推动老游戏保存、移植到WebAssembly等新平台，让买断制游戏不因服务器关停而报废；坏的一面是任何软件都可能被无授权反编译并挪用，付费产品可能被迫'被开源'、竞争对手可抄对手代码，冲击整个科技行业。Simon认为这篇文章把两面都讲到了，值得一看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
