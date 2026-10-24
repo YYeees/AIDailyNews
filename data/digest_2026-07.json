@@ -55,7 +55,7 @@
       "date": "2026-07-29",
       "source_type": "blog",
       "summary": "OpenAI发现在API调用中开启两个设置——保留推理痕迹（retain reasoning）和启用压缩（compaction）——能让GPT-5.6在ARC-AGI-3基准上的分数提升两倍以上，是开发者可以直接套用的具体配置技巧。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +71,7 @@
       "date": "2026-07-28",
       "source_type": "blog",
       "summary": "field report显示科学家开始用AI coding agent改造科学计算工作流，在基因组学等领域加速了软件开发和科研发现的速度。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -231,7 +231,7 @@
       "date": "2026-07-09",
       "source_type": "blog",
       "summary": "OpenAI推出ChatGPT Work，一个可跨应用、跨文件操作、可持续工作数小时的agent，面向需要长时间推进复杂项目的场景，把一个目标直接执行成成品。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -247,7 +247,7 @@
       "date": "2026-07-09",
       "source_type": "blog",
       "summary": "OpenAI发布GPT-5.6，主打“每token更高智能密度”，在性能提升的同时优化了单位成本的性价比，并为重度任务提供更大的按需算力。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -311,7 +311,7 @@
       "date": "2026-07-05",
       "source_type": "blog",
       "summary": "文章提出AI让创作能力几近免费后，稀缺的是“品味”——对什么会被喜爱的判断力和敢于偏离大众审美的勇气。作者给出具体练习：深度浸入而非走捷径（如去餐厅吃饭而非只看菜单）、追溯创作者背景、无导航漫游，用以对抗AI工具带来的注意力流失，重建一手的审美判断。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
