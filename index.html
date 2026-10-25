@@ -16,6 +16,13 @@
     --up: #3F7D4E; --dark: #1B1A19; --dark-ink: #F3EFE7; --dark-soft: #BDB7AC;
     --sage: #E3E8DE; --sage-rule: #CFD7C8;
   }
+  /* 弯双引号U+201C/D在中英文里是同一个码位，按字体顺序会先落到苹果英文字体上，变成窄窄的半角。
+     只在中文摘要里把这两个字符交给苹方，英文字母照旧；单引号不动，英文缩写里的撇号也是它 */
+  @font-face {
+    font-family: "CJK Quotes";
+    src: local("PingFangSC-Regular"), local("PingFang SC Regular");
+    unicode-range: U+201C-201D;
+  }
   * { box-sizing: border-box; }
   html { -webkit-font-smoothing: antialiased; }
   body {
@@ -54,6 +61,10 @@
   .filter-on a { margin-left: auto; cursor: pointer; color: var(--soft); border-bottom: 1px solid var(--rule); }
   .filter-on a:hover { color: var(--ink); }
   .filter-on[hidden] { display: none; }
+  /* 来源名(公司/作者)也能点来筛选，跟分类标签同一套：悬停出下划线，选中变强调色 */
+  [data-who] { cursor: pointer; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  [data-who]:hover { color: var(--ink); border-bottom-color: var(--faint); }
+  [data-who].on { color: var(--accent); }
 
   /* ---- 按天分组；日期吸顶，滚动时当天的日期停在顶上，滚到下一天被顶掉 ---- */
   .day { margin-top: 56px; }
@@ -75,8 +86,9 @@
   .src .who { color: var(--soft); font-weight: 600; }
   .src .new { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
-  .lead h3 { font-size: 1.32rem; line-height: 1.55; font-weight: 600; margin: 10px 0 12px; }
-  .lead p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.95; }
+  .lead h3 { font-size: 1.32rem; line-height: 1.55; font-weight: 600; margin: 10px 0 12px; letter-spacing: 0; }
+  .lead p, .brief .more p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
+  .lead p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
   .lead:hover h3 { color: var(--accent); }
 
   /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
@@ -84,14 +96,14 @@
   .brief { display: block; padding: 15px 0; border-bottom: 1px dashed var(--rule); cursor: pointer; border-radius: 10px; }
   .brief:last-child { border-bottom: 0; }
   .brief .row { display: flex; gap: 14px; align-items: baseline; }
-  .brief .t { flex: 1; font-size: 1rem; font-weight: 500; line-height: 1.6; }
+  .brief .t { flex: 1; font-size: 1rem; font-weight: 500; line-height: 1.6; letter-spacing: 0; }
   .brief .t a:hover { color: var(--accent); }
   .brief .who { font-size: 13px; color: var(--faint); white-space: nowrap; }
   /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
   .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
   .brief.open .more { grid-template-rows: 1fr; }
   .brief .more > div { overflow: hidden; }
-  .brief .more p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.95; }
+  .brief .more p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
   .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px; color: var(--faint); }
   /* 展开时这一条变成临时头条：标题跟头条一样粗，淡底色跟上下分开。左右用负margin把底色往外扩，
      文字仍跟其他行对齐 */
@@ -137,7 +149,7 @@
   .panel-x .who, .panel-x .who a { color: var(--dark-ink); }
   .panel-x .who a:hover { color: var(--accent); }
   /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
-  .mini .txt { color: var(--soft); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .mini .txt { color: var(--soft); text-align: justify; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .panel-x .txt { color: var(--dark-soft); }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
@@ -148,11 +160,11 @@
   .repo .meta { display: flex; gap: 12px; font-size: 12.5px; color: var(--faint); }
   .repo .meta .up { color: var(--up); font-weight: 600; }
 
-  /* 宽屏：正文720不变，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
+  /* 宽屏：正文栏656(原720，收窄四个字)，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
   @media (min-width: 1220px) {
     .page {
       max-width: 1160px; display: grid; column-gap: 72px;
-      grid-template-columns: minmax(0, 720px) 360px; justify-content: center;
+      grid-template-columns: minmax(0, 656px) 360px; justify-content: center;
     }
     .mast { grid-column: 1 / -1; }
     #feed, .foot { grid-column: 1; }
@@ -319,6 +331,7 @@ document.addEventListener('click', e => {
 // ---- 内容列表 ----
 let RECENT = [];
 let FILTER = '';
+let WHO = '';  // 按来源筛，跟FILTER互斥：选了一个就清掉另一个
 let SEQ = 0;  // 浮现动画的先后，每次重排从0数起，超过12条的一起出来，免得后面等太久
 const delay = () => `style="--d:${Math.min(SEQ++, 12)}"`;
 const GO = '<span class="go" aria-hidden="true">↗</span>';
@@ -332,6 +345,10 @@ function tags(i) {
   return i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
     + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
 }
+function who(i) {
+  return `<span class="who${i.person === WHO ? ' on' : ''}" data-who="${esc(i.person)}" title="只看${esc(i.person)}">${esc(i.person)}</span>`;
+}
+const match = i => (!FILTER || i.tracks.some(t => t.track === FILTER)) && (!WHO || i.person === WHO);
 const summaryOf = i => i.summary || (i.tracks[0] && i.tracks[0].reason) || '';
 
 function dayHead(iso, n) {
@@ -345,7 +362,7 @@ function dayHead(iso, n) {
 }
 function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
-    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}<span class="who">${esc(i.person)}</span>
+    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
       <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
@@ -354,7 +371,7 @@ function briefHTML(i) {
   return `<div class="brief" ${delay()}>
     <div class="row">
       <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></span>
-      <span class="who">${esc(i.person)}</span>
+      ${who(i)}
     </div>
     <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
   </div>`;
@@ -367,7 +384,7 @@ function listHTML(list) {
 }
 function renderDays() {
   SEQ = 0;
-  const items = RECENT.filter(i => !FILTER || i.tracks.some(t => t.track === FILTER));
+  const items = RECENT.filter(match);
   const byDay = {};
   items.forEach(i => (byDay[i.date] ||= []).push(i));
   document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
@@ -376,23 +393,26 @@ function renderDays() {
 }
 function renderFilter() {
   const el = document.getElementById('filterOn');
-  el.hidden = !FILTER;
-  if (!FILTER) return;
-  const n = RECENT.filter(i => i.tracks.some(t => t.track === FILTER)).length;
-  el.innerHTML = `<span>只看 <b>${TRACK_LABEL[FILTER]}</b>，最近七天 ${n} 篇</span><a data-clear>看全部</a>`;
+  el.hidden = !FILTER && !WHO;
+  if (el.hidden) return;
+  const name = FILTER ? TRACK_LABEL[FILTER] : esc(WHO);
+  el.innerHTML = `<span>只看 <b>${name}</b>，最近七天 ${RECENT.filter(match).length} 篇</span><a data-clear>看全部</a>`;
 }
-function setFilter(k) {
+function setFilter(k, w = '') {
   FILTER = k;
+  WHO = w;
   renderFilter();
   renderDays();
   document.getElementById('feed').scrollIntoView({ behavior: 'smooth' });
 }
 
-// 点击分发：分类标签→筛选；头条空白处→打开原文；简讯/侧栏空白处→展开收起。
+// 点击分发：分类标签、来源名→筛选；头条空白处→打开原文；简讯/侧栏空白处→展开收起。
 // 链接(标题、记一笔)交给浏览器默认行为，不在这里处理。
 document.addEventListener('click', e => {
   const tg = e.target.closest('[data-track]');
   if (tg) { setFilter(tg.dataset.track === FILTER ? '' : tg.dataset.track); return; }
+  const w = e.target.closest('[data-who]');
+  if (w) { setFilter('', w.dataset.who === WHO ? '' : w.dataset.who); return; }
   if (e.target.closest('[data-clear]')) { setFilter(''); return; }
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
