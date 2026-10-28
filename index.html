@@ -151,6 +151,15 @@
   /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
   .mini .txt { color: var(--soft); text-align: justify; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .panel-x .txt { color: var(--dark-soft); }
+  /* X面板只露前四条，其余在面板里滚动(高度由fitX()按第四条的底边算，条目高矮不一) */
+  /* 滚动条只在滚动时出现，停下来一会儿就藏起来(用户要求)：靠JS在滚动时挂上.scrolling。
+     只写::-webkit-scrollbar、不写标准的scrollbar-width：Chrome见到标准属性就改用系统滚动条，
+     这里的显隐控制就不起作用了 */
+  #x { position: relative; overflow-y: auto; margin-right: -12px; padding-right: 12px; }
+  #x::-webkit-scrollbar { width: 4px; }
+  #x::-webkit-scrollbar-track, #x::-webkit-scrollbar-thumb { background: transparent; border-radius: 2px; }
+  #x.scrolling::-webkit-scrollbar-track { background: #2A2826; }
+  #x.scrolling::-webkit-scrollbar-thumb { background: #6B665E; }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
   .repo .name { font-size: 15px; line-height: 1.4; font-weight: 600; word-break: break-all; }
@@ -192,7 +201,7 @@
   .empty { color: var(--faint); font-size: .95rem; padding: 14px 0; }
 
   /* ===== 动效 ===== */
-  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动)，标题旁滑出 ↗ */
+  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动) */
   .lead, .brief { position: relative; isolation: isolate; }
   .lead::before, .brief::before {
     content: ""; position: absolute; inset: 4px -16px; z-index: -1; border-radius: 12px;
@@ -200,11 +209,6 @@
   }
   @media (max-width: 760px) { .lead::before, .brief::before { inset: 4px -10px; } }
   @media (hover: hover) { .lead:hover::before, .brief:not(.open):hover::before { opacity: 1; } }
-  .go {
-    display: inline-block; margin-left: 6px; font-weight: 400; color: var(--accent);
-    opacity: 0; transform: translate(-4px, 2px); transition: opacity .2s, transform .2s;
-  }
-  .lead:hover .go, .brief .t a:hover .go { opacity: 1; transform: translate(0, 0); }
   /* 打开页面、切换分类时，一条接一条往上浮出来 */
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
   .lead, .brief, .day-head { animation: rise .45s ease backwards; animation-delay: calc(var(--d, 0) * 40ms); }
@@ -327,13 +331,54 @@ document.addEventListener('click', e => {
   }, 0);
 });
 
+// ---- 阅读记录：哪些点开了原文、哪些只看了摘要 ----
+// 发到 clicks/ 目录里的 Worker，存进 D1。点了没点要和"当时页面上有什么"对照着看，
+// 所以打开页面时先发一条 view，带上主列表的全部链接和顺序，后面才算得出点击率。
+// 公开站不发：别人的点击不是我们要的数据。
+const TRACK_URL = 'https://digest-clicks.yyeees.workers.dev';
+const PAGE_ID = Math.random().toString(36).slice(2, 10);   // 把同一次打开页面的事件串起来
+function track(ev) {
+  if (IS_PUBLIC) return;
+  // sendBeacon 在跳去原文、关标签页时也能发出去；text/plain 不触发 CORS 预检
+  try { navigator.sendBeacon(TRACK_URL, new Blob([JSON.stringify({ ...ev, page: PAGE_ID })], { type: 'text/plain' })); }
+  catch (e) { /* 记不上就算了，不能影响阅读 */ }
+}
+// 条目在主列表里的位置：第几天(0=最新一天)、当天第几条、头条还是简讯。分析位置偏差要用。
+function itemCtx(el) {
+  const card = el.closest('.lead, .brief');
+  if (!card) return null;
+  const day = card.closest('.day');
+  const days = [...document.querySelectorAll('#days .day')];
+  return {
+    day_idx: days.indexOf(day),
+    pos: [...day.querySelectorAll('.lead, .brief')].indexOf(card),
+    kind: card.classList.contains('lead') ? 'lead' : 'brief',
+  };
+}
+function itemMeta(link) {
+  const i = RECENT.find(x => x.link === link);
+  return i ? { person: i.person, date: i.date, tier: best(i) } : {};
+}
+function trackOpen(link, el, how) {
+  const ctx = itemCtx(el);
+  const area = ctx ? 'main' : el.closest('#x') ? 'x' : el.closest('#gh') ? 'gh' : 'other';
+  track({ type: 'click', link, area, how, filter: FILTER || WHO || '', ...ctx, ...(ctx ? itemMeta(link) : {}) });
+}
+// click 管左键(含 Cmd/Ctrl 点击在新标签打开)，auxclick 管中键。右键菜单里"在新标签页打开"收不到，只能漏掉。
+function onLinkPress(e) {
+  if (e.type === 'auxclick' && e.button !== 1) return;
+  const a = e.target.closest && e.target.closest('a[target="_blank"]');
+  if (a) trackOpen(a.getAttribute('href'), a, e.type === 'auxclick' || e.metaKey || e.ctrlKey ? 'newtab' : 'click');
+}
+document.addEventListener('click', onLinkPress);
+document.addEventListener('auxclick', onLinkPress);
+
 // ---- 内容列表 ----
 let RECENT = [];
 let FILTER = '';
 let WHO = '';  // 按来源筛，跟FILTER互斥：选了一个就清掉另一个
 let SEQ = 0;  // 浮现动画的先后，每次重排从0数起，超过12条的一起出来，免得后面等太久
 const delay = () => `style="--d:${Math.min(SEQ++, 12)}"`;
-const GO = '<span class="go" aria-hidden="true">↗</span>';
 
 // 选了某个分类时按那个分类自己的tier分头条/简讯，没选时任一分类high就算头条
 function best(i) {
@@ -363,13 +408,13 @@ function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
     <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
       <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
-    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></h3>
+    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
 }
 function briefHTML(i) {
   return `<div class="brief" ${delay()}>
     <div class="row">
-      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></span>
+      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
       ${who(i)}
     </div>
     <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
@@ -415,9 +460,13 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-clear]')) { setFilter(''); return; }
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
-  if (lead) { window.open(lead.dataset.link, '_blank', 'noopener'); return; }
+  if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); return; }
   const fold = e.target.closest('.brief, .mini.more');
-  if (fold) fold.classList.toggle('open');
+  if (!fold) return;
+  fold.classList.toggle('open');
+  // 简讯的摘要默认收着，展开说明想看摘要；收起不记
+  const a = fold.classList.contains('brief') && fold.classList.contains('open') && fold.querySelector('a');
+  if (a) track({ type: 'expand', link: a.getAttribute('href'), filter: FILTER || WHO || '', ...itemCtx(a), ...itemMeta(a.getAttribute('href')) });
 });
 
 async function loadRecent() {
@@ -426,6 +475,8 @@ async function loadRecent() {
   const high = RECENT.filter(i => i.tracks.some(t => t.tier === 'high')).length;
   document.getElementById('lede').textContent = `过去七天 ${RECENT.length} 篇，值得细读的 ${high} 篇。`;
   renderDays();
+  track({ type: 'view', links: [...document.querySelectorAll('#days .lead, #days .brief')]
+    .map(c => c.dataset.link || c.querySelector('a').getAttribute('href')) });
 }
 
 // ---- 侧栏：X 和 GitHub ----
@@ -439,6 +490,24 @@ function markFoldable() {
 }
 addEventListener('resize', markFoldable);
 
+const X_VISIBLE = 4;
+function fitX() {
+  const box = document.getElementById('x');
+  const minis = box.querySelectorAll('.mini');
+  const last = minis[X_VISIBLE - 1];
+  box.style.maxHeight = minis.length > X_VISIBLE ? `${last.offsetTop + last.offsetHeight}px` : '';
+}
+addEventListener('resize', fitX);
+{
+  const box = document.getElementById('x');
+  let idle;
+  box.addEventListener('scroll', () => {
+    box.classList.add('scrolling');
+    clearTimeout(idle);
+    idle = setTimeout(() => box.classList.remove('scrolling'), 800);
+  }, { passive: true });
+}
+
 async function loadX() {
   const data = await (await fetch('data/x_recent.json')).json();
   document.getElementById('x').innerHTML = data.items.length
@@ -447,6 +516,7 @@ async function loadX() {
         <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
   markFoldable();
+  fitX();
 }
 async function loadTrending() {
   const data = await (await fetch('data/trending.json')).json();
