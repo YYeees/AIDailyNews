@@ -2,17 +2,97 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Ted Sanders",
-      "link": "https://simonwillison.net/2026/Oct/28/ted-sanders/",
-      "date": "2026-10-28",
+      "title": "API credits benefit for eligible ChatGPT subscriptions",
+      "link": "https://simonwillison.net/2026/Oct/29/api-credits/",
+      "date": "2026-10-29",
       "source_type": "blog",
-      "summary": "Simon Willison转引Ted Sanders解释OpenAI模型命名规则的一段话。模型表现是多维的，擅长数学的模型不一定擅长讲笑话，但模型越大通常越可靠、越贵，也越记得住冷门知识。版本号同时体现发布顺序、和其他版本的相似度，以及这次升级的幅度大小。",
+      "summary": "OpenAI跟进了Anthropic早先的做法，给花钱更高档位订阅ChatGPT的用户发等额的API额度，可以直接拿去调用OpenAI的API。作者本人订阅了两家的服务，觉得这下用API做公开演示的成本都被订阅费覆盖了，挺划算。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "解释AI厂商模型命名规则背后的逻辑，有助理解行业，但偏知识性，不直接改变怎么用AI"
+          "reason": "直接影响日常怎么用AI工具的实操信息，但内容单薄只是一条订阅福利播报"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "date": "2026-10-29",
+      "source_type": "blog",
+      "summary": "独立开发者Jacob Sansbury讲了他们怎么用一群自主运行的Fable模型agent来开发多人游戏Spawn，玩家一句话就能在游戏里造出城堡和龙。他们的agent直接改线上代码每小时发布一次，一小时不发布就算重大事故，出问题能在半分钟内精准回滚。作者还提到换成GPT-6 Astra处理安全问题时，agent直接把所有功能关掉了事，可见模型选择很关键。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "真实案例讲清楚自主agent在生产环境大规模运作的具体做法和模型选型取舍，直接影响怎么用AI工具"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "link": "https://openai.com/index/updated-model-spec",
+      "date": "2026-10-29",
+      "source_type": "blog",
+      "summary": "OpenAI更新了指导模型行为的Model Spec文档，提出五条核心价值，目标是让能力更强的AI做出更稳妥的判断，尊重用户的自主权，同时忠实执行用户真正的意图。这份文档决定了ChatGPT和API背后的模型被怎么训练去应对边界情况。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "官方模型行为准则更新，重要但本身偏宏观政策叙事，WebFetch遇403无法读全文核实深度"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning",
+      "link": "https://latent.space/p/elorian/",
+      "date": "2026-10-29",
+      "source_type": "blog",
+      "summary": "创业公司Elorian发布了新的视觉推理模型Glimpse，还联合推出了一个叫DecoyCount的测试，专门检验模型是不是真的在数数，还是靠视觉套路蒙对答案。结果是包括GPT-6 Astra在内的主流模型准确率都不到五成，Glimpse自己测出来刚过五成。创始人认为让模型一边生成图像一边推理，才是补上这个短板的办法。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度采访加解释，讲清楚视觉推理和世界模型的区别及为什么重要，不是纯新闻通稿"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Ben Hylak",
+      "link": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+      "date": "2026-10-29",
+      "source_type": "blog",
+      "summary": "产品经理Ben Hylak开玩笑说，以后每个他用的产品都该变成一个没有界面的MCP服务，直接喂给agent，用户不用管底层细节，除了他自己做的产品，因为用户很喜欢那个界面。这是对agent化趋势和自家产品定位的一句自嘲。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "沾AI边但偏轻量的一句调侃，涉及产品agent化趋势但没有展开论证"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders",
+      "link": "https://latent.space/p/ainews-gemini-4-carbon/",
+      "date": "2026-10-29",
+      "source_type": "blog",
+      "summary": "Google发布了新模型Gemini 4 Carbon，在多个独立榜单上拿下第一，尤其是网络安全和长链条任务表现突出，目前只开放给受信任的安全防御团队用。编程类评测上它比Claude Opus 5.5便宜，但分数还略逊一筹，呈现出各家模型紧咬着比拼的局面。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新模型发布信息量大，但整体是推特benchmark速报拼接体，偏纯新闻通稿，没有讲清楚为什么重要"
         }
       ]
     },
@@ -23,7 +103,7 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "Latent Space采访了Supabase的两位创始人，聊agent为什么偏爱用Supabase做后端。关键是本地开发不用装Docker了，数据库结构能像代码一样存进Git里管理和追溯，计算也能挨着数据库跑。这些对人类开发者本来就是减负，对会反复搭建环境的agent来说更是直接省掉了大段摩擦。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +119,7 @@
       "date": "2026-10-28",
       "source_type": "youtube",
       "summary": "Greg Isenberg采访了Gamma联合创始人Jon Noronha，聊的核心概念是agent harness，也就是让agent动手做事、自查结果再交付的一整套工具链。Jon说一份Gamma的PPT背后要跑大约20个模型、200次调用，光检查排版就要好几轮。他觉得做垂直agent产品的机会在于用户主观判断强、还想要人把关的领域，护城河来自独特产品直觉、自有数据，或者把AI和真实物理世界结合起来的生意。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +135,7 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "Google发布新模型Gemini 4 Carbon，主打网络安全防御能力和能连续干几天活的长任务能力，比如独立修复大型代码库里的bug。它识别和修复安全漏洞的表现比上一代提升了两倍多，撒谎和作弊的概率也明显降低，提示注入攻击基本防得住。目前先给网络安全从业者开放，之后再逐步推广给普通开发者和企业。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +151,7 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "GitHub发布的2026年Octoverse报告显示，agent写代码已经把开发节奏推到了新高度，现在每月有2.2亿个PR被合并，提交数一年内涨了三倍多，新建仓库数量也翻了一倍。报告还用大模型给这些仓库按地区和行业分类，想说明agent工程正在整体改变GitHub上的开发规模。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -87,28 +167,12 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "Simon Willison说2026年10月是用AI做游戏的一个转折点，Claude Opus 5.5在建模、配乐和游戏设计上的进步，让AI终于能做出真正好玩而不只是看起来像游戏的东西。他举了四个自己做的例子，从单次生成的找茬小游戏到支持多人对战的即时战略游戏，每个花的功夫都不超过四小时。他认为这会让更多没写过代码的人也能做游戏，但也会引来游戏圈对AI内容的争议。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "前沿模型能力新趋势讲清楚是什么为什么重要，Opus 5.5在建模配乐游戏设计上的进步，附具体可验证案例"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Terk Terkowitz",
-      "link": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "Simon Willison转引亚马逊工程管理层的一句话：如果你的工作用不上现在的AI工具，这不是失败，而是一个值得记录下来、跟经理讨论的发现。亚马逊认为，能说清楚AI在哪些工作上还帮不上忙，本身就是工程师该有的判断力。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "亚马逊官方对工程师使用AI工具的期待说明，有职场参考价值，但偏宏观表态而非操作指南"
         }
       ]
     },
@@ -119,7 +183,7 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "Latent Space的AI新闻汇总里，头条讲Anthropic一位招聘经理宣布不再考编程面试题，理由是Claude写代码已经比候选人强。他给新人工程师的建议是少写需求文档，直接用周末时间攒出能跑的原型，而且一次只做一个好点子。这反映招聘标准正从会不会写代码转向能不能拿出有商业价值的东西。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -135,7 +199,7 @@
       "date": "2026-10-28",
       "source_type": "blog",
       "summary": "Anthropic把AI for Science项目从个人研究者扩展到机构和基金会，给20家科研组织提供免费Claude算力，支持神经科学、天文、基因组学等领域的具体项目。比如普林斯顿团队用它画出果蝇全脑神经连接图，约翰霍普金斯团队借天文测量方法给肿瘤切片拍照分析。这标志着AI辅助科研从个例合作走向建制化推广。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -461,54 +525,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "汇总了过去48小时里一连串由AI加速发现和利用的安全漏洞与供应链事件，讲清楚了各事件的因果和影响，是扎实的趋势报道"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO",
-      "link": "https://www.latent.space/p/modal-d",
-      "date": "2026-10-22",
-      "source_type": "blog",
-      "summary": "Latent Space采访算力平台Modal的CEO，讲GPU需求其实全天忽高忽低，而传统合同是按固定时段固定数量买的。Modal的生意就是把成千上万客户的需求拼在一起，让算力能被切成小块按需用。有意思的是，给agent跑代码用的隔离环境原本差点被砍掉，现在撑起了公司三分之一的收入。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI基础设施行业深度访谈,内容扎实(sandbox经济占比/融资/容量管理技术细节),但偏商业/infra叙事,受众较窄"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Beyond tree cover: mapping the world’s forest types",
-      "link": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-      "date": "2026-10-22",
-      "source_type": "blog",
-      "summary": "Google DeepMind联合多个机构做了一个叫ForTy的全球森林分类地图，把地球上的森林分成原始林、人工林、种植园林等6种类型，还给出了逐年的变化数据。它能看出以前地图看不出的变化，比如一片原始森林被砍了之后又种成单一品种的木材林，这种森林还在但已经变了的情况，验证准确率达到了90%。这套数据能帮企业和监管机构落实欧盟的森林砍伐监管法规，追踪森林到底变成了什么，而不只是知道森林消失了没有。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清楚了具体技术方法（训练标注点识别森林类型转变）和验证准确率，并说明了对环保监管政策的实际支持"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "You are the Team  — Anekha Sokhal, Moshi",
-      "link": "https://www.latent.space/p/moshi",
-      "date": "2026-10-22",
-      "source_type": "blog",
-      "summary": "Latent Space采访金融AI工具Moshi的创始人，她说现在工程师常听到管理层讲“你就是整个团队”，原来一个团队的活要一个人带着agent干完。她把Moshi定位成给交易员用的推荐系统，把行情、新闻和个人数据串起来，而不是又一个聊天助手。如果你关心agent怎样改变工程师的工作量和压力，这期可以听听。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "有具体的行业趋势观察('你就是整个团队'的压力现象/推荐系统设计思路),但偏个人访谈叙事"
         }
       ]
     }
