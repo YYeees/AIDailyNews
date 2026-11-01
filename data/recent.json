@@ -1,34 +1,34 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "datasette-llm 0.1a9",
+      "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+      "date": "2026-10-31",
+      "source_type": "blog",
+      "summary": "Simon给Datasette的AI插件做了一项小更新：启动时会沿用LLM工具里已经设好的默认模型，不必再单独指定。它省去的是接入数据库代理时的一步重复配置，没有改变代理的主要能力。如果你正在用这套工具，可以点开看新的启动方式；其他读者把它当作一条轻量更新即可。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者维护的小工具更新日志，介绍默认模型配置的小幅体验改进。"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
       "link": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
       "date": "2026-10-31",
       "source_type": "blog",
       "summary": "Latent Space 借 Google 财报讨论一个矛盾：AI 直接给出答案，让用户更少点开原始网页，也可能削弱搜索自己的广告收入。作者引用管理层对 AI 搜索变现较弱的说明，同时承认公开数据不足以做严格分析。值得留意的是摘要与信息来源的关系，文章对市场走势的延伸仍是评论。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "从搜索收入讨论 AI 商业化张力，属于宏观趋势评论。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "dbreunig/nesformer",
-      "link": "https://simonwillison.net/2026/Oct/30/nesformer/",
-      "date": "2026-10-30",
-      "source_type": "blog",
-      "summary": "Drew Breunig 把任天堂游戏机的处理器模拟器做进了 Qwen 的模型权重，能运行经典游戏，只是速度很慢。Simon 分享了他让 Claude 探索并实现这个点子的提示词，还提到 agent 找到了旧的兼容性测试来核对行为。适合看看编程 agent 能把多离谱的实验做成，暂时不是日常工具指南。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "把模型权重做成游戏机模拟器，是有趣的 agent 编程演示，非日常应用指南。"
         }
       ]
     },
@@ -39,7 +39,7 @@
       "date": "2026-10-30",
       "source_type": "blog",
       "summary": "OpenAI 的公告简介称，将加强 ChatGPT 的暴力预防措施，包括扩大防护范围、更早介入风险，以及公开报告公共安全情况。标题同时提到面向青少年的新保护措施。原文访问受限，目前只能确认这些方向，具体如何实施仍需查看官方全文。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +55,7 @@
       "date": "2026-10-30",
       "source_type": "blog",
       "summary": "Latent Space 介绍今年编程 agent 大会的策展思路，重点放在扩大产出时如何减少低质内容、小模型驱动的软件，以及小团队挑战复杂软件。文章能帮人了解组织者关注哪些工程趋势，但主要是议程介绍和售票宣传，具体做法仍要等演讲展开。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +71,7 @@
       "date": "2026-10-29",
       "source_type": "youtube",
       "summary": "Greg Isenberg 认为，AI 让软件更容易做出来，单纯按账号卖工具的生意会承压。他提出先免费提供工具，再向用户销售代办任务的 AI 和人工服务，并用饮食记录应用举例。适合想了解 AI 产品如何收费的人参考，但这是他的商业判断。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
