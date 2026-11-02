@@ -2,17 +2,33 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette-llm 0.1a9",
-      "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
-      "date": "2026-10-31",
+      "title": "If in doubt, delete the uv.lock file",
+      "link": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+      "date": "2026-11-01",
       "source_type": "blog",
-      "summary": "Simon给Datasette的AI插件做了一项小更新：启动时会沿用LLM工具里已经设好的默认模型，不必再单独指定。它省去的是接入数据库代理时的一步重复配置，没有改变代理的主要能力。如果你正在用这套工具，可以点开看新的启动方式；其他读者把它当作一条轻量更新即可。",
+      "summary": null,
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者维护的小工具更新日志，介绍默认模型配置的小幅体验改进。"
+          "reason": "普通Python依赖锁定排错经验，不涉及AI实操。"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Kyle Kingsbury",
+      "link": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "date": "2026-11-01",
+      "source_type": "blog",
+      "summary": "Simon摘录了软件可靠性研究者Kyle Kingsbury的一段担忧：AI让像样的文档和项目外观更容易制造，这些表面信号也就更难证明软件可靠。他接着追问，维护者怎样保证程序和文档正确，又怎样把质量证据展示给使用者。摘录很短，但值得做测试的人思考，今后该拿什么来支撑信任。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI生成内容削弱软件可信度的风险，属于轻量观点引用。"
         }
       ]
     },
@@ -477,38 +493,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "展示ChatGPT在全球工作场景里的宏观使用趋势数据，偏宏观叙事，没有具体到怎么用"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Introducing GPT-6.1 Terra",
-      "link": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "date": "2026-10-26",
-      "source_type": "blog",
-      "summary": "OpenAI发布新模型GPT-6.1 Terra，主打视觉推理和计算机操作能力，官方说它能看懂技术图纸、填表、剪视频这类日常办公任务。这是一篇偏通稿的发布公告，没有展开讲这次升级具体强在哪里。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "新模型发布，带来视觉推理和计算机操作能力提升，但是官方发布通稿，没有展开说明意义"
-        }
-      ]
-    },
-    {
-      "person": "Anthropic",
-      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
-      "link": "https://www.anthropic.com/news/s1-sec",
-      "date": "2026-10-26",
-      "source_type": "blog",
-      "summary": "Anthropic向美国证监会提交了S-1注册声明，为上市做准备，计划以代码ANT在纳斯达克挂牌。公告本身是法律文本，股票发行规模和定价区间目前还没公布。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Anthropic提交IPO申请是重要的行业动态，但公告是法律文本，没有展开说明意义"
         }
       ]
     }
