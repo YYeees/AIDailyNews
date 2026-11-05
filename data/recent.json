@@ -7,7 +7,7 @@
       "date": "2026-11-04",
       "source_type": "blog",
       "summary": "Simon Willison修复了Datasette的LLM集成插件中的一个问题：演示站点原本没有正确地把可用模型限制在配置名单内。这条内容只说明修复对象，没有展开排查过程或测试方法。正在部署这套插件的人可以查看更新，普通AI使用者不必专门追踪。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +23,7 @@
       "date": "2026-11-04",
       "source_type": "blog",
       "summary": "OpenAI的发布提要称，Daybreak Red已通过Amazon Bedrock进入AWS GovCloud的美国东部区域，面向获批客户开展授权网络安全工作。它使用GPT-5.6 Cyber，但这条提要主要说明部署渠道，没有介绍实际操作方法。原文访问受限，本次未能核对使用条件和能力边界。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +39,7 @@
       "date": "2026-11-04",
       "source_type": "blog",
       "summary": "Maggie Appleton分享在GitHub Next探索未来软件的做法：先收集微小变化，再提出判断，最后做出能让人看见和讨论的原型。她用数字花园、个人软件和家庭AI助手等亲身案例，解释如何推演后续影响，也提醒判断要有证据支撑。值得读的是把模糊直觉变成具体作品，再让作品反过来修正想法的方法。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +55,7 @@
       "date": "2026-11-04",
       "source_type": "blog",
       "summary": "OpenAI的发布提要称，Images 2.6带来更快的图像生成、GIF制作、更精细的编辑，以及新的API控制选项，涉及ChatGPT、Codex和API。原文页面访问受限，本次未能核对具体用法和限制。经常用AI做图的人可以关注这些变化，是否适合自己的工作仍需查看原文。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +71,7 @@
       "date": "2026-11-04",
       "source_type": "blog",
       "summary": "Anthropic的生物研究团队讲述如何让Claude参与寻找、分离和解析一种功能仍不清楚的蛋白质外壳。AI帮助他们加快流程，也曾写错实验方案、漏掉分析步骤，研究者必须靠专业判断纠偏。这篇值得看的不只是发现本身，还有一线研究者如何分工、质疑AI建议，以及在陌生领域识别错误的困难。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
