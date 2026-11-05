@@ -1,13 +1,93 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "datasette-llm 0.1a10",
+      "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+      "date": "2026-11-04",
+      "source_type": "blog",
+      "summary": "Simon Willison修复了Datasette的LLM集成插件中的一个问题：演示站点原本没有正确地把可用模型限制在配置名单内。这条内容只说明修复对象，没有展开排查过程或测试方法。正在部署这套插件的人可以查看更新，普通AI使用者不必专门追踪。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "自维护AI插件的小修复，不能因作者身份提升为通用AI指南。"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "link": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "date": "2026-11-04",
+      "source_type": "blog",
+      "summary": "OpenAI的发布提要称，Daybreak Red已通过Amazon Bedrock进入AWS GovCloud的美国东部区域，面向获批客户开展授权网络安全工作。它使用GPT-5.6 Cyber，但这条提要主要说明部署渠道，没有介绍实际操作方法。原文访问受限，本次未能核对使用条件和能力边界。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI安全产品部署渠道更新，属于轻量产品消息，正文HTTP 403，判断仅基于提要。"
+        }
+      ]
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Fortune Telling and Speculative Design",
+      "link": "https://maggieappleton.com/fortune-telling",
+      "date": "2026-11-04",
+      "source_type": "blog",
+      "summary": "Maggie Appleton分享在GitHub Next探索未来软件的做法：先收集微小变化，再提出判断，最后做出能让人看见和讨论的原型。她用数字花园、个人软件和家庭AI助手等亲身案例，解释如何推演后续影响，也提醒判断要有证据支撑。值得读的是把模糊直觉变成具体作品，再让作品反过来修正想法的方法。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "用AI产品信号和原型推演未来，偏设计方法与趋势思考而非日常AI使用指南。"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing Images 2.6",
+      "link": "https://openai.com/index/introducing-images-2-6",
+      "date": "2026-11-04",
+      "source_type": "blog",
+      "summary": "OpenAI的发布提要称，Images 2.6带来更快的图像生成、GIF制作、更精细的编辑，以及新的API控制选项，涉及ChatGPT、Codex和API。原文页面访问受限，本次未能核对具体用法和限制。经常用AI做图的人可以关注这些变化，是否适合自己的工作仍需查看原文。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "图像生成与编辑能力更新具有实用相关性，但正文HTTP 403，仅凭简短提要不足以判高。"
+        }
+      ]
+    },
+    {
+      "person": "Anthropic",
+      "title": "Investigating vault particles with Claude",
+      "link": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+      "date": "2026-11-04",
+      "source_type": "blog",
+      "summary": "Anthropic的生物研究团队讲述如何让Claude参与寻找、分离和解析一种功能仍不清楚的蛋白质外壳。AI帮助他们加快流程，也曾写错实验方案、漏掉分析步骤，研究者必须靠专业判断纠偏。这篇值得看的不只是发现本身，还有一线研究者如何分工、质疑AI建议，以及在陌生领域识别错误的困难。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI参与结构生物学研究的一手案例扎实，但实验与分析门槛较高。"
+        }
+      ]
+    },
+    {
       "person": "Google",
       "title": "Agentic cheminformatics with Google Antigravity",
       "link": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
       "date": "2026-11-03",
       "source_type": "blog",
       "summary": "Google展示如何让Antigravity配合化学技能包，串起文献检索、分子整理、预测建模和候选药物设计。语言模型负责协调流程，专业工具负责计算，研究者可以在交互界面检查数据与结果。它值得参考的是如何把领域工具接进agent，同时明确计算建议仍须实验验证。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,28 +103,12 @@
       "date": "2026-11-03",
       "source_type": "blog",
       "summary": "Dan Koe提出用AI搭建一个人的内容团队，替自己或客户完成定位、选题、起草和发布。文章的具体做法是先访谈真实经历和独特观点，再结合已有作品与内容研究建立素材库，让人负责方向和最终改写。适合想把写作变成业务的人参考，不过其中也夹有不少自家工具推广。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "给出AI辅助内容业务流程，但大量篇幅推广自家工具和创业机会。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-      "date": "2026-11-03",
-      "source_type": "blog",
-      "summary": "Simon Willison在自己的笔记本上复现了让模型读取神经网络参数、猜出它在玩什么游戏的实验，有成功也有失败。他特意区分了直接读参数与借助代码修改模型，提醒不要把不同能力混在一起夸大。值得读的不只是结果，还有他如何亲手验证一个热门研究主张。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "提供本地模型读参数的可复现实验与失败例子，但研究背景和运行成本超出日常AI使用。"
         }
       ]
     },
@@ -55,7 +119,7 @@
       "date": "2026-11-03",
       "source_type": "blog",
       "summary": "OpenAI介绍ChatGPT和Codex如何参与实体工程工作，涉及计算机辅助设计、电路板设计和仿真。它提供了一个观察方向：AI编程工具的用途正在延伸到软件之外。此次原文访问被拒绝，只能根据官方简介介绍主题，具体做法和效果需要点开原文核对。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,44 +135,12 @@
       "date": "2026-11-03",
       "source_type": "blog",
       "summary": "这期AI新闻关注一个新实验：让大模型直接阅读和修改小型神经网络的内部参数，而不是先写训练程序。文章把它放进AI自主改进的讨论中，也提醒目前展示主要局限于简单游戏和小模型。适合了解这个新方向，但还不能据此认定模型已经能普遍改进自己。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "介绍直接读写模型参数的研究进展，但属于研究级解读，尚非普通用户实操指南。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
-      "link": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
-      "date": "2026-11-03",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "利用飞机声定位的隐私案例，与AI使用没有实质关系。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "October sponsors-only newsletter",
-      "link": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
-      "date": "2026-11-03",
-      "source_type": "blog",
-      "summary": "Simon Willison发布了新一期订阅月报，目录涉及AI做游戏、漏洞发现、模型发布和他当前使用的工具。公开页面只有主题预告，完整内容需要订阅，适合先看目录判断是否值得追读，不能把这份预告当成完整的使用指南。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI月报的订阅推广，仅公开目录，无法据此评价付费正文的深度。"
         }
       ]
     },
@@ -285,102 +317,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "新模型发布信息量大，但整体是推特benchmark速报拼接体，偏纯新闻通稿，没有讲清楚为什么重要"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Why Agents Love Supabase",
-      "link": "https://latent.space/p/supabase/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "Latent Space采访了Supabase的两位创始人，聊agent为什么偏爱用Supabase做后端。关键是本地开发不用装Docker了，数据库结构能像代码一样存进Git里管理和追溯，计算也能挨着数据库跑。这些对人类开发者本来就是减负，对会反复搭建环境的agent来说更是直接省掉了大段摩擦。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲清楚agent为什么偏爱某个后端的具体技术原因，但主题聚焦单一厂商产品，偏基础设施选型"
-        }
-      ]
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "$100M ARR Founder: The Next Big AI Opportunity",
-      "link": "https://www.youtube.com/watch?v=st61aKW8P5A",
-      "date": "2026-10-28",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg采访了Gamma联合创始人Jon Noronha，聊的核心概念是agent harness，也就是让agent动手做事、自查结果再交付的一整套工具链。Jon说一份Gamma的PPT背后要跑大约20个模型、200次调用，光检查排版就要好几轮。他觉得做垂直agent产品的机会在于用户主观判断强、还想要人把关的领域，护城河来自独特产品直觉、自有数据，或者把AI和真实物理世界结合起来的生意。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入讲agent harness这个构建者核心概念，附Gamma真实产品案例和选品方法论，门槛不高又扎实"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Gemini 4 Carbon: Our next frontier model",
-      "link": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "Google发布新模型Gemini 4 Carbon，主打网络安全防御能力和能连续干几天活的长任务能力，比如独立修复大型代码库里的bug。它识别和修复安全漏洞的表现比上一代提升了两倍多，撒谎和作弊的概率也明显降低，提示注入攻击基本防得住。目前先给网络安全从业者开放，之后再逐步推广给普通开发者和企业。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "新一代前沿模型发布，附具体benchmark和安全性数据，讲清楚能力边界，不是空泛通稿"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "GitHub Octoverse 2026",
-      "link": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "GitHub发布的2026年Octoverse报告显示，agent写代码已经把开发节奏推到了新高度，现在每月有2.2亿个PR被合并，提交数一年内涨了三倍多，新建仓库数量也翻了一倍。报告还用大模型给这些仓库按地区和行业分类，想说明agent工程正在整体改变GitHub上的开发规模。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "GitHub官方年度数据显示agent工程对开发规模的量级冲击，是重要的行业趋势信号"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The October inflection point for vibe game development",
-      "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "Simon Willison说2026年10月是用AI做游戏的一个转折点，Claude Opus 5.5在建模、配乐和游戏设计上的进步，让AI终于能做出真正好玩而不只是看起来像游戏的东西。他举了四个自己做的例子，从单次生成的找茬小游戏到支持多人对战的即时战略游戏，每个花的功夫都不超过四小时。他认为这会让更多没写过代码的人也能做游戏，但也会引来游戏圈对AI内容的争议。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型能力新趋势讲清楚是什么为什么重要，Opus 5.5在建模配乐游戏设计上的进步，附具体可验证案例"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger beats tenure\"",
-      "link": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/",
-      "date": "2026-10-28",
-      "source_type": "blog",
-      "summary": "Latent Space的AI新闻汇总里，头条讲Anthropic一位招聘经理宣布不再考编程面试题，理由是Claude写代码已经比候选人强。他给新人工程师的建议是少写需求文档，直接用周末时间攒出能跑的原型，而且一次只做一个好点子。这反映招聘标准正从会不会写代码转向能不能拿出有商业价值的东西。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "直接讲AI对编程面试和招聘标准的实质冲击，附具体建议，不是纯新闻通稿"
         }
       ]
     }
