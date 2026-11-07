@@ -2,17 +2,49 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Paul Ford",
-      "link": "https://simonwillison.net/2026/Nov/5/paul-ford/",
-      "date": "2026-11-05",
+      "title": "Quoting Nilay Patel",
+      "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+      "date": "2026-11-06",
       "source_type": "blog",
-      "summary": "Simon Willison摘录Paul Ford的一句话：浏览器已经是很强大的应用平台，而使用这些能力的成本还在不断降低。这是一条关于网页作为创作和应用载体的短提醒，没有展开具体例子或实现方法。如果你关心思维工具为什么越来越容易做出来，可以顺着引用去读Ford的原文。",
+      "summary": "Simon摘录了Nilay Patel对AI行业的批评：公众承担了基础设施和劣质内容带来的成本，却未必感受到产品足够有用。他认为行业需要做出让人自然愿意使用的产品，而不是继续依赖宣传说服。作为一段鲜明的反方观点，它适合用来检视技术热潮里的价值主张，但并不提供系统论证或实操方法。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "只谈浏览器应用能力，没有明确AI信息。"
+          "reason": "围绕AI产品价值与社会成本提出批评，属于宏观观点，缺少工具实操。"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+      "link": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+      "date": "2026-11-06",
+      "source_type": "blog",
+      "summary": "这篇简讯介绍Thinking Machines的新开放权重模型Inkling 2 Small，重点是较快的训练过程，以及围绕可定制性展开的产品方向。作者认为它显示这家新实验室开始持续交付成果，但正文更多是概览和外链，缺少深入的使用比较。如果你想跟踪开放模型的新参与者，可以把它当作继续查阅的入口。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "概述开放权重模型的训练效率与可定制方向，但正文偏简短转述，缺少普通用户可用的选型细节。"
+        }
+      ]
+    },
+    {
+      "person": "Anthropic",
+      "title": "Teaching AI to build scientific models",
+      "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+      "date": "2026-11-06",
+      "source_type": "blog",
+      "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "系统解释AI辅助科学建模的进展与局限，但涉及统计推断与科研背景，实操门槛较高。"
         }
       ]
     },
@@ -23,7 +55,7 @@
       "date": "2026-11-05",
       "source_type": "blog",
       "summary": "Google更新Gemini Omni 1.2 Flash，支持生成最长15秒的视频，价格比上一版降低30%。更实用的变化是可以沿着同一段视频继续对话修改背景、人物或光线，不必每次从头生成，文章也展示了参考图与角色一致性的例子。做短片或产品演示可以看看这些新流程，同时留意它对高速动作和复杂物理效果仍有局限。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +71,7 @@
       "date": "2026-11-05",
       "source_type": "blog",
       "summary": "这期AI行业简报主要整理团队换人和公司收购，包括Claude Code产品负责人转投OpenAI，以及几家开发工具公司的整合。现有正文更像行业动向速览，也夹有作者大会的宣传，没有展开工具能力或具体用法。想追踪AI编程工具背后的人与公司可以看看，寻找实操指南则不必优先读。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +87,7 @@
       "date": "2026-11-05",
       "source_type": "blog",
       "summary": "Anthropic分析研究人员如何使用Claude，发现最常见的用途是分析数据和写作，而科学家最看重的提出问题与收集数据，用得反而少。报告把这些差异与模型能力、实验室里的实际操作限制联系起来，也讨论专用科研工具能否填补缺口。值得读的是哪些环节已经能交给AI，哪些仍是研究者自己的核心工作，而不是把未来产出预测当成已经实现的成绩。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -237,54 +269,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "从搜索收入讨论 AI 商业化张力，属于宏观趋势评论。"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Speeding up planning decisions with AI",
-      "link": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
-      "date": "2026-10-30",
-      "source_type": "blog",
-      "summary": "Google DeepMind介绍了帮助英国地方政府处理房屋改建申请的PlanAssist。它先检查材料和规划限制，再起草带出处的报告，最终决定仍由审批人员作出，早期试点称可减少58%的评估时间。适合看看AI如何接手行政流程中的重复工作，也要留意这些成效仍是官方试点报告。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍规划审批中的人工复核与自动化分工，属于具体但偏宣传的行业应用案例。"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Community safety report and new protections for teens",
-      "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-      "date": "2026-10-30",
-      "source_type": "blog",
-      "summary": "OpenAI 的公告简介称，将加强 ChatGPT 的暴力预防措施，包括扩大防护范围、更早介入风险，以及公开报告公共安全情况。标题同时提到面向青少年的新保护措施。原文访问受限，目前只能确认这些方向，具体如何实施仍需查看官方全文。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍 ChatGPT 防暴力与青少年保护方向，属于产品安全动态；全文被 HTTP 403 拦截，仅依据 feed 简介保守判断。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Building AIE CODE: The top Coding Agent Conference",
-      "link": "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
-      "date": "2026-10-30",
-      "source_type": "blog",
-      "summary": "Latent Space 介绍今年编程 agent 大会的策展思路，重点放在扩大产出时如何减少低质内容、小模型驱动的软件，以及小团队挑战复杂软件。文章能帮人了解组织者关注哪些工程趋势，但主要是议程介绍和售票宣传，具体做法仍要等演讲展开。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "以编程 agent 大会策展与售票为主，趋势线索有参考价值但缺少具体实操。"
         }
       ]
     }
