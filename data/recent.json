@@ -2,17 +2,33 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Nilay Patel",
-      "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
-      "date": "2026-11-06",
+      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+      "date": "2026-11-07",
       "source_type": "blog",
-      "summary": "Simon摘录了Nilay Patel对AI行业的批评：公众承担了基础设施和劣质内容带来的成本，却未必感受到产品足够有用。他认为行业需要做出让人自然愿意使用的产品，而不是继续依赖宣传说服。作为一段鲜明的反方观点，它适合用来检视技术热潮里的价值主张，但并不提供系统论证或实操方法。",
+      "summary": null,
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "围绕AI产品价值与社会成本提出批评，属于宏观观点，缺少工具实操。"
+          "reason": "讨论Datasette分页与Firefox预取行为，属于普通Web工程问题，与AI使用无关。"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Anthropic IPO: Whither Now?",
+      "link": "https://latent.space/p/ainews-anthropic-ipo-whither-now/",
+      "date": "2026-11-07",
+      "source_type": "blog",
+      "summary": "这期Latent Space围绕AI市场回调，讨论Anthropic上市预期和收入增长能否撑住估值。正文简述市场情绪与增长目标，具体分析放在配套播客里，另有较长的赞助介绍。适合想了解AI商业预期的人，单看这篇文字能获得的实操信息有限。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "围绕Anthropic上市预期与AI市场估值的宏观评论，正文主要引向播客，缺少实操内容。"
         }
       ]
     },
@@ -23,7 +39,7 @@
       "date": "2026-11-06",
       "source_type": "blog",
       "summary": "这篇简讯介绍Thinking Machines的新开放权重模型Inkling 2 Small，重点是较快的训练过程，以及围绕可定制性展开的产品方向。作者认为它显示这家新实验室开始持续交付成果，但正文更多是概览和外链，缺少深入的使用比较。如果你想跟踪开放模型的新参与者，可以把它当作继续查阅的入口。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +55,7 @@
       "date": "2026-11-06",
       "source_type": "blog",
       "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -253,22 +269,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "介绍日常任务基准，但全文访问受阻，现有信息不足以判断具体实用价值。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
-      "link": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
-      "date": "2026-10-31",
-      "source_type": "blog",
-      "summary": "Latent Space 借 Google 财报讨论一个矛盾：AI 直接给出答案，让用户更少点开原始网页，也可能削弱搜索自己的广告收入。作者引用管理层对 AI 搜索变现较弱的说明，同时承认公开数据不足以做严格分析。值得留意的是摘要与信息来源的关系，文章对市场走势的延伸仍是评论。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "从搜索收入讨论 AI 商业化张力，属于宏观趋势评论。"
         }
       ]
     }
