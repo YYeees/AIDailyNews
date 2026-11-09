@@ -2,17 +2,33 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
-      "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
-      "date": "2026-11-07",
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+      "date": "2026-11-08",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Simon 遛狗时想到一个数据库小功能，便让 Claude 比较用 C 和 Rust 实现的性能、代码复杂度与文件大小。发现差距来自数字解析方式后，他继续追问，让模型优化实现，并整理成带测试和随机输入检查的研究报告。它展示了怎样把一个好奇的问题推进成可验证的实验，底层性能细节需要一些编程基础。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "讨论Datasette分页与Firefox预取行为，属于普通Web工程问题，与AI使用无关。"
+          "reason": "用聊天式提示比较并优化数据库扩展，是具体的智能体实验案例，但涉及底层性能细节。"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+      "link": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
+      "date": "2026-11-08",
+      "source_type": "blog",
+      "summary": "这期访谈介绍斯坦福如何教学生使用编程智能体，以及这些方法怎样用到真实团队。课程让学生给开源项目提交修改，再由维护者审查，重点是理解代码和设计取舍。与同源完整版是同一期内容，想看课程和团队实践的展开，优先点完整版即可。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与同源《How Stanford Teaches AI-Native Engineering》重复，完整版信息更全，择一看即可。"
         }
       ]
     },
@@ -23,7 +39,7 @@
       "date": "2026-11-07",
       "source_type": "blog",
       "summary": "这期Latent Space围绕AI市场回调，讨论Anthropic上市预期和收入增长能否撑住估值。正文简述市场情绪与增长目标，具体分析放在配套播客里，另有较长的赞助介绍。适合想了解AI商业预期的人，单看这篇文字能获得的实操信息有限。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
