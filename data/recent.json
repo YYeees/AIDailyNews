@@ -2,17 +2,145 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "llm-gemini 0.36",
-      "link": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
-      "date": "2026-11-10",
+      "title": "datasette-cluster-map 0.19",
+      "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+      "date": "2026-11-13",
       "source_type": "blog",
-      "summary": "Simon 更新自己的 Gemini 插件，并试用刚扩大开放范围的 Carbon 模型。他展示了绘图和地图动画，也提醒优惠价格之后会调整，适合已经使用这个插件、想了解接入情况的人。",
+      "summary": null,
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者维护的插件更新与模型演示，按更新日志标准降档。"
+          "reason": "作者自己维护的小工具版本更新日志"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-leaflet 0.3",
+      "link": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+      "date": "2026-11-13",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing ChatGPT Wallet",
+      "link": "https://openai.com/index/introducing-chatgpt-wallet",
+      "date": "2026-11-13",
+      "source_type": "blog",
+      "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "官方新功能公告，让agent能代为付款"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
+      "link": "https://latent.space/p/artcraft/",
+      "date": "2026-11-13",
+      "source_type": "blog",
+      "summary": "ArtCraft创始人在大会上讲他们用AI从头克隆了Photoshop和Acrobat等软件，目前已经开源十七个。文章记录了现场气氛和他的开源宣言。适合看个野心很大的案例。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创业者宣讲，偏叙事和项目介绍"
+        }
+      ]
+    },
+    {
+      "person": "Google",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "date": "2026-11-12",
+      "source_type": "blog",
+      "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，讲清了定价和能力"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] D-Day (Decision Models Day)",
+      "link": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "source_type": "blog",
+      "summary": "这是当天大会的每日汇总，讲决策模型集中亮相，Cloudflare展示了自家的模型，Google也宣布了Gemini Decision 1。和另一篇Jev的报道讲的是同一件事，看那篇更完整。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与The Jev Revolution重复，择一看即可"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Jev Revolution: What Engineers Are Already Building with System One Models",
+      "link": "https://latent.space/p/jev-revolution/",
+      "date": "2026-11-12",
+      "source_type": "blog",
+      "summary": "AI Engineer Code Summit主题是系统一模型，也就是不写长文、只返回选择、分数或概率的快速模型。创始人讲了Jev这类产品为什么发布后迅速流行，以及已有哪些生产用例。想知道除了聊天模型还有什么新方向，这篇值得读。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统一模型是当前新趋势，文章讲清楚是什么以及工程师已经在做什么"
+        }
+      ]
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "Use Grok Bot Better Than 99% of People (Full Course)",
+      "link": "https://www.youtube.com/watch?v=1cWZ7Ekff6E",
+      "date": "2026-11-11",
+      "source_type": "youtube",
+      "summary": "Greg和一位用户聊他怎么把工作和生活都交给Grok Bot这个个人助理。他还让它把写代码的活转给Claude Code，覆盖工程、设计、内容、理财和购物五块。想照着抄一套agent用法的人可以看。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创作者访谈演示一套个人agent用法，偏推广和演示"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
+      "link": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "source_type": "blog",
+      "summary": "Mercor这家给AI模型提供专家数据的公司，拿到新一轮融资，估值到了两百亿美元。文章看点是它的收入涨得很快，以及它说各行各业的工作流程都还没被模型评测过。适合想了解AI数据行业景气度的人扫一眼。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI行业融资新闻，偏宏观叙事"
         }
       ]
     },
@@ -23,7 +151,7 @@
       "date": "2026-11-10",
       "source_type": "blog",
       "summary": "Resend 创始人谈如何让开发工具更容易被 AI 代理找到和使用，从可直接读取的价格表讲到工具调用返回的数据量。他会展开代理实际调用，检查哪些内容占满上下文，适合正在设计文档或代理工具的人借用这种观察方式。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +167,7 @@
       "date": "2026-11-10",
       "source_type": "youtube",
       "summary": "Greg 用 Fable 演示业务审查、行业调研和内容制作等提示词，也尝试让模型把自己的决策习惯整理成长期使用的说明。适合找可改写的任务模板，节目中的赚钱设想和自主工作能力仍应放回自己的业务里验证。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +183,7 @@
       "date": "2026-11-10",
       "source_type": "blog",
       "summary": "OpenAI 宣布面向商家的 ChatGPT 功能，简介提到管理企业信息、了解企业如何被展示，以及把用户兴趣转成后续行动。原文返回访问拒绝，目前只能确认这些简介信息，具体使用方式仍需点开原文查看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +199,7 @@
       "date": "2026-11-10",
       "source_type": "blog",
       "summary": "Simon 试用了 Meta 的轻量模型 Muse Ember，把它与同档模型的收费和实际表现放在一起看。他特别提醒，长输入会改变价格，模型思考时消耗的字数也不同，选型应看完成任务的总成本，而不只看标价。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -87,7 +215,7 @@
       "date": "2026-11-10",
       "source_type": "blog",
       "summary": "这篇梳理 Claude Fable 新版本的能力和费用变化，提醒每个字更便宜，不代表完成任务的账单更低。模型会花更多时间检查工作，推理强度也影响成本，适合在升级之前理解该怎样比较实际使用代价。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -103,28 +231,12 @@
       "date": "2026-11-10",
       "source_type": "blog",
       "summary": "Simon 摘录了 Anthropic 对 Claude Fable 的提示建议：明确告诉模型代码库由它负责，会影响它是否主动整理重复代码。小任务实验中，这种表述比不说明归属时更常触发重构，值得在希望代理长期维护项目时试用。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Yonkers Rises",
-      "link": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
-      "date": "2026-11-10",
-      "source_type": "blog",
-      "summary": "Simon 为了记住纽约 Yonkers 的位置，让 Claude 做了一段城区变成机甲、在城市中行走的动画。他给出了提示词和成品，适合看模型如何把地图数据变成帮助理解和记忆的交互场景。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程代理制作动画的演示案例。"
         }
       ]
     },
@@ -135,7 +247,7 @@
       "date": "2026-11-09",
       "source_type": "youtube",
       "summary": "这期演示如何让 AI 代理真正接手营销工作，重点是先准备业务数据、广告平台权限和创作工具。嘉宾解释为什么要把数据集中起来再让代理查询，也展示广告生成流程，适合想把聊天助手接进实际业务的人。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -189,134 +301,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "与同源《How Stanford Teaches AI-Native Engineering》重复，完整版信息更全，择一看即可。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic IPO: Whither Now?",
-      "link": "https://latent.space/p/ainews-anthropic-ipo-whither-now/",
-      "date": "2026-11-07",
-      "source_type": "blog",
-      "summary": "这期Latent Space围绕AI市场回调，讨论Anthropic上市预期和收入增长能否撑住估值。正文简述市场情绪与增长目标，具体分析放在配套播客里，另有较长的赞助介绍。适合想了解AI商业预期的人，单看这篇文字能获得的实操信息有限。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "围绕Anthropic上市预期与AI市场估值的宏观评论，正文主要引向播客，缺少实操内容。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
-      "link": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
-      "date": "2026-11-06",
-      "source_type": "blog",
-      "summary": "这篇简讯介绍Thinking Machines的新开放权重模型Inkling 2 Small，重点是较快的训练过程，以及围绕可定制性展开的产品方向。作者认为它显示这家新实验室开始持续交付成果，但正文更多是概览和外链，缺少深入的使用比较。如果你想跟踪开放模型的新参与者，可以把它当作继续查阅的入口。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "概述开放权重模型的训练效率与可定制方向，但正文偏简短转述，缺少普通用户可用的选型细节。"
-        }
-      ]
-    },
-    {
-      "person": "Anthropic",
-      "title": "Teaching AI to build scientific models",
-      "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
-      "date": "2026-11-06",
-      "source_type": "blog",
-      "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "系统解释AI辅助科学建模的进展与局限，但涉及统计推断与科研背景，实操门槛较高。"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-      "link": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-      "date": "2026-11-05",
-      "source_type": "blog",
-      "summary": "Google更新Gemini Omni 1.2 Flash，支持生成最长15秒的视频，价格比上一版降低30%。更实用的变化是可以沿着同一段视频继续对话修改背景、人物或光线，不必每次从头生成，文章也展示了参考图与角色一致性的例子。做短片或产品演示可以看看这些新流程，同时留意它对高速动作和复杂物理效果仍有局限。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] It's Swapping Season",
-      "link": "https://latent.space/p/ainews-it-s-swapping-season/",
-      "date": "2026-11-05",
-      "source_type": "blog",
-      "summary": "这期AI行业简报主要整理团队换人和公司收购，包括Claude Code产品负责人转投OpenAI，以及几家开发工具公司的整合。现有正文更像行业动向速览，也夹有作者大会的宣传，没有展开工具能力或具体用法。想追踪AI编程工具背后的人与公司可以看看，寻找实操指南则不必优先读。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "以人员流动、收购与活动宣传为主，是轻量行业动态而非深入实操。"
-        }
-      ]
-    },
-    {
-      "person": "Anthropic",
-      "title": "How scientists use Claude",
-      "link": "https://www.anthropic.com/research/how-researchers-use-claude",
-      "date": "2026-11-05",
-      "source_type": "blog",
-      "summary": "Anthropic分析研究人员如何使用Claude，发现最常见的用途是分析数据和写作，而科学家最看重的提出问题与收集数据，用得反而少。报告把这些差异与模型能力、实验室里的实际操作限制联系起来，也讨论专用科研工具能否填补缺口。值得读的是哪些环节已经能交给AI，哪些仍是研究者自己的核心工作，而不是把未来产出预测当成已经实现的成绩。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "基于真实科研会话分析采用趋势，内容扎实但偏宏观研究，缺少普通用户可直接照做的指南。"
-        }
-      ]
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "8 Businesses for the AI Age",
-      "link": "https://www.youtube.com/watch?v=b3tMAOFB71o",
-      "date": "2026-11-04",
-      "source_type": "youtube",
-      "summary": "Greg 讨论当软件和内容更容易复制时，什么生意仍然有价值。他把机会放在现实服务、信任、独有数据和交付结果上，适合想重新审视创业方向的人。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI时代商业护城河，偏宏观观点。"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-      "link": "https://openai.com/index/daybreak-red-aws-govcloud",
-      "date": "2026-11-04",
-      "source_type": "blog",
-      "summary": "OpenAI的发布提要称，Daybreak Red已通过Amazon Bedrock进入AWS GovCloud的美国东部区域，面向获批客户开展授权网络安全工作。它使用GPT-5.6 Cyber，但这条提要主要说明部署渠道，没有介绍实际操作方法。原文访问受限，本次未能核对使用条件和能力边界。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI安全产品部署渠道更新，属于轻量产品消息，正文HTTP 403，判断仅基于提要。"
         }
       ]
     }
