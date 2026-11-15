@@ -7,23 +7,7 @@
       "date": "2026-11-14",
       "source_type": "blog",
       "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-vega 0.7",
-      "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
-      "date": "2026-11-14",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +23,7 @@
       "date": "2026-11-14",
       "source_type": "blog",
       "summary": "这期简报的主角是一份“拒绝AI垃圾内容”宣言，在AI工程师大会的讨论中诞生，被很多演讲者联署，还上了Hacker News首页。另外提到llama.cpp和ggml、SGLang都发布了1.0。想了解业内怎么看AI生成内容质量的人可以点开。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +39,7 @@
       "date": "2026-11-13",
       "source_type": "blog",
       "summary": "吴恩达推荐了刚开源的OpenWorker Agent Harness SDK，用它可以给任意大模型搭一个agent harness，也就是包住模型、让它能真正干活的那层外壳。他鼓励没做过的人自己动手做一次，这也是面试里会考的技能。想理解agent是怎么搭起来的，可以从这篇开始。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -317,22 +301,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
-      "link": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
-      "date": "2026-11-08",
-      "source_type": "blog",
-      "summary": "这期访谈介绍斯坦福如何教学生使用编程智能体，以及这些方法怎样用到真实团队。课程让学生给开源项目提交修改，再由维护者审查，重点是理解代码和设计取舍。与同源完整版是同一期内容，想看课程和团队实践的展开，优先点完整版即可。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "与同源《How Stanford Teaches AI-Native Engineering》重复，完整版信息更全，择一看即可。"
         }
       ]
     }
