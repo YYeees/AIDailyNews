@@ -4,17 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7日内关注 · Daily Digest</title>
-<!-- 竹简上的毛笔字(志莽行书)：text= 只下载用得到的那两百来个字，文件很小 -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap&text=%E5%AE%9A%E9%A3%8E%E6%B3%A2%E4%B8%89%E6%9C%88%E4%B8%83%E6%97%A5%E6%B2%99%E6%B9%96%E9%81%93%E4%B8%AD%E9%81%87%E9%9B%A8%E5%85%B7%E5%85%88%E5%8E%BB%E5%90%8C%E8%A1%8C%E7%9A%86%E7%8B%BC%E7%8B%88%E4%BD%99%E7%8B%AC%E4%B8%8D%E8%A7%89%E5%B7%B2%E8%80%8C%E9%81%82%E6%99%B4%E6%95%85%E4%BD%9C%E6%AD%A4%E8%AF%8D%E8%8E%AB%E5%90%AC%E7%A9%BF%E6%9E%97%E6%89%93%E5%8F%B6%E5%A3%B0%E4%BD%95%E5%A6%A8%E5%90%9F%E5%95%B8%E4%B8%94%E5%BE%90%E7%AB%B9%E6%9D%96%E8%8A%92%E9%9E%8B%E8%BD%BB%E8%83%9C%E9%A9%AC%E8%B0%81%E6%80%95%E4%B8%80%E8%93%91%E7%83%9F%E4%BB%BB%E5%B9%B3%E7%94%9F%E6%96%99%E5%B3%AD%E6%98%A5%E5%90%B9%E9%85%92%E9%86%92%E5%BE%AE%E5%86%B7%E5%B1%B1%E5%A4%B4%E6%96%9C%E7%85%A7%E5%8D%B4%E7%9B%B8%E8%BF%8E%E5%9B%9E%E9%A6%96%E5%90%91%E6%9D%A5%E8%90%A7%E7%91%9F%E5%A4%84%E5%BD%92%E4%B9%9F%E6%97%A0%E4%B8%B4%E6%B1%9F%E4%BB%99%E5%A4%9C%E9%A5%AE%E4%B8%9C%E5%9D%A1%E5%A4%8D%E9%86%89%E4%BB%BF%E4%BD%9B%E6%9B%B4%E5%AE%B6%E7%AB%A5%E9%BC%BB%E6%81%AF%E9%9B%B7%E9%B8%A3%E6%95%B2%E9%97%A8%E9%83%BD%E5%BA%94%E5%80%9A%E9%95%BF%E6%81%A8%E8%BA%AB%E9%9D%9E%E6%88%91%E6%9C%89%E6%97%B6%E5%BF%98%E8%90%A5%E9%98%91%E9%9D%99%E7%B8%A0%E7%BA%B9%E5%B0%8F%E8%88%9F%E4%BB%8E%E9%80%9D%E6%B5%B7%E5%AF%84%E6%B5%A3%E6%BA%AA%E7%BB%86%E6%99%93%E5%AF%92%E6%B7%A1%E7%96%8F%E6%9F%B3%E5%AA%9A%E6%BB%A9%E5%85%A5%E6%B7%AE%E6%B8%85%E6%B4%9B%E6%B8%90%E6%BC%AB%E9%9B%AA%E6%B2%AB%E4%B9%B3%E8%8A%B1%E6%B5%AE%E5%8D%88%E7%9B%8F%E8%93%BC%E8%8C%B8%E8%92%BF%E7%AC%8B%E8%AF%95%E7%9B%98%E4%BA%BA%E9%97%B4%E5%91%B3%E6%98%AF%E6%AC%A2%E8%8B%8F%E8%BD%BC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Sorts+Mill+Goudy&display=swap">
 <style>
   /* 2026-10-24改版：白底、苹方、按天分组；high是带摘要的头条，medium收成一行简讯点开看摘要；
-     右侧深色X面板 + 鼠尾草绿仓库面板；刊头下面一卷会随风轻摆、自己书写的竹简。 */
+     右侧深色X面板 + 鼠尾草绿仓库面板。(刊头下面那卷《定风波》竹简 2026-11-14 用户要求去掉了) */
   :root {
     --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
-    --bg: #FFFFFF; --ink: #1A1917; --soft: #3F3C37; --faint: #7A756B;
-    --rule: #E6E2D9; --accent: #A8461F; --hover: #F6F4EF;
-    --up: #3F7D4E; --dark: #1B1A19; --dark-ink: #F3EFE7; --dark-soft: #BDB7AC;
-    --sage: #E3E8DE; --sage-rule: #CFD7C8;
+    /* 颜色层级跟「大公司」页统一(2026-11-14)：标题最深；摘要、人名、标签依次变淡；
+       大日期用土橙(--date)；"新"和选中的筛选用砖红(--accent) */
+    --bg: #FAF9F5; --ink: #16150F; --soft: #4E4C46; --who: #6E6C65; --faint: #9C9990;
+    --rule: #E6E2D8; --rule-strong: #C9C5BB; --accent: #B5442D; --hover: #F1EEE6;
+    --date: #CC785C;
+    --title: "Iowan Old Style", "Sorts Mill Goudy", "PingFang SC", Georgia, serif;
+    --up: #3F7D4E;
   }
   /* 弯双引号U+201C/D在中英文里是同一个码位，按字体顺序会先落到苹果英文字体上，变成窄窄的半角。
      只在中文摘要里把这两个字符交给苹方，英文字母照旧；单引号不动，英文缩写里的撇号也是它 */
@@ -31,27 +34,55 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  .page { max-width: 720px; margin: 0 auto; padding: 72px 16px 120px; }
-
-  /* ---- 刊头 ---- */
-  .mast { margin-bottom: 40px; }
-  .mast .date { font-size: 13px; line-height: 1.6; color: var(--faint); letter-spacing: .08em; }
-  .mast h1 { font-size: 2.4rem; font-weight: 600; margin: 6px 0 10px; letter-spacing: .02em; }
-  .mast .lede { color: var(--soft); font-size: 1.02rem; margin: 0; }
-  .mast nav { margin-top: 18px; font-size: 13px; color: var(--faint); }
-  .mast nav a { color: var(--soft); border-bottom: 1px solid var(--rule); }
-
-  /* 刊头和第一天之间的竹简：宽度跟正文栏一致，上下边缘柔化 */
-  .band {
-    display: block; width: 100%; height: 106px; margin: 0 0 8px;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
-            mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  /* ---- 顶部横栏：跟「常读的人」「大公司」两页同一份样式(三页切换时 logo 和导航不跳) ---- */
+  /* 首页对所有元素用了border-box，宽度要把左右内边距算进去(1160+48)，才跟另外两页对齐 */
+  .top { max-width: 1208px; margin: 0 auto; padding: 34px 24px 0; line-height: 1.6; letter-spacing: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .top .mark { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-size: 20px; letter-spacing: 0; }
+  .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+             font-family: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", sans-serif; }
+  .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+  @media (max-width: 760px) {
+    .top { flex-wrap: wrap; row-gap: 14px; padding-left: 16px; padding-right: 16px; }   /* 跟下面正文的16px对齐 */
+    .top nav { width: 100%; justify-content: space-between; gap: 0; font-size: 11.5px; }
   }
+
+  /* 单栏居中，跟「大公司」页同宽(860)。原来宽屏是"正文656 + 右侧360边栏"的两栏 */
+  .page { max-width: 892px; margin: 0 auto; padding: 96px 16px 120px; }
+
+  /* ---- 页头：跟另外两页一样，小号大写页名 + 一行灰色说明(2026-11-14 统一；原来是大标题"7日内关注") ---- */
+  .mast { margin-bottom: 36px; }
+  .mast h1 { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-weight: 400; font-size: 14px;
+             letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); line-height: 1.6; }
+  .mast .lede { margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--faint); letter-spacing: .02em; }
 
   /* ---- 点文章上的分类标签筛选；筛选中在顶上露一行提示，点"看全部"或再点一次标签退出 ---- */
   .tg { cursor: pointer; padding: 2px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
   .tg:hover { color: var(--ink); border-bottom-color: var(--faint); }
   .tg.on { color: var(--accent); font-weight: 600; }
+  /* 等级：HIGH 土橙、MEDIUM 灰、LOW 最浅；LOW 的轨道只展示，不能点 */
+  .tg { white-space: nowrap; }
+  /* 等级只显示一个：HIGH 土橙、MEDIUM 灰、LOW 最浅，跟前面的轨道名隔开一点 */
+  .tier { font-weight: 500; letter-spacing: .12em; white-space: nowrap; }
+  .tier::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
+  .tier-high { color: var(--date); }
+  .tier-medium { color: var(--faint); }
+  .tier-low { color: var(--faint); }
+  .tg-low { cursor: default; color: #C2BEB4; letter-spacing: .12em; }
+  .tg-low:hover { border-bottom-color: transparent; color: #C2BEB4; }
+  /* 标注按钮：三个小图标(♥ 喜欢 / – 一般 / ✕ 不感兴趣)，悬停那一条才浮现；标过的一直显示那一个 */
+  .lbls { display: inline-flex; gap: 2px; margin: 0 6px 0 0; opacity: 0; transition: opacity .15s; }
+  .lead:hover .lbls, .brief:hover .lbls, .lbls:focus-within { opacity: 1; }
+  .lbls.set { opacity: 1; }
+  .lbls.set .lb:not(.on) { display: none; }
+  .lead:hover .lbls.set .lb, .brief:hover .lbls.set .lb { display: inline-flex; }
+  @media (hover: none) { .lbls { opacity: 1; } }
+  .lb { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0;
+        font: 12px/1 var(--sans); letter-spacing: 0; text-transform: none; cursor: pointer;
+        color: var(--faint); background: transparent; border: 0; border-radius: 50%; }
+  .lb:hover { color: var(--ink); background: var(--hover); }
+  .lb-like.on { color: var(--date); }
+  .lb-meh.on { color: var(--who); font-weight: 700; }
+  .lb-no.on { color: var(--soft); }
   .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
   .filter-on {
     display: flex; align-items: baseline; gap: 12px; padding: 12px 0;
@@ -66,52 +97,59 @@
   [data-who]:hover { color: var(--ink); border-bottom-color: var(--faint); }
   [data-who].on { color: var(--accent); }
 
-  /* ---- 按天分组；日期吸顶，滚动时当天的日期停在顶上，滚到下一天被顶掉 ---- */
-  .day { margin-top: 56px; }
-  #days > .day:first-child { margin-top: 56px; }
-  .day-head {
-    display: flex; align-items: flex-end; gap: 14px;
-    padding: 14px 0 12px; border-bottom: 1px solid var(--ink);
-    position: sticky; top: 0; z-index: 3;
-    background: rgba(255, 255, 255, .72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  /* ---- 按天分组：跟「大公司」页同一个版式——左栏大日期(Iowan带尾巴的数字，土橙)，右栏当天内容。
+     左栏吸顶：滚动时当天的日期停在左边，滚到下一天被换掉 ---- */
+  .day { display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 36px;
+         padding: 32px 0 6px; border-top: 1px solid var(--rule-strong); margin-top: 0; }
+  #days > .day:first-child { margin-top: 0; }
+  .day-head { position: sticky; top: 24px; align-self: start; padding-top: 6px;
+              font-family: var(--title); font-size: 15px; line-height: 1.5; color: var(--faint); }
+  .day-head .num { display: block; font-family: var(--title); font-size: 58px; line-height: 1; color: var(--date);
+                   margin-bottom: 12px; font-variant-numeric: oldstyle-nums; font-feature-settings: "onum" 1; }
+  .day-head .mon { display: block; }
+  .day-head .wk, .day-head .n { display: block; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .04em; margin-top: 6px; }
+  .day-head .n { margin-top: 2px; }
+  .day-body { min-width: 0; }
+  /* 窄屏：左栏大日期变成每天上方的一行 */
+  @media (max-width: 760px) {
+    .day { grid-template-columns: 1fr; padding-top: 22px; }
+    .day-head { position: static; display: flex; align-items: baseline; gap: 8px; padding: 0 0 14px; }
+    .day-head .num { display: inline; font-size: 34px; margin: 0 2px 0 0; }
+    .day-head .wk, .day-head .n { display: inline; margin: 0 0 0 6px; }
+    .lead h3, .lead.t-high h3 { font-size: 19px; }
+    .lead.has-pic { grid-template-columns: minmax(0, 1fr) 84px; column-gap: 16px; }
+    .lead p { font-size: 14px; }
+    .src { row-gap: 2px; }
   }
-  .day-head .num { font-size: 3rem; line-height: 1; font-weight: 300; letter-spacing: -.02em; color: var(--accent); }
-  .day-head .lbl { font-size: 14px; line-height: 1.5; font-weight: 600; padding-bottom: 4px; }
-  .day-head .lbl span { display: block; font-weight: 400; color: var(--faint); font-size: 12.5px; }
-  .day-head .n { margin-left: auto; font-size: 13px; color: var(--faint); padding-bottom: 4px; }
 
-  /* 头条(high)：来源、标题、摘要；点标题或空白处都打开原文 */
-  .lead { display: block; padding: 24px 0; border-bottom: 1px solid var(--rule); cursor: pointer; }
-  .src { font-size: 13px; color: var(--faint); display: flex; gap: 8px; align-items: center; }
-  .src .who { color: var(--soft); font-weight: 600; }
-  .src .new { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
-  .lead h3 { font-size: 1.32rem; line-height: 1.55; font-weight: 600; margin: 10px 0 12px; letter-spacing: 0; }
-  .lead p, .brief .more p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
-  .lead p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
-  .lead:hover h3 { color: var(--accent); }
+  /* 每一条：除了标注和记一笔，其余全部跟「大公司」页的卡片一致(2026-11-14 用户定)——
+     信息行在上(11.5px 全大写，来源中灰 · 轨道/等级浅灰，HIGH 土橙) → 标题(24px，HIGH 26px) → 摘要(14.5px)；
+     条目之间浅色细线。点标题或空白处打开原文 */
+  .lead { display: block; padding: 0 0 28px; cursor: pointer; }
+  .lead + .lead { border-top: 1px solid var(--rule); padding-top: 26px; }
+  .src { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint);
+         display: flex; flex-wrap: wrap; gap: 4px; align-items: center; line-height: 1.6; }
+  .src .who { color: var(--who); font-weight: 500; }
+  .src .sep { margin: 0 2px; color: var(--faint); }
+  .src .tracks { display: inline-flex; align-items: center; }
+  .src .tracks .tg { color: var(--faint); }
+  .src .tracks .tg:hover { color: var(--ink); }
+  .src .tracks .tg.on { color: var(--accent); }
+  .src .acts { margin-left: auto; display: inline-flex; align-items: center; text-transform: none; letter-spacing: 0; }
+  .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 8px 0 0; letter-spacing: 0;
+             color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
+  .lead.t-high h3 { font-size: 26px; }
+  .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
+  .lead p { margin: 9px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
+  /* 配图：跟「大公司」页一样，右侧 150px 小方块，跟信息行顶部对齐；图挂了就整块去掉 */
+  .lead.has-pic { display: grid; grid-template-columns: minmax(0, 1fr) 150px; column-gap: 26px; align-items: start; }
+  .lead .pic { display: block; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 4px; background: #EDEAE0; margin-top: 4px; }
+  .lead .pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .lead:hover .pic img { transform: scale(1.04); }
+  /* 信息行里的按钮(记一笔)缩到跟文字一样高，不把这一行撑开 */
+  .src .note-btn { width: 20px; height: 20px; }
+  .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
-  /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
-  .briefs { padding: 6px 0 4px; }
-  .brief { display: block; padding: 15px 0; border-bottom: 1px dashed var(--rule); cursor: pointer; border-radius: 10px; }
-  .brief:last-child { border-bottom: 0; }
-  .brief .row { display: flex; gap: 14px; align-items: baseline; }
-  .brief .t { flex: 1; font-size: 1rem; font-weight: 500; line-height: 1.6; letter-spacing: 0; }
-  .brief .t a:hover { color: var(--accent); }
-  .brief .who { font-size: 13px; color: var(--faint); white-space: nowrap; }
-  /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
-  .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
-  .brief.open .more { grid-template-rows: 1fr; }
-  .brief .more > div { overflow: hidden; }
-  .brief .more p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
-  .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px; color: var(--faint); }
-  /* 展开时这一条变成临时头条：标题跟头条一样粗，淡底色跟上下分开。左右用负margin把底色往外扩，
-     文字仍跟其他行对齐 */
-  .brief { transition: background .2s, padding .2s, margin .2s; }
-  .brief.open { background: var(--hover); border-bottom-color: transparent; margin: 6px -18px; padding: 20px 18px 22px; }
-  @media (max-width: 760px) { .brief.open { margin: 6px -12px; padding: 18px 12px 20px; } }
-  .brief.open .t { font-weight: 600; }
-  .brief.open .more p { padding-top: 12px; }
 
   /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
      回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。
@@ -126,65 +164,62 @@
   /* 未记:空心笔(只描边)。已记:实心笔。同形状不同填充,切换时尺寸完全不变。 */
   .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
   .note-btn:hover { color: var(--ink); border-color: var(--faint); }
-  .lead:hover .note-btn, .brief.open .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
+  .lead:hover .note-btn, .brief:hover .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
   @media (hover: none) { .note-btn { opacity: 1; } }
   .note-btn.noted { color: var(--accent); border-color: transparent; }
   .note-btn.noted svg { fill: currentColor; }
   .note-btn.noted:hover { background: rgba(168, 70, 31, .08); }
 
-  /* ---- 侧栏：深色X面板 + 鼠尾草绿仓库面板 ---- */
-  .aside { margin-top: 80px; display: grid; gap: 48px; }
-  @media (min-width: 760px) { .aside { grid-template-columns: 1fr 1fr; } }
-  .aside > div { border-radius: 14px; padding: 18px 20px 6px; }
-  .aside h4 { font-size: 13px; font-weight: 600; letter-spacing: .1em; margin: 0 0 6px; padding-bottom: 4px; }
-  .panel-x { background: var(--dark); }
-  .panel-x h4 { color: var(--dark-soft); }
-  .panel-gh { background: var(--sage); }
-  .panel-gh h4 { color: var(--soft); }
-  .mini { display: block; padding: 14px 0; border-top: 1px solid var(--rule); font-size: .92rem; line-height: 1.75; }
-  .panel-x .mini { border-top-color: #34322F; }
-  .panel-gh .mini { border-top-color: var(--sage-rule); }
-  .mini .who { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
-  .mini .who em { font-style: normal; font-weight: 400; color: var(--faint); margin-left: 6px; font-size: 12.5px; }
-  .panel-x .who, .panel-x .who a { color: var(--dark-ink); }
-  .panel-x .who a:hover { color: var(--accent); }
-  /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
-  .mini .txt { color: var(--soft); text-align: justify; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-  .panel-x .txt { color: var(--dark-soft); }
-  /* X面板只露前四条，其余在面板里滚动(高度由fitX()按第四条的底边算，条目高矮不一) */
-  /* 滚动条只在滚动时出现，停下来一会儿就藏起来(用户要求)：靠JS在滚动时挂上.scrolling。
-     只写::-webkit-scrollbar、不写标准的scrollbar-width：Chrome见到标准属性就改用系统滚动条，
-     这里的显隐控制就不起作用了 */
-  #x { position: relative; overflow-y: auto; margin-right: -12px; padding-right: 12px; }
-  #x::-webkit-scrollbar { width: 4px; }
-  #x::-webkit-scrollbar-track, #x::-webkit-scrollbar-thumb { background: transparent; border-radius: 2px; }
-  #x.scrolling::-webkit-scrollbar-track { background: #2A2826; }
-  #x.scrolling::-webkit-scrollbar-thumb { background: #6B665E; }
+  /* ---- X 动态、GitHub Trending：原来是右侧吸顶的深色/鼠尾草绿面板，2026-11-14 用户觉得
+     "挂在右边看着难受"，挪到正文下方，跟按天分组同一个"左栏标题 + 右栏列表"的版式，不要色块 ---- */
+  .aside { margin-top: 0; }
+  .extra { display: grid; grid-template-columns: 104px minmax(0, 1fr); column-gap: 32px;
+           padding: 28px 0 8px; border-top: 1px solid var(--rule-strong); }
+  .extra h4 { margin: 0; padding-top: 6px; font-family: var(--title); font-weight: 400; font-size: 20px; line-height: 1.2;
+              color: var(--date); letter-spacing: .04em; }
+  .extra h4 span { display: block; margin-top: 8px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .04em; }
+  .mini { display: block; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .mini:first-child { padding-top: 6px; }
+  .mini:last-child { border-bottom: 0; }
+  .mini .who { display: block; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); font-weight: 500; margin-bottom: 6px; }
+  .mini .who em { font-style: normal; color: var(--faint); margin-left: 8px; letter-spacing: .06em; }
+  .mini .who a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  /* 说明文字：收起时两行、行尾省略号，点开后接着往下排 */
+  .mini .txt { color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify;
+               display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
-  .repo .name { font-size: 15px; line-height: 1.4; font-weight: 600; word-break: break-all; }
-  .repo .name span { font-weight: 400; color: var(--faint); }
-  .repo .name a:hover { color: var(--accent); }
-  .repo .txt { margin: 4px 0 6px; }
-  .repo .meta { display: flex; gap: 12px; font-size: 12.5px; color: var(--faint); }
+  /* X 引语卡：白底卡片两列；头像 + 名字/@账号·日期；英文原话(Iowan 斜体，前面一个土橙大引号)；中文转述 */
+  #x { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 4px; }
+  .xcard { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid var(--rule); border-radius: 10px;
+           padding: 16px 18px 14px; transition: border-color .2s, box-shadow .2s; }
+  .xcard:hover { border-color: #D5D0C4; box-shadow: 0 4px 14px rgba(40, 30, 10, .06); }
+  .xcard.hidden-x { display: none; }
+  .xwho { display: flex; align-items: center; gap: 10px; }
+  .xwho .av { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex: none; background: #E9E5DB;
+              display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--who); }
+  .xwho .av img { width: 100%; height: 100%; object-fit: cover; }
+  .xmeta { display: flex; flex-direction: column; line-height: 1.3; }
+  .xmeta .nm { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .xmeta .hd { font-size: 12px; color: var(--faint); }
+  .xq { position: relative; padding-left: 18px; font-family: var(--title); font-style: italic; font-size: 16.5px; line-height: 1.5;
+        color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
+  .xq::before { content: "\201C"; position: absolute; left: -2px; top: -8px; font: 36px/1 var(--title); color: var(--date); }
+  .xzh { font-size: 13px; line-height: 1.7; color: var(--soft); border-top: 1px dashed var(--rule); padding-top: 10px; }
+  @media (max-width: 760px) { #x { grid-template-columns: 1fr; } }
+  .more-x { display: inline-block; margin: 16px 0 18px; font-size: 13px; color: var(--faint); cursor: pointer; border-bottom: 1px solid var(--rule); }
+  .more-x:hover { color: var(--ink); border-bottom-color: var(--faint); }
+  .repo .name { font-family: var(--title); font-size: 18px; line-height: 1.4; color: var(--ink); -webkit-text-stroke: .2px currentColor; word-break: break-all; }
+  .repo .name span { color: var(--faint); -webkit-text-stroke: 0; }
+  .repo .name a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  /* Trending 的中文简介默认完整显示，不再截成两行(2026-11-14 用户要的)；X 动态仍然两行、点开看全文 */
+  .repo .txt { margin: 6px 0 8px; display: block; -webkit-line-clamp: unset; overflow: visible; }
+  .repo .meta { display: flex; gap: 14px; font-size: 12px; color: var(--faint); letter-spacing: .04em; }
   .repo .meta .up { color: var(--up); font-weight: 600; }
-
-  /* 宽屏：正文栏656(原720，收窄四个字)，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
-  @media (min-width: 1220px) {
-    .page {
-      max-width: 1160px; display: grid; column-gap: 72px;
-      grid-template-columns: minmax(0, 656px) 360px; justify-content: center;
-    }
-    .mast { grid-column: 1 / -1; }
-    #feed, .foot { grid-column: 1; }
-    .aside {
-      grid-column: 2; grid-row: 2 / span 2; align-self: start;
-      position: sticky; top: 40px; margin-top: 0;
-      grid-template-columns: 1fr; gap: 40px;
-      max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: none;
-    }
-    .aside::-webkit-scrollbar { display: none; }
-    .mini { font-size: .9rem; }
+  @media (max-width: 760px) {
+    .extra { grid-template-columns: 1fr; padding-top: 22px; }
+    .extra h4 { padding: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+    .extra h4 span { display: inline; margin: 0; }
   }
 
   /* ---- 页脚：最近一次更新 + 收起来的运行日志 ---- */
@@ -201,14 +236,7 @@
   .empty { color: var(--faint); font-size: .95rem; padding: 14px 0; }
 
   /* ===== 动效 ===== */
-  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动) */
-  .lead, .brief { position: relative; isolation: isolate; }
-  .lead::before, .brief::before {
-    content: ""; position: absolute; inset: 4px -16px; z-index: -1; border-radius: 12px;
-    background: var(--hover); opacity: 0; transition: opacity .2s ease;
-  }
-  @media (max-width: 760px) { .lead::before, .brief::before { inset: 4px -10px; } }
-  @media (hover: hover) { .lead:hover::before, .brief:not(.open):hover::before { opacity: 1; } }
+  /* (原来悬停时背后浮起一层淡底色；2026-11-14 跟「大公司」页统一，去掉了，悬停只给标题加下划线) */
   /* 打开页面、切换分类时，一条接一条往上浮出来 */
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
   .lead, .brief, .day-head { animation: rise .45s ease backwards; animation-delay: calc(var(--d, 0) * 40ms); }
@@ -219,20 +247,21 @@
 </style>
 </head>
 <body>
+<header class="top">
+    <a class="mark" href="index.html">Daily Digest</a>
+</header>
 <div class="page">
   <header class="mast">
-    <div class="date" id="today"></div>
-    <h1>7日内关注</h1>
-    <p class="lede" id="lede"></p>
+    <h1>Recent</h1>
+    <p class="lede"><span id="today"></span> · <span id="lede"></span></p>
   </header>
   <main id="feed">
-    <canvas class="band" id="band" aria-hidden="true"></canvas>
     <div class="filter-on" id="filterOn" hidden></div>
     <div id="days"></div>
   </main>
   <section class="aside">
-    <div class="panel-x" id="board-x"><h4>他们在 X 上说</h4><div id="x"></div></div>
-    <div class="panel-gh"><h4>本周在涨的仓库</h4><div id="gh"></div></div>
+    <div class="extra" id="board-x"><h4>On X<span>他们在 X 上说</span></h4><div><div id="x"></div></div></div>
+    <div class="extra"><h4>Trending<span>本周在涨的仓库</span></h4><div id="gh"></div></div>
   </section>
   <details class="foot">
     <summary>最近一次更新 <span id="lastRun"></span> · 运行日志</summary>
@@ -251,6 +280,7 @@ const TRACK_LABEL = { ai: 'AI' };
 const WEEK = '日一二三四五六';
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
+// (2026-11-14 用户要求去掉来源前的"刚更新"红点；is_new 字段仍由导出脚本写进JSON，前端暂不使用)
 // "刚更新"高亮完全由导出脚本算好写进JSON的`is_new`字段决定，前端不做任何时间运算——
 // 判定规则和踩过的坑见项目根目录new_flags.py的文件头注释。
 
@@ -385,10 +415,49 @@ function best(i) {
   const ts = FILTER ? i.tracks.filter(t => t.track === FILTER) : i.tracks;
   return ts.some(t => t.tier === 'high') ? 'high' : 'medium';
 }
-function tags(i) {
-  return i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
-    + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
+// 标签(2026-11-14 用户定)：命中的轨道名全部列出(AI · ANCHOR · EVAL)，等级只显示一个——
+// 三条轨道里管线判得最高的那个(来自recent.json的tiers，真实判断)。轨道名可以点来筛选。
+const TIER_RANK = { high: 3, medium: 2, low: 1 };
+function topTier(i) {
+  const tiers = i.tiers || Object.fromEntries(i.tracks.map(t => [t.track, t.tier]));
+  return Object.values(tiers).filter(Boolean).sort((a, b) => (TIER_RANK[b] || 0) - (TIER_RANK[a] || 0))[0] || 'low';
 }
+function tags(i) {
+  const tracks = i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
+    + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
+  const t = topTier(i);
+  return `${tracks}<b class="tier tier-${t}" title="三条线里判得最高的等级">${t.toUpperCase()}</b>`;
+}
+
+// ---- 标注：用户自己的三档判断(喜欢/一般/不感兴趣)，给以后的嗅探器当训练数据 ----
+// 存两份：本浏览器(localStorage，用来显示已标的状态) + 点击记录后台(D1，以后分析用)。
+// 每条标注带上当时的机器等级，方便对比"管线判HIGH但我不感兴趣"这类分歧。
+const LABEL_KEY = 'digest-labels-v1';
+const LABELS = [['like', '喜欢', '♥'], ['meh', '一般', '–'], ['no', '不感兴趣', '✕']];
+function loadLabels() { try { return JSON.parse(localStorage.getItem(LABEL_KEY) || '{}') || {}; } catch (e) { return {}; } }
+function saveLabel(link, v) {
+  try { const all = loadLabels(); if (v) all[link] = v; else delete all[link]; localStorage.setItem(LABEL_KEY, JSON.stringify(all)); }
+  catch (e) { /* 存不住也不影响后台那份 */ }
+}
+function labelBtns(i) {
+  if (IS_PUBLIC) return '';
+  const cur = loadLabels()[i.link];
+  return `<span class="lbls${cur ? ' set' : ''}" data-link="${esc(i.link)}">`
+    + LABELS.map(([v, txt, ic]) => `<button type="button" class="lb lb-${v}${cur === v ? ' on' : ''}" data-label="${v}" title="${txt}" aria-label="${txt}">${ic}</button>`).join('')
+    + '</span>';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.lb');
+  if (!b) return;
+  e.stopPropagation();
+  const box = b.closest('.lbls'), link = box.dataset.link;
+  const v = b.classList.contains('on') ? null : b.dataset.label;   // 再点一次取消
+  saveLabel(link, v);
+  box.querySelectorAll('.lb').forEach(x => x.classList.toggle('on', x.dataset.label === v));
+  box.classList.toggle('set', !!v);
+  const i = RECENT.find(x => x.link === link) || {};
+  track({ type: 'label', link, label: v, tiers: i.tiers || null, ...itemCtx(b), ...itemMeta(link) });
+}, true);
 function who(i) {
   return `<span class="who${i.person === WHO ? ' on' : ''}" data-who="${esc(i.person)}" title="只看${esc(i.person)}">${esc(i.person)}</span>`;
 }
@@ -400,31 +469,27 @@ function dayHead(iso, n) {
   const t = new Date(); t.setHours(0, 0, 0, 0);
   const diff = Math.round((t - d) / 864e5);
   const rel = diff === 0 ? '今天' : diff === 1 ? '昨天' : `周${WEEK[d.getDay()]}`;
-  const sub = diff <= 1 ? `${d.getMonth() + 1}月 · 周${WEEK[d.getDay()]}` : `${d.getMonth() + 1}月`;
+  // 跟「大公司」页同一个左栏：大日期 / 英文月份 / 昨天·周五 / 几篇
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const wk = diff <= 1 ? `${rel} · 周${WEEK[d.getDay()]}` : `周${WEEK[d.getDay()]}`;
   return `<div class="day-head" ${delay()}><span class="num">${d.getDate()}</span>`
-    + `<span class="lbl">${rel}<span>${sub}</span></span><span class="n">${n} 篇</span></div>`;
+    + `<span class="mon">${MON[d.getMonth()]}</span><span class="wk">${wk}</span></div>`;
 }
 function leadHTML(i) {
-  return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
-    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
-      <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
-    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
-    <p>${esc(summaryOf(i))}</p></div>`;
+  // 有配图(scripts/attach_images.py 补的)就跟「大公司」页一样放在右侧小方块里
+  // 只有 HIGH 的放配图(2026-11-14 用户要试的)：有图的就是重点
+  const pic = i.image && topTier(i) === 'high' ? `<span class="pic"><img src="${esc(i.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>` : '';
+  return `<div class="lead t-${topTier(i)}${pic ? ' has-pic' : ''}" data-link="${esc(i.link)}" ${delay()}>
+    <div class="body">
+      <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>
+        <span class="acts">${labelBtns(i)}${noteBtn(i)}</span></div>
+      <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
+      <p>${esc(summaryOf(i))}</p>
+    </div>${pic}</div>`;
 }
-function briefHTML(i) {
-  return `<div class="brief" ${delay()}>
-    <div class="row">
-      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
-      ${who(i)}
-    </div>
-    <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
-  </div>`;
-}
+// high 和 medium 在页面上不再区分(2026-11-14 用户定)：都用同一种卡片，同一天里 high 排在前面。
 function listHTML(list) {
-  const leads = list.filter(i => best(i) === 'high');
-  const briefs = list.filter(i => best(i) !== 'high');
-  return leads.map(leadHTML).join('')
-    + (briefs.length ? `<div class="briefs">${briefs.map(briefHTML).join('')}</div>` : '');
+  return [...list.filter(i => best(i) === 'high'), ...list.filter(i => best(i) !== 'high')].map(leadHTML).join('');
 }
 function renderDays() {
   SEQ = 0;
@@ -432,8 +497,12 @@ function renderDays() {
   const byDay = {};
   items.forEach(i => (byDay[i.date] ||= []).push(i));
   document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
-    .map(day => `<section class="day">${dayHead(day, byDay[day].length)}${listHTML(byDay[day])}</section>`)
+    .map(day => `<section class="day">${dayHead(day, byDay[day].length)}<div class="day-body">${listHTML(byDay[day])}</div></section>`)
     .join('') || '<p class="empty">最近七天没有内容。</p>';
+  // 配图挂了(对方换地址、网络不通)：去掉图，这一条退回单栏
+  document.querySelectorAll('#days .lead .pic img').forEach(img => img.addEventListener('error', () => {
+    const card = img.closest('.lead'); img.parentElement.remove(); card.classList.remove('has-pic');
+  }, { once: true }));
 }
 function renderFilter() {
   const el = document.getElementById('filterOn');
@@ -461,7 +530,7 @@ document.addEventListener('click', e => {
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
   if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); return; }
-  const fold = e.target.closest('.brief, .mini.more');
+  const fold = e.target.closest('.mini.more');   // 简讯的摘要 2026-11-14 起直接显示，不再折叠
   if (!fold) return;
   fold.classList.toggle('open');
   // 简讯的摘要默认收着，展开说明想看摘要；收起不记
@@ -471,7 +540,8 @@ document.addEventListener('click', e => {
 
 async function loadRecent() {
   const data = await (await fetch('data/recent.json')).json();
-  RECENT = data.items;
+  // 大公司的条目只在「大公司」页看(2026-11-14 用户要分开展示)；公开站没有那个页面，照常显示
+  RECENT = IS_PUBLIC ? data.items : data.items.filter(i => !i.is_company);
   const high = RECENT.filter(i => i.tracks.some(t => t.tier === 'high')).length;
   document.getElementById('lede').textContent = `过去七天 ${RECENT.length} 篇，值得细读的 ${high} 篇。`;
   renderDays();
@@ -490,33 +560,38 @@ function markFoldable() {
 }
 addEventListener('resize', markFoldable);
 
-const X_VISIBLE = 4;
-function fitX() {
-  const box = document.getElementById('x');
-  const minis = box.querySelectorAll('.mini');
-  const last = minis[X_VISIBLE - 1];
-  box.style.maxHeight = minis.length > X_VISIBLE ? `${last.offsetTop + last.offsetHeight}px` : '';
-}
-addEventListener('resize', fitX);
-{
-  const box = document.getElementById('x');
-  let idle;
-  box.addEventListener('scroll', () => {
-    box.classList.add('scrolling');
-    clearTimeout(idle);
-    idle = setTimeout(() => box.classList.remove('scrolling'), 800);
-  }, { passive: true });
-}
+const X_VISIBLE = 6;   // X 先露6条(两列各三张)，其余点"再看 N 条"展开
+document.addEventListener('click', e => {
+  const m = e.target.closest('.more-x');
+  if (!m) return;
+  document.querySelectorAll('#x .hidden-x').forEach(el => el.classList.remove('hidden-x'));
+  m.remove();
+});
 
+// X 动态：引语卡(2026-11-14 用户从两种样式里挑的)——头像 + 名字/@账号/日期，推文英文原话当引语，
+// 下面一行中文转述。两列，先露 X_VISIBLE 条，其余点"再看 N 条"。头像来自 unavatar.io，挂了退回首字母
+function xAvatar(i) {
+  const ini = esc((i.person || '?')[0]);
+  return i.handle
+    ? `<span class="av"><img src="https://unavatar.io/x/${esc(i.handle)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-ini="${ini}"></span>`
+    : `<span class="av">${ini}</span>`;
+}
 async function loadX() {
   const data = await (await fetch('data/x_recent.json')).json();
-  document.getElementById('x').innerHTML = data.items.length
-    ? data.items.map(i => `<div class="mini xpost">
-        <span class="who"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.person)}</a><em>${(i.date || '').slice(5)}</em></span>
-        <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
+  const box = document.getElementById('x');
+  box.innerHTML = data.items.length
+    ? data.items.map((i, k) => `<a class="xcard${k >= X_VISIBLE ? ' hidden-x' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
+        <span class="xwho">${xAvatar(i)}<span class="xmeta"><span class="nm">${esc(i.person)}</span>`
+        + `<span class="hd">${i.handle ? '@' + esc(i.handle) + ' · ' : ''}${esc((i.date || '').slice(5))}</span></span></span>
+        <span class="xq">${esc((i.text || i.title).replace(/\n\s*\n+/g, '\n'))}</span>
+        ${i.summary ? `<span class="xzh">${esc(i.summary)}</span>` : ''}</a>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
-  markFoldable();
-  fitX();
+  if (data.items.length > X_VISIBLE) {
+    box.insertAdjacentHTML('afterend', `<span class="more-x">再看 ${data.items.length - X_VISIBLE} 条</span>`);
+  }
+  box.querySelectorAll('.av img').forEach(img => img.addEventListener('error', () => {
+    img.parentElement.textContent = img.dataset.ini;
+  }, { once: true }));
 }
 async function loadTrending() {
   const data = await (await fetch('data/trending.json')).json();
@@ -563,149 +638,6 @@ loadRecent();
 if (!IS_PUBLIC) loadX();
 loadTrending();
 loadRunLog();
-
-// ---- 刊头下面的竹简 ----
-// 手削的竹片(宽窄、长短、深浅各不同)用细绳编起来，黑白两色，随一阵阵的风轻轻摆；
-// 苏轼《定风波》(带小序)《临江仙》《浣溪沙》用行书从右往左、从上到下一个字一个字写上去，写满淡去再从头写
-(function slips() {
-  const cv = document.getElementById('band');
-  const ctx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const CYCLE = 60, PER = 5, FONT = 10;  // 一轮60秒：前70%书写，后面停一会儿再淡去
-  const TEXT = '定风波  三月七日沙湖道中遇雨雨具先去同行皆狼狈余独不觉已而遂晴故作此词    莫听穿林打叶声何妨吟啸且徐行竹杖芒鞋轻胜马谁怕一蓑烟雨任平生 料峭春风吹酒醒微冷山头斜照却相迎回首向来萧瑟处归去也无风雨也无晴  临江仙  夜饮东坡醒复醉归来仿佛三更家童鼻息已雷鸣敲门都不应倚杖听江声 长恨此身非我有何时忘却营营夜阑风静縠纹平小舟从此逝江海寄余生    浣溪沙  细雨斜风作晓寒淡烟疏柳媚晴滩入淮清洛渐漫漫 雪沫乳花浮午盏蓼茸蒿笋试春盘人间有味是清欢     苏轼';  // 空格=留空的格子
-  const CORD = [.15, .85];               // 两道编绳在竹片上的位置
-  let W, H, slips = [], top, len;
-  let seed = 11;  // 固定种子：每次打开竹子长得一样
-  const rnd = () => ((seed = Math.imul(seed ^ (seed >>> 15), 2246822507) + 0x9E3779B9 | 0) >>> 0) / 4294967295;
-
-  function build() {
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    W = cv.clientWidth || 720; H = cv.clientHeight || 106;
-    cv.width = W * dpr; cv.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    len = H * .86; top = (H - len) / 2;
-    seed = 11; slips = [];
-    for (let x = 2; ;) {
-      const w = 11 + rnd() * 2.4;
-      if (x + w > W - 2) break;
-      const grain = [];
-      for (let g = 0, n = 1 + (rnd() < .6); g < n; g++) grain.push({ x: .25 + rnd() * .5, y0: rnd() * .3, y1: .6 + rnd() * .4 });
-      const chars = [];
-      for (let c = 0; c < PER; c++) chars.push({ a: .66 + rnd() * .28, rot: (rnd() - .5) * .12, dx: (rnd() - .5) * 1.2 });
-      slips.push({
-        x, w, chars, grain,
-        len: len * (.965 + rnd() * .05), off: (rnd() - .5) * 2.6,
-        tone: .02 + rnd() * .018,          // 墨色的深浅
-        ph: rnd() * 6.28,                  // 每片自己的一点相位，风吹过时不完全同步
-      });
-      x += w + 2.4 + rnd() * 1.3;
-    }
-    // 第一片贴左边、最后一片贴右边，中间多出来的空隙平均分给每道缝
-    const x0 = slips[0].x, last = slips[slips.length - 1];
-    const spare = W - (last.x + last.w - x0);
-    slips.forEach((sl, k) => { sl.x = sl.x - x0 + spare * k / (slips.length - 1); });
-  }
-
-  // 风：一道波从左往右推；风力时强时弱，像一阵一阵吹过来
-  let T = 0;
-  const gust = () => Math.max(.25, .6 + .3 * Math.sin(T * .21) + .15 * Math.sin(T * .53 + 1.3));
-  function pose(sl) {
-    if (still) return { dx: 0, dy: 0, a: 0 };
-    const g = gust(), x = sl.x, w = T * .9;
-    return {
-      dx: Math.sin(x * .021 - w * .9 + sl.ph * .2) * .5 * g,
-      dy: (Math.sin(x * .016 - w) * 1.6 + Math.sin(x * .045 - w * 1.7 + sl.ph) * .4) * g,
-      a: (Math.sin(x * .013 - w * 1.1) * .03 + Math.sin(x * .037 - w * 1.6 + sl.ph) * .01) * g,
-    };
-  }
-  // 竹片坐标系里的点 → 画布坐标(绕上方编绳那一点偏转，再整体平移)
-  function place(sl, ps, lx, ly) {
-    const cx = sl.x + sl.w / 2, cy = top + sl.off + sl.len * CORD[0];
-    const c = Math.cos(ps.a), s = Math.sin(ps.a);
-    const ux = lx - cx, uy = ly - cy;
-    return [cx + ux * c - uy * s + ps.dx, cy + ux * s + uy * c + ps.dy];
-  }
-
-  function draw(phase) {
-    ctx.clearRect(0, 0, W, H);
-    const writing = Math.min(phase / .7, 1);
-    const fade = phase > .85 ? 1 - (phase - .85) / .15 : 1;
-    const n = slips.length, poses = slips.map(pose);
-    ctx.font = `${FONT}px "Zhi Mang Xing", "Kaiti SC", "STKaiti", serif`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-
-    slips.forEach((sl, k) => {
-      const ps = poses[k], t0 = top + sl.off;
-      ctx.save();
-      const [px, py] = place(sl, ps, sl.x + sl.w / 2, t0 + sl.len * CORD[0]);
-      ctx.translate(px, py); ctx.rotate(ps.a); ctx.translate(-(sl.x + sl.w / 2), -(t0 + sl.len * CORD[0]));
-      // 竹片：淡墨平涂，四角略圆；一侧边缘深一点像竹片的侧面；里面一两道若有若无的竹纹
-      ctx.fillStyle = `rgba(26,25,23,${sl.tone})`;
-      ctx.beginPath();
-      ctx.roundRect ? ctx.roundRect(sl.x, t0, sl.w, sl.len, 1.6) : ctx.rect(sl.x, t0, sl.w, sl.len);
-      ctx.fill();
-      ctx.fillStyle = 'rgba(26,25,23,.04)';
-      ctx.fillRect(sl.x + sl.w - 1.2, t0 + 1, 1.2, sl.len - 2);
-      ctx.strokeStyle = 'rgba(26,25,23,.035)'; ctx.lineWidth = .6;
-      ctx.beginPath();
-      for (const g of sl.grain) { const gx = sl.x + sl.w * g.x; ctx.moveTo(gx, t0 + sl.len * g.y0); ctx.lineTo(gx, t0 + sl.len * g.y1); }
-      ctx.stroke();
-      // 字：右起第几片 × 每片第几个字 = 阅读顺序，按这个顺序一个字一个字淡入
-      const col = n - 1 - k, y0 = t0 + sl.len * CORD[0], step = (sl.len * (CORD[1] - CORD[0])) / PER;
-      ctx.fillStyle = '#1A1917';
-      sl.chars.forEach((ch, c) => {
-        const idx = col * PER + c;
-        if (idx >= TEXT.length || TEXT[idx] === ' ') return;  // 写完就停，左边剩下的竹片留白
-        const ink = still ? 1 : Math.max(0, Math.min(1, writing * TEXT.length - idx)) * fade;
-        if (!ink) return;
-        ctx.globalAlpha = ch.a * ink;
-        ctx.save();
-        ctx.translate(sl.x + sl.w / 2 + ch.dx, y0 + step * (c + .5));
-        ctx.rotate(ch.rot);
-        ctx.fillText(TEXT[idx], 0, 0);
-        ctx.restore();
-      });
-      ctx.globalAlpha = 1;
-      ctx.restore();
-    });
-
-    // 编绳：在竹片上绕过(两道斜线)，竹片之间微微下垂
-    ctx.strokeStyle = 'rgba(26,25,23,.38)'; ctx.lineWidth = .9; ctx.lineCap = 'round';
-    for (const f of CORD) {
-      ctx.beginPath();
-      let prev = null;
-      slips.forEach((sl, k) => {
-        const ps = poses[k], y = top + sl.off + sl.len * f;
-        const L = place(sl, ps, sl.x - .4, y), R = place(sl, ps, sl.x + sl.w + .4, y);
-        if (prev) {
-          const mx = (prev[0] + L[0]) / 2, my = (prev[1] + L[1]) / 2 + 1.1;
-          ctx.moveTo(prev[0], prev[1]); ctx.quadraticCurveTo(mx, my, L[0], L[1]);
-        }
-        for (const o of [-1.3, .5]) {
-          const a = place(sl, ps, sl.x - .4, y + o), b = place(sl, ps, sl.x + sl.w + .4, y + o + 1.6);
-          ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]);
-        }
-        prev = R;
-      });
-      ctx.stroke();
-    }
-  }
-
-  const t0 = performance.now();
-  let last = 0;
-  function loop(now) {
-    requestAnimationFrame(loop);
-    if (document.hidden || now - last < 33) return;   // 切到别的标签页就停，30帧够了
-    last = now;
-    T = (now - t0) / 1000;
-    draw((T % CYCLE) / CYCLE);
-  }
-  build(); draw(still ? 1 : 0);
-  // 等毛笔字体下载完再重画一次，不然先出来的是系统楷体
-  document.fonts && document.fonts.load(`${FONT}px "Zhi Mang Xing"`, TEXT.replace(/ /g, '')).then(() => draw(still ? 1 : 0)).catch(() => {});
-  addEventListener('resize', () => { build(); draw(still ? 1 : 0); });
-  if (!still) requestAnimationFrame(loop);
-})();
 </script>
 </body>
 </html>

@@ -2,9 +2,9 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette-cluster-map 0.19",
-      "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
-      "date": "2026-11-13",
+      "title": "datasette-llm 0.1a11",
+      "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+      "date": "2026-11-14",
       "source_type": "blog",
       "summary": null,
       "is_new": true,
@@ -12,15 +12,15 @@
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志"
+          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
         }
       ]
     },
     {
       "person": "Simon Willison",
-      "title": "datasette-leaflet 0.3",
-      "link": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
-      "date": "2026-11-13",
+      "title": "datasette-vega 0.7",
+      "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+      "date": "2026-11-14",
       "source_type": "blog",
       "summary": null,
       "is_new": true,
@@ -28,7 +28,39 @@
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志"
+          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] The No AI Slop Manifesto",
+      "link": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+      "date": "2026-11-14",
+      "source_type": "blog",
+      "summary": "这期简报的主角是一份“拒绝AI垃圾内容”宣言，在AI工程师大会的讨论中诞生，被很多演讲者联署，还上了Hacker News首页。另外提到llama.cpp和ggml、SGLang都发布了1.0。想了解业内怎么看AI生成内容质量的人可以点开。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "报道反AI垃圾内容宣言和几个项目的1.0发布，偏新闻与讨论"
+        }
+      ]
+    },
+    {
+      "person": "Andrew Ng",
+      "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
+      "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
+      "date": "2026-11-13",
+      "source_type": "blog",
+      "summary": "吴恩达推荐了刚开源的OpenWorker Agent Harness SDK，用它可以给任意大模型搭一个agent harness，也就是包住模型、让它能真正干活的那层外壳。他鼓励没做过的人自己动手做一次，这也是面试里会考的技能。想理解agent是怎么搭起来的，可以从这篇开始。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲怎么用开源SDK搭agent harness，可直接动手"
         }
       ]
     },
@@ -39,7 +71,7 @@
       "date": "2026-11-13",
       "source_type": "blog",
       "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +87,7 @@
       "date": "2026-11-13",
       "source_type": "blog",
       "summary": "ArtCraft创始人在大会上讲他们用AI从头克隆了Photoshop和Acrobat等软件，目前已经开源十七个。文章记录了现场气氛和他的开源宣言。适合看个野心很大的案例。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -71,7 +103,7 @@
       "date": "2026-11-12",
       "source_type": "blog",
       "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -87,7 +119,7 @@
       "date": "2026-11-12",
       "source_type": "blog",
       "summary": "这是当天大会的每日汇总，讲决策模型集中亮相，Cloudflare展示了自家的模型，Google也宣布了Gemini Decision 1。和另一篇Jev的报道讲的是同一件事，看那篇更完整。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -103,7 +135,7 @@
       "date": "2026-11-12",
       "source_type": "blog",
       "summary": "AI Engineer Code Summit主题是系统一模型，也就是不写长文、只返回选择、分数或概率的快速模型。创始人讲了Jev这类产品为什么发布后迅速流行，以及已有哪些生产用例。想知道除了聊天模型还有什么新方向，这篇值得读。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -119,7 +151,7 @@
       "date": "2026-11-11",
       "source_type": "youtube",
       "summary": "Greg和一位用户聊他怎么把工作和生活都交给Grok Bot这个个人助理。他还让它把写代码的活转给Claude Code，覆盖工程、设计、内容、理财和购物五块。想照着抄一套agent用法的人可以看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -135,7 +167,7 @@
       "date": "2026-11-11",
       "source_type": "blog",
       "summary": "Mercor这家给AI模型提供专家数据的公司，拿到新一轮融资，估值到了两百亿美元。文章看点是它的收入涨得很快，以及它说各行各业的工作流程都还没被模型评测过。适合想了解AI数据行业景气度的人扫一眼。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
