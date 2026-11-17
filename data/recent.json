@@ -2,9 +2,9 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette-llm 0.1a11",
-      "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
-      "date": "2026-11-14",
+      "title": "llm 0.37.3",
+      "link": "https://simonwillison.net/2026/Nov/16/llm/",
+      "date": "2026-11-16",
       "source_type": "blog",
       "summary": null,
       "is_new": false,
@@ -12,7 +12,87 @@
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
+          "reason": "作者自己维护的小工具版本更新日志，不算AI实操内容"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
+      "link": "https://latent.space/p/bfl/",
+      "date": "2026-11-16",
+      "source_type": "blog",
+      "summary": "Latent Space访谈了Black Forest Labs的两位负责人，聊他们为什么要从做图像模型转向视频和世界模型。核心观点是只看静态图学不到物体怎么运动，要把画面、动作和声音放在一起训练FLUX 3。想了解图像视频生成这条路线怎么想的人值得听。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Black Forest Labs讲从像素运动声音学视觉智能，偏图像视频模型技术，需要一定背景"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "link": "https://openai.com/index/science-at-the-frontier",
+      "date": "2026-11-16",
+      "source_type": "blog",
+      "summary": "OpenAI调查了一千八百多位科学家怎么在研究里用ChatGPT，看日常工作流和他们自报的效率变化。全文没能抓到，仅据摘要判断。想看专业人群怎么用AI的可以点开。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "研究者怎么用ChatGPT的使用情况调查，偏宏观，仅凭摘要判断"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "link": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "date": "2026-11-16",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了面向医疗团队的computer-use agent，也就是让AI像人一样操作医疗软件界面完成工作。仅基于标题判断，全文没能抓到。想看agent在受监管行业怎么落地可以点开看。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI官方的computer-use agent落地发布，仅凭标题和摘要判断，全文403抓取失败"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "link": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "date": "2026-11-16",
+      "source_type": "blog",
+      "summary": "OpenAI给ChatGPT医疗版加了computer-use agent、更准的临床回答和跨医疗软件的插件。和同日另一篇healthcare computer-use是同一件事，挑一篇看就行。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "ChatGPT for Healthcare的功能更新，与上一条重复，择一看即可"
+        }
+      ]
+    },
+    {
+      "person": "Anthropic",
+      "title": "Updating our coordinated vulnerability disclosure policy timelines",
+      "link": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+      "date": "2026-11-16",
+      "source_type": "blog",
+      "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "前沿模型找漏洞能力带来的披露政策变化，偏安全政策，实操性一般"
         }
       ]
     },
@@ -253,54 +333,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
-        }
-      ]
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "AI Agents are too good at marketing now",
-      "link": "https://www.youtube.com/watch?v=uJuxenfe-NU",
-      "date": "2026-11-09",
-      "source_type": "youtube",
-      "summary": "这期演示如何让 AI 代理真正接手营销工作，重点是先准备业务数据、广告平台权限和创作工具。嘉宾解释为什么要把数据集中起来再让代理查询，也展示广告生成流程，适合想把聊天助手接进实际业务的人。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "展示可借用的营销代理数据与工具配置方法。"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Hide your slop PR descriptions behind <details><summary>",
-      "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
-      "date": "2026-11-09",
-      "source_type": "blog",
-      "summary": "Simon Willison发现，智能体写的变更说明即使准确完整，也常常长到让人不想读。他现在先放一段由自己挑选和认可的简短介绍，把模型生成的完整说明折叠在后面，必要时再展开。文章附有实际例子，适合直接借来改善人工智能参与开发时的沟通，也提醒人类判断应该放在读者最先看到的位置。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "给出可立即应用的人工智能编程协作写法，并有真实合并请求示例。"
-        }
-      ]
-    },
-    {
-      "person": "Anthropic",
-      "title": "Claude can design electronic prototypes from start to finish",
-      "link": "https://www.anthropic.com/research/claude-electronics-design",
-      "date": "2026-11-09",
-      "source_type": "blog",
-      "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
         }
       ]
     }
