@@ -1,13 +1,77 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
+      "link": "https://latent.space/p/linear-scaling/",
+      "date": "2026-11-19",
+      "source_type": "blog",
+      "summary": "Latent Space这期访谈Linear的COO，聊这家做任务管理的公司在AI时代怎么调整做法。现在Linear上超过一半的工作项是agent创建的，她说如果产品里的agent体验不比外面的好，就没人有理由打开你的应用。还聊了为什么一直不雇销售开发人员，适合关心AI产品怎么赚钱的人。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲AI时代SaaS公司的销售和产品策略，沾AI但偏商业叙事"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "PostgreSQL 19 Released",
+      "link": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+      "date": "2026-11-19",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "数据库版本发布，与AI无关"
+        }
+      ]
+    },
+    {
+      "person": "OpenAI",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "date": "2026-11-19",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI用Codex工作流找并修复性能问题的案例，原文未能抓取，只据摘要判断"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+      "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+      "date": "2026-11-19",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了Gemini 4 Neon，这是它七周内的第四个Gemini 4模型，中档但比上一档更快更便宜。这期汇总了定价、上下文长度、各家第三方评测的排名和早期用户的实测反馈，还顺带提到Anthropic的IPO定价。想一次掌握这个新模型的位置和大家的评价，看这期就够了。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
+        }
+      ]
+    },
+    {
       "person": "Greg Isenberg",
       "title": "Build a 1 Person Media Machine With Grok Bot",
       "link": "https://www.youtube.com/watch?v=vKobP6DkC1E",
       "date": "2026-11-18",
       "source_type": "youtube",
       "summary": "Greg Isenberg请Tella的Louise聊她怎么用GrokBot把视频内容从调研到发布全包下来。她每周固定找出爆款帖子、存下好的开头，再接着写脚本和剪辑。想看一个人怎么靠AI搭内容流水线，可以点开。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +87,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": "Google发布Gemini 4 Neon，定位在能力和成本之间，主打编程、办公分析和科学推理，价格比上一档便宜。示例里多个agent在Antigravity里协作做出3D实验室和滑雪模拟器。已经能通过API和付费订阅用上，选模型的时候值得先看一眼。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,44 +103,12 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": "Google把新一代世界模型Genie 4开放给Ultra订阅用户，可以用一句话实时改场景里的天气和角色，还自带声音。同时升级了上一代的单次探索时长，并加了社区画廊。不用写代码就能做可玩的小世界，想体验的话值得点开看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "世界模型产品发布，面向订阅用户，偏演示"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Daniel Stenberg",
-      "link": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": "curl作者说，AI agent把十八万多行C代码改写成了三十多万行Rust，同期真正的curl项目还合并了三百多个提交。这条引用的意思是改写没有拖慢主线开发。想看AI重写大型老项目到底靠不靠谱，可以顺着去读原文。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "curl作者讲agent把C代码改写成Rust的实测"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The PSF end-of-year fundraiser",
-      "link": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Python基金会募捐，与AI无关"
         }
       ]
     },
@@ -87,7 +119,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": "这期简报讲OpenAI发了GPT-6.2 Astra和Sol两个新模型，按第三方测试，每个任务的成本低了很多，但综合得分还是略低于Anthropic的Fable 5.2。社交媒体上的口碑很分裂，作者认为有些批评过头，有些确实说中了。想快速了解选哪个模型划算，可以扫一眼。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -103,7 +135,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": null,
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -119,7 +151,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": null,
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -135,7 +167,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": null,
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -151,7 +183,7 @@
       "date": "2026-11-18",
       "source_type": "blog",
       "summary": null,
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -247,7 +279,7 @@
       "date": "2026-11-17",
       "source_type": "blog",
       "summary": "Claude Fable 5.2解决了黑洞物理里两个悬了很久的问题，一个是二十多年前有人开了头却没人算完的计算。Anthropic先用大白话讲发现，再给技术细节，还交代了Claude是怎么一步步做研究的。想看AI现在能在真正的科研里做到什么程度，可以点开看看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -397,54 +429,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "创业者宣讲，偏叙事和项目介绍"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Introducing Gemini 4 Hydrogen",
-      "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-      "date": "2026-11-12",
-      "source_type": "blog",
-      "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布，讲清了定价和能力"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] D-Day (Decision Models Day)",
-      "link": "https://latent.space/p/ainews-d-day-decision-models-day/",
-      "date": "2026-11-12",
-      "source_type": "blog",
-      "summary": "这是当天大会的每日汇总，讲决策模型集中亮相，Cloudflare展示了自家的模型，Google也宣布了Gemini Decision 1。和另一篇Jev的报道讲的是同一件事，看那篇更完整。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "与The Jev Revolution重复，择一看即可"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "The Jev Revolution: What Engineers Are Already Building with System One Models",
-      "link": "https://latent.space/p/jev-revolution/",
-      "date": "2026-11-12",
-      "source_type": "blog",
-      "summary": "AI Engineer Code Summit主题是系统一模型，也就是不写长文、只返回选择、分数或概率的快速模型。创始人讲了Jev这类产品为什么发布后迅速流行，以及已有哪些生产用例。想知道除了聊天模型还有什么新方向，这篇值得读。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "系统一模型是当前新趋势，文章讲清楚是什么以及工程师已经在做什么"
         }
       ]
     }
