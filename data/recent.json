@@ -1,13 +1,45 @@
 {
   "items": [
     {
+      "person": "Greg Isenberg",
+      "title": "How to design an agent harness",
+      "link": "https://www.youtube.com/shorts/LrJ4RYRQSpk",
+      "date": "2026-11-22",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg访谈Gamma的联合创始人，聊agent外壳以及围绕它的创业机会。Gamma今年把产品重做成一个创作型agent，做一份演示稿背后要调用大约二十个模型。偏访谈，适合想看产品怎么落地的人。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "按正文判断，偏观点或推广或需背景"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Muru",
+      "link": "https://simonwillison.net/2026/Nov/21/muru/",
+      "date": "2026-11-21",
+      "source_type": "blog",
+      "summary": "Simon Willison介绍Muru，一个由mod_wsgi作者借助AI写出来的新项目，想用更理想的方式部署Python网页应用。偏小工具介绍，需要一些后端背景。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "按正文判断，偏观点或推广或需背景"
+        }
+      ]
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Riemann Hypothesis proved...twice independently",
       "link": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
       "date": "2026-11-21",
       "source_type": "blog",
       "summary": "这期AI新闻日报的头条是，Anthropic的一位研究员宣布用Claude写出了黎曼猜想的证明，同一天另一位数学家也放出了自己花十二年写的人工证明。前者附带巨大的机器可验证代码，大概率正确却没有人能读完，后者好懂却可能有错。这个对比挺值得想一想，不过结论还要等数年验证。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,7 +55,7 @@
       "date": "2026-11-20",
       "source_type": "youtube",
       "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，展示了用它做动效、游戏和硬件原型的例子。他讲了在哪里跑、怎么用得更好，也坦率说了写作习惯和命名混乱这些缺点。想快速了解这个新模型能干什么可以看，不过里面赚钱建议偏创作者视角。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
