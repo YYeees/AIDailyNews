@@ -2,12 +2,76 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Quoting Scott Aaronson",
+      "link": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
+      "date": "2026-11-25",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "一句引文，偏理论计算机科学，与日常使用AI无关"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Revolution vs The Renaissance — Thariq Shihipar, OpenAI",
+      "link": "https://latent.space/p/the_revolution_vs_the_renaissance_thariq_shihipar_openai/",
+      "date": "2026-11-25",
+      "source_type": "blog",
+      "summary": "Thariq Shihipar聊用编程agent以后，软件可以便宜到成批生产，同时人反而有更多时间把一件东西做得顺手。他用自己做的格斗游戏和Mac工具举例，讲他对agent看法的改变。关心怎么和agent共同做东西的人值得听。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战与个人软件的访谈，偏理念和演示"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Math Proofs Are Landing Faster Than We Can Read Them",
+      "link": "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/",
+      "date": "2026-11-25",
+      "source_type": "blog",
+      "summary": "这期AINews汇总了十一月AI辅助数学研究的进展，包括矩阵乘法指数的新结论和几份证明。文中也提到有论文因符号错误被撤回，说明论文数量会掩盖质量问题。同时预告了Thariq转去OpenAI的访谈。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI数学证明进展汇总，需要较强专业背景才看得懂"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
+      "link": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
+      "date": "2026-11-25",
+      "source_type": "blog",
+      "summary": "这期AINews的主题是谷歌Gemini 4系列，尤其是Neon在榜单和实际使用中口碑很好，大家开始重新看待谷歌作为前沿模型厂商的地位。内容以社区反应汇总为主。想快速了解最近模型格局的人可以扫一眼。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "模型发布周报，Gemini 4系列表现受关注，偏新闻汇总"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Three LLM inflection points in twelve months",
       "link": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
       "date": "2026-11-24",
       "source_type": "blog",
       "summary": "Simon Willison回顾过去十二个月里LLM和编程agent的三次关键跃迁，从去年十一月编程agent开始可靠，到今年模型能围绕目标自己坚持做完。他认为只要能把软件描述清楚，现在的模型往往就能做出来，自己很可能不会再回去手写大部分代码。想看懂这一年变化脉络的人值得读。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -23,28 +87,12 @@
       "date": "2026-11-24",
       "source_type": "youtube",
       "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，讲了社区做出的作品和五种用法。最后还坦白说了几个缺点，比如回答太简短、命名容易混淆。想快速知道这个新模型值不值得试的人可以看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "新模型上手介绍，偏推广与演示"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "GPT 6.2 Astra Solves a Historical Mystery",
-      "link": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
-      "date": "2026-11-24",
-      "source_type": "blog",
-      "summary": "一位历史学教授用GPT-6.2 Astra，只给很少的提示，它就在二十多分钟里查出了一本匿名素描本的作者，还找到了一份冷门档案来佐证。Simon转述后抛出一个问题，历史学家会不会也迎来自己的深蓝时刻。看看AI做研究型工作现在能到什么程度。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI用于历史研究的案例，偏轻量的趣闻"
         }
       ]
     },
@@ -55,28 +103,12 @@
       "date": "2026-11-24",
       "source_type": "youtube",
       "summary": "Greg Isenberg访谈一位机器人公司联合创始人，聊机器人创业除了拿大额融资之外还有哪些小切口。比如数据、供应链、远程操控、保险和软件工具。适合对物理AI方向的创业机会感兴趣的人。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "机器人与物理AI创业访谈片段，偏宏观"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-charts 0.2a0",
-      "link": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
-      "date": "2026-11-24",
-      "source_type": "blog",
-      "summary": "Simon Willison给自己的Datasette图表插件加了和聊天agent的联动，现在直接跟agent说想要什么图，它就会自动生成。文中附了演示视频，可以登录体验。想看一个小型数据工具怎么接上agent的话可以点开。",
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的Datasette插件版本更新，AI只是顺带集成"
         }
       ]
     },
@@ -87,28 +119,12 @@
       "date": "2026-11-24",
       "source_type": "blog",
       "summary": "这期AI News汇总了一天的行业动态，头条是英伟达黄仁勋在宣布辞职十一天后回归担任CEO，以及OpenAI公布了预训练的进展曲线。另外还提到Sierra估值翻了三倍、智谱发布了新模型。适合想快速扫一眼行业大事的时候看。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
           "reason": "AI行业新闻汇总，偏宏观叙事"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-agent 0.7a1",
-      "link": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
-      "date": "2026-11-24",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "小工具版本更新日志，与同日datasette-charts重复，择一看即可"
         }
       ]
     },
@@ -285,118 +301,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
-        }
-      ]
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Build a 1 Person Media Machine With Grok Bot",
-      "link": "https://www.youtube.com/watch?v=vKobP6DkC1E",
-      "date": "2026-11-18",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg请Tella的Louise聊她怎么用GrokBot把视频内容从调研到发布全包下来。她每周固定找出爆款帖子、存下好的开头，再接着写脚本和剪辑。想看一个人怎么靠AI搭内容流水线，可以点开。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "创作者访谈，用Grok Bot做内容流程，偏推广演示"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Introducing Gemini 4 Neon",
-      "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": "Google发布Gemini 4 Neon，定位在能力和成本之间，主打编程、办公分析和科学推理，价格比上一档便宜。示例里多个agent在Antigravity里协作做出3D实验室和滑雪模拟器。已经能通过API和付费订阅用上，选模型的时候值得先看一眼。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "新模型发布，讲清定位与可用渠道，直接影响选型"
-        }
-      ]
-    },
-    {
-      "person": "Google",
-      "title": "Genie 4 is now available",
-      "link": "https://deepmind.google/blog/genie-4-is-now-available/",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": "Google把新一代世界模型Genie 4开放给Ultra订阅用户，可以用一句话实时改场景里的天气和角色，还自带声音。同时升级了上一代的单次探索时长，并加了社区画廊。不用写代码就能做可玩的小世界，想体验的话值得点开看。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "世界模型产品发布，面向订阅用户，偏演示"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse",
-      "link": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": "这期简报讲OpenAI发了GPT-6.2 Astra和Sol两个新模型，按第三方测试，每个任务的成本低了很多，但综合得分还是略低于Anthropic的Fable 5.2。社交媒体上的口碑很分裂，作者认为有些批评过头，有些确实说中了。想快速了解选哪个模型划算，可以扫一眼。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "新模型发布与成本对比，信息偏简报"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Research acceleration: The jagged frontier",
-      "link": "https://openai.com/index/research-acceleration-jagged-frontier",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent加速AI研究的度量，偏宏观，正文未能抓取"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Inside the Codex sandbox",
-      "link": "https://openai.com/index/inside-the-codex-sandbox",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Codex沙箱的运行机制，关系到日常用法，正文未能抓取"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "Managing frontier AI risk: From training to deployment",
-      "link": "https://openai.com/index/managing-frontier-ai-risk",
-      "date": "2026-11-18",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "风险管理流程介绍，偏宏观，正文未能抓取"
         }
       ]
     }
