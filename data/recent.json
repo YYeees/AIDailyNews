@@ -2,9 +2,25 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Scott Aaronson",
-      "link": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
-      "date": "2026-11-25",
+      "title": "Quoting Jack Despain Zhou",
+      "link": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+      "date": "2026-11-26",
+      "source_type": "blog",
+      "summary": "这是一段很短的引文，作者说AI已经让文字有了一种千人一面的味道，打开视频、听演讲、看邮件，到处都能认出Claude的腔调。读起来几十秒，但正好点到了用AI写东西时最容易丢掉的东西，也就是自己的声音。",
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "一句引文，讲AI带来的千人一面，偏观点叙事"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
+      "link": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+      "date": "2026-11-26",
       "source_type": "blog",
       "summary": null,
       "is_new": true,
@@ -12,7 +28,23 @@
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "一句引文，偏理论计算机科学，与日常使用AI无关"
+          "reason": "SQLite工具介绍，与AI无关"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "link": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
+      "date": "2026-11-26",
+      "source_type": "blog",
+      "summary": null,
+      "is_new": true,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是对新闻摄影规范的一条评论，与AI关系弱"
         }
       ]
     },
@@ -23,7 +55,7 @@
       "date": "2026-11-25",
       "source_type": "blog",
       "summary": "Thariq Shihipar聊用编程agent以后，软件可以便宜到成批生产，同时人反而有更多时间把一件东西做得顺手。他用自己做的格斗游戏和Mac工具举例，讲他对agent看法的改变。关心怎么和agent共同做东西的人值得听。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -39,7 +71,7 @@
       "date": "2026-11-25",
       "source_type": "blog",
       "summary": "这期AINews汇总了十一月AI辅助数学研究的进展，包括矩阵乘法指数的新结论和几份证明。文中也提到有论文因符号错误被撤回，说明论文数量会掩盖质量问题。同时预告了Thariq转去OpenAI的访谈。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -55,7 +87,7 @@
       "date": "2026-11-25",
       "source_type": "blog",
       "summary": "这期AINews的主题是谷歌Gemini 4系列，尤其是Neon在榜单和实际使用中口碑很好，大家开始重新看待谷歌作为前沿模型厂商的地位。内容以社区反应汇总为主。想快速了解最近模型格局的人可以扫一眼。",
-      "is_new": true,
+      "is_new": false,
       "tracks": [
         {
           "track": "ai",
@@ -253,54 +285,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "每日AI新闻汇总，Anthropic上市是大新闻但偏资讯，另含Genie 4开放给开发者"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
-      "link": "https://latent.space/p/linear-scaling/",
-      "date": "2026-11-19",
-      "source_type": "blog",
-      "summary": "Latent Space这期访谈Linear的COO，聊这家做任务管理的公司在AI时代怎么调整做法。现在Linear上超过一半的工作项是agent创建的，她说如果产品里的agent体验不比外面的好，就没人有理由打开你的应用。还聊了为什么一直不雇销售开发人员，适合关心AI产品怎么赚钱的人。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲AI时代SaaS公司的销售和产品策略，沾AI但偏商业叙事"
-        }
-      ]
-    },
-    {
-      "person": "OpenAI",
-      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-      "date": "2026-11-19",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "OpenAI用Codex工作流找并修复性能问题的案例，原文未能抓取，只据摘要判断"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
-      "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
-      "date": "2026-11-19",
-      "source_type": "blog",
-      "summary": "Google DeepMind发布了Gemini 4 Neon，这是它七周内的第四个Gemini 4模型，中档但比上一档更快更便宜。这期汇总了定价、上下文长度、各家第三方评测的排名和早期用户的实测反馈，还顺带提到Anthropic的IPO定价。想一次掌握这个新模型的位置和大家的评价，看这期就够了。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
         }
       ]
     }
