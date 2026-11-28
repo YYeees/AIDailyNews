@@ -2,49 +2,17 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Jack Despain Zhou",
-      "link": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
-      "date": "2026-11-26",
+      "title": "datasette-charts 0.4a0",
+      "link": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+      "date": "2026-11-27",
       "source_type": "blog",
-      "summary": "这是一段很短的引文，作者说AI已经让文字有了一种千人一面的味道，打开视频、听演讲、看邮件，到处都能认出Claude的腔调。读起来几十秒，但正好点到了用AI写东西时最容易丢掉的东西，也就是自己的声音。",
+      "summary": "Simon Willison更新了他的图表插件datasette-charts，并给它做了一个官网，有写插件的教程和图表样例库。这次改动的起因是他让Claude Opus 5.5随手写了个实验插件来试用接口，结果暴露出一堆不好用的地方。想看看怎么让AI帮你检验自己的设计，可以看看这个例子。",
       "is_new": true,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "一句引文，讲AI带来的千人一面，偏观点叙事"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
-      "link": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
-      "date": "2026-11-26",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "SQLite工具介绍，与AI无关"
-        }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "link": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
-      "date": "2026-11-26",
-      "source_type": "blog",
-      "summary": null,
-      "is_new": true,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "只是对新闻摄影规范的一条评论，与AI关系弱"
+          "reason": "作者自己维护的小工具版本更新，但提到让Claude Opus 5.5试用插件接口来发现设计问题"
         }
       ]
     },
@@ -253,38 +221,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "AI新闻日报，头条是Claude辅助的黎曼猜想证明声明，偏宏观新闻，难度较高。"
-        }
-      ]
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Gemini 4 Neon: the most underrated model of the year",
-      "link": "https://www.youtube.com/watch?v=tCY7zMknCJQ",
-      "date": "2026-11-20",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，展示了用它做动效、游戏和硬件原型的例子。他讲了在哪里跑、怎么用得更好，也坦率说了写作习惯和命名混乱这些缺点。想快速了解这个新模型能干什么可以看，不过里面赚钱建议偏创作者视角。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Gemini 4 Neon的上手体验和用法，偏创作者推广与赚钱角度。"
-        }
-      ]
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T",
-      "link": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
-      "date": "2026-11-20",
-      "source_type": "blog",
-      "summary": "这期AI新闻汇总主要讲Anthropic上市首日的情况，发行价83美元，收盘涨了约17%，融资规模成了史上最大的IPO。另外还提到Google把Genie 4开放给了开发者。想快速了解这一天AI圈发生了什么，扫一眼这篇就够。",
-      "is_new": false,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "每日AI新闻汇总，Anthropic上市是大新闻但偏资讯，另含Genie 4开放给开发者"
         }
       ]
     }
